@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng điều khiển cá nhân - SmartBuilding (SV1)</title>
+  <meta name="description" content="Occupant Dashboard - Theo dõi tiêu thụ điện năng cá nhân và phòng làm việc">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <style>
+    /* Chart Bar visualizer */
+    .bar-chart-container {
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      height: 220px;
+      padding-top: 30px;
+      padding-bottom: 24px;
+      position: relative;
+    }
+    .chart-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+      position: relative;
+    }
+    .chart-bar-wrap {
+      width: 100%;
+      max-width: 32px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-sm);
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+    }
+    .chart-bar-fill {
+      width: 100%;
+      background: linear-gradient(180deg, var(--emerald-400) 0%, var(--emerald-600) 100%);
+      border-radius: var(--radius-sm);
+      transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      cursor: pointer;
+    }
+    .chart-bar-fill:hover {
+      filter: brightness(1.2);
+    }
+    .chart-bar-fill:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 105%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 0.72rem;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .chart-label {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-top: 8px;
+    }
+    .ai-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--emerald-400);
+      border-radius: var(--radius-full);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR DÙNG CHUNG CHO SV1 -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">SmartBuilding</div>
+        <div class="brand-sub">CSE122 • BTL-36</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-menu">
+      <div class="menu-label">VAI TRÒ: NGƯỜI DÙNG TÒA NHÀ</div>
+      <a href="occupant-dashboard.html" class="nav-item active">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        <span>Tổng quan cá nhân</span>
+      </a>
+      <a href="occupant-comfort-feedback.html" class="nav-item">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+        <span>Phản hồi tiện nghi</span>
+      </a>
+      <a href="occupant-energy-challenges.html" class="nav-item">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+        </svg>
+        <span>Thử thách năng lượng</span>
+      </a>
+
+      <div class="menu-label" style="margin-top: 16px;">HỆ THỐNG</div>
+      <a href="../index.html" class="nav-item">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        <span>Trang chủ Portal</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-snippet">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--emerald-500); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">
+          VA
+        </div>
+        <div class="user-info">
+          <div class="user-name" id="sidebarUserName">Nguyễn Văn An</div>
+          <div class="user-role-badge" id="sidebarUserRoom">Phòng 402 - Khu Đông</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN WRAPPER -->
+  <div class="main-wrapper">
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <div>
+          <h1 class="page-title">Bảng điều khiển cá nhân (Occupant Dashboard)</h1>
+          <div class="page-subtitle">Theo dõi năng lượng và tiện nghi môi trường làm việc</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span>Cảm biến IoT: Đang kết nối</span>
+        </div>
+        <div class="points-pill" id="userPointsDisplay">
+          420 Điểm Xanh
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content-area">
+      <!-- 4 THẺ CHỈ SỐ KPI CHÍNH -->
+      <section class="grid-cols-4" style="margin-bottom: 24px;">
+        <div class="card stat-card">
+          <div class="stat-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--emerald-400);">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div class="stat-value" id="todayUsageDisplay">14.8 <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">kWh</span></div>
+          <div class="stat-label">Tiêu thụ điện hôm nay</div>
+          <div style="margin-top: 8px;">
+            <span class="stat-badge badge-positive">
+              ↓ 15.4% so với hôm qua
+            </span>
+          </div>
+        </div>
+
+        <div class="card stat-card">
+          <div class="stat-icon" style="background: rgba(14, 165, 233, 0.15); color: var(--sky-400);">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div class="stat-value" id="todayCostDisplay">44.400 <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">đ</span></div>
+          <div class="stat-label">Chi phí điện tạm tính hôm nay</div>
+          <div style="margin-top: 8px;">
+            <span class="stat-badge badge-positive">Đạt mục tiêu ngân sách</span>
+          </div>
+        </div>
+
+        <div class="card stat-card">
+          <div class="stat-icon" style="background: rgba(251, 191, 36, 0.15); color: var(--amber-400);">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <div class="stat-value" id="roomTempDisplay">25.4°C</div>
+          <div class="stat-label">Nhiệt độ phòng hiện tại (402)</div>
+          <div style="margin-top: 8px;">
+            <span class="stat-badge" style="background: rgba(255,255,255,0.06); color: var(--text-muted);">Độ ẩm: 58% • 480 Lux</span>
+          </div>
+        </div>
+
+        <div class="card stat-card">
+          <div class="stat-icon" style="background: rgba(192, 132, 252, 0.15); color: var(--purple-400);">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div class="stat-value" id="userEcoLevelDisplay">Cấp 3</div>
+          <div class="stat-label">Hạng thành viên Xanh</div>
+          <div style="margin-top: 8px;">
+            <span class="stat-badge badge-positive">Hoàn thành 3 thử thách</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- HÀNG 2: BIỂU ĐỒ NĂNG LƯỢNG & ĐỀ XUẤT AI -->
+      <section class="grid-cols-3" style="margin-bottom: 24px;">
+        <!-- BIỂU ĐỒ THEO GIỜ (Chiếm 2 cột) -->
+        <div class="card" style="grid-column: span 2;">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">
+                <svg width="20" height="20" fill="none" stroke="var(--emerald-400)" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                Biểu đồ tiêu thụ điện theo giờ trong ngày (kWh)
+              </h2>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Phòng 402 - Cập nhật tự động theo đồng hồ đo thông minh</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: var(--emerald-400);">Hôm nay</span>
+              <span class="badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-dim);">Định mức chuẩn</span>
+            </div>
+          </div>
+
+          <!-- Chart Visualizer -->
+          <div class="bar-chart-container" id="barChartContainer">
+            <!-- Render từ JS -->
+          </div>
+        </div>
+
+        <!-- WIDGET GỢI Ý THÔNG MINH (AI-2 Saving Recommendation) -->
+        <div class="card ai-card">
+          <div class="card-header">
+            <div>
+              <span class="ai-badge">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                AI-2 RECOMMENDATION
+              </span>
+              <h2 class="card-title" style="margin-top: 8px; font-size: 1rem;">Gợi ý tiết kiệm cá nhân</h2>
+            </div>
+          </div>
+
+          <div id="aiSuggestionsList" style="display: flex; flex-direction: column; gap: 14px;">
+            <!-- Render từ JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- HÀNG 3: LIÊN KẾT NHANH VÀO THỬ THÁCH VÀ PHẢN HỒI -->
+      <section class="grid-cols-2">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <svg width="20" height="20" fill="none" stroke="var(--sky-400)" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+              Thử thách tiết kiệm đang diễn ra
+            </h2>
+            <a href="occupant-energy-challenges.html" class="btn btn-secondary btn-sm">Xem tất cả &rarr;</a>
+          </div>
+          <div id="quickChallengesSummary">
+            <!-- Render từ JS -->
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">
+              <svg width="20" height="20" fill="none" stroke="var(--amber-400)" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+              </svg>
+              Phản ánh tiện nghi gần đây
+            </h2>
+            <a href="occupant-comfort-feedback.html" class="btn btn-primary btn-sm">+ Gửi phản ánh</a>
+          </div>
+          <div id="quickFeedbackSummary">
+            <!-- Render từ JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // JS Logic riêng cho Occupant Dashboard
+    document.addEventListener('DOMContentLoaded', () => {
+      renderHourlyChart();
+      renderAiSuggestions();
+      renderQuickSummaries();
+    });
+
+    // Vẽ biểu đồ cột theo giờ
+    function renderHourlyChart() {
+      const store = getStore();
+      const usage = store.energyStats.hourlyUsage || [];
+      const container = document.getElementById('barChartContainer');
+      if (!container) return;
+
+      const maxKwh = Math.max(...usage.map(u => Math.max(u.kwh, u.baseline))) * 1.15;
+
+      container.innerHTML = usage.map(item => {
+        const heightPct = Math.round((item.kwh / maxKwh) * 100);
+        const isSpike = item.kwh > item.baseline;
+        const colorGrad = isSpike 
+          ? 'linear-gradient(180deg, #f87171 0%, #dc2626 100%)' 
+          : 'linear-gradient(180deg, var(--emerald-400) 0%, var(--emerald-600) 100%)';
+
+        return `
+          <div class="chart-col">
+            <div class="chart-bar-wrap">
+              <div class="chart-bar-fill" 
+                   style="height: ${heightPct}%; background: ${colorGrad};" 
+                   data-tooltip="${item.kwh} kWh (Chuẩn: ${item.baseline} kWh)">
+              </div>
+            </div>
+            <span class="chart-label">${item.hour}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render gợi ý AI
+    function renderAiSuggestions() {
+      const store = getStore();
+      const list = store.aiSuggestions || [];
+      const container = document.getElementById('aiSuggestionsList');
+      if (!container) return;
+
+      container.innerHTML = list.map(item => `
+        <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+            <strong style="font-size: 0.88rem; color: #fff;">${item.title}</strong>
+            <span class="badge ${item.applied ? 'badge-resolved' : 'badge-pending'}">${item.applied ? 'Đã áp dụng' : 'Khuyến nghị'}</span>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">${item.description}</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.75rem; color: var(--emerald-400); font-weight: 600;">Tiết kiệm: ${item.potentialSavings}</span>
+            ${!item.applied ? `<button class="btn btn-primary btn-sm" onclick="applySuggestion('${item.id}')" style="padding: 4px 10px; font-size: 0.75rem;">Áp dụng</button>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function applySuggestion(id) {
+      const store = getStore();
+      const item = store.aiSuggestions.find(s => s.id === id);
+      if (item) {
+        item.applied = true;
+        store.currentUser.points += 25;
+        saveStore(store);
+        renderAiSuggestions();
+        updateTopBarUserInfo();
+        showToast('Đã áp dụng gợi ý tiết kiệm thành công! Bạn nhận được +25 Điểm Xanh.', 'success');
+      }
+    }
+
+    // Render tóm tắt thử thách và phản hồi
+    function renderQuickSummaries() {
+      const store = getStore();
+      const challengesContainer = document.getElementById('quickChallengesSummary');
+      const activeChallenge = store.challenges.find(c => c.status === 'in-progress') || store.challenges[0];
+
+      if (challengesContainer && activeChallenge) {
+        challengesContainer.innerHTML = `
+          <div style="padding: 12px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <strong>${activeChallenge.title}</strong>
+              <span class="badge badge-pending">${activeChallenge.progress}%</span>
+            </div>
+            <div style="height: 8px; background: rgba(255,255,255,0.1); border-radius: var(--radius-full); overflow: hidden; margin-bottom: 8px;">
+              <div style="height: 100%; width: ${activeChallenge.progress}%; background: var(--emerald-400);"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+              <span>Phần thưởng: ${activeChallenge.rewardPoints} điểm</span>
+              <span>Hạn chót: ${activeChallenge.deadline}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      const fbContainer = document.getElementById('quickFeedbackSummary');
+      const latestFb = store.feedbacks[0];
+      if (fbContainer && latestFb) {
+        fbContainer.innerHTML = `
+          <div style="padding: 12px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <strong style="font-size: 0.88rem;">${latestFb.issueLabel}</strong>
+              <span class="badge badge-${latestFb.status}">${latestFb.status === 'investigating' ? 'Đang xử lý' : 'Chờ duyệt'}</span>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4;">${latestFb.description.slice(0, 90)}...</p>
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 8px;">Gửi lúc: ${latestFb.createdAt}</div>
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
