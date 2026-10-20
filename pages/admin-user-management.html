@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách tài khoản hệ thống – SmartBuilding</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+  <link rel="stylesheet" href="../css/manager.css">
+</head>
+<body data-page="users">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="grid-cols-3" id="stats" aria-label="Thống kê"></section>
+      <section class="card section"><h2 class="card-title" style="margin-bottom:16px">Thêm mới / sửa tài khoản</h2><form id="af" class="form-row" novalidate></form></section>
+      <section class="card section"><div class="card-header"><h2 class="card-title">Danh sách tài khoản hệ thống</h2><input class="form-control" id="q" placeholder="Tìm kiếm…" aria-label="Tìm kiếm" style="max-width:260px"></div><div class="table-responsive"><table class="custom-table"><thead id="head"></thead><tbody id="rows"></tbody></table></div></section>
+    </main>
+  </div>
+</div>
+<script src="../js/data.js"></script>
+<script src="../js/manager-data.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/manager.js"></script>
+</body>
+</html>

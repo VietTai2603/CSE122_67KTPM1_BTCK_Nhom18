@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy KPIs – SmartBuilding</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+  <link rel="stylesheet" href="../css/manager.css">
+</head>
+<body data-page="kpis">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="grid-cols-4" id="stats" aria-label="Chỉ số KPI"></section>
+      <section class="card section"><div class="card-header"><h2 class="card-title">Mức sử dụng ngân sách điện tháng</h2><span class="badge badge-investigating" id="bpct"></span></div><div class="progress" id="barwrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Mức sử dụng ngân sách"><i id="bar" style="width:0;background:var(--emerald-500)"></i></div></section>
+      <section class="card section"><div class="card-header"><h2 class="card-title">Xu hướng hiệu suất (nghìn kWh / tháng)</h2><span class="stat-label">Xanh: thực tế · Nét đứt: mục tiêu</span></div><div id="chart"></div></section>
+      <section class="card section"><h2 class="card-title" style="margin-bottom:16px">Chỉ tiêu KPI theo khu vực</h2><div class="table-responsive"><table class="custom-table"><thead><tr><th>Khu vực</th><th>Mục tiêu tháng (kWh)</th><th>Thực tế tháng này (kWh)</th><th>Đánh giá</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+    </main>
+  </div>
+</div>
+<script src="../js/data.js"></script>
+<script src="../js/manager-data.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/manager.js"></script>
+</body>
+</html>

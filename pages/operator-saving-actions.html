@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saving Actions – SmartBuilding (Operator)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+</head>
+<body data-page="actions">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="grid-cols-3" id="stats" aria-label="Thống kê"></section>
+      <section class="card section"><div class="card-header"><h2 class="card-title">🤖 AI-2 Saving Recommendation</h2><button class="btn btn-secondary btn-sm" id="fail"></button></div>
+        <div class="toolbar"><select class="form-control" id="aiZone" aria-label="Khu vực"></select><input class="form-control" id="aiTemp" type="number" value="33" aria-label="Nhiệt độ ngoài trời (°C)" placeholder="Nhiệt độ ngoài trời °C"><button class="btn btn-ai" id="aiGo">Gợi ý tiết kiệm</button></div>
+        <p class="form-error-msg" id="aiErr" style="display:block"></p><div id="aiOut" aria-live="polite"></div></section>
+      <div class="split">
+        <section aria-label="Danh sách tác vụ"><h2 class="card-title section">Danh sách tác vụ tối ưu</h2><div id="list"></div></section>
+        <section class="card section" aria-label="Biểu mẫu"><h2 class="card-title" style="margin-bottom:16px">Thêm / sửa tác vụ tiết kiệm</h2><form id="af" novalidate></form></section>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/operator.js"></script>
+</body>
+</html>

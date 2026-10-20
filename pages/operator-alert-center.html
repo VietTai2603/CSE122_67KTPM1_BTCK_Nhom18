@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Center – SmartBuilding (Operator)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+</head>
+<body data-page="alerts">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="grid-cols-4" id="stats" aria-label="Thống kê cảnh báo"></section>
+      <section class="card section"><div class="card-header"><h2 class="card-title">🤖 AI-1 Energy Anomaly Detector</h2><div class="toolbar"><button class="btn btn-ai" id="scan">Quét bất thường bằng AI</button><button class="btn btn-secondary btn-sm" id="fail"></button></div></div>
+        <div id="aiOut" aria-live="polite"><p class="muted">Nhấn "Quét" để AI phân tích phụ tải các khu vực.</p></div></section>
+      <section class="card section"><div class="card-header"><h2 class="card-title">Danh sách cảnh báo hệ thống</h2><button class="btn btn-primary btn-sm" id="add">+ Tạo cảnh báo thủ công</button></div>
+        <form id="cf" class="section" hidden novalidate></form>
+        <div class="tabs" id="tabs"><button class="tab active" data-f="all">Tất cả</button><button class="tab" data-f="critical">Critical</button><button class="tab" data-f="warning">Warning</button><button class="tab" data-f="resolved">Đã giải quyết</button></div>
+        <div class="table-responsive section"><table class="custom-table"><thead><tr><th>Mã ID</th><th>Khu vực</th><th>Sự cố</th><th>Mức độ / Trạng thái</th><th>Thao tác</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+    </main>
+  </div>
+</div>
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/operator.js"></script>
+</body>
+</html>
