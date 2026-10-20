@@ -748,3 +748,28 @@ button, input, select, textarea {
   color: var(--text-main);
   margin-bottom: 6px;
 }
+
+/* ========================================================
+   FILTER TABS (dùng chung: Comfort Feedback, Energy Challenges)
+   ======================================================== */
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: var(--bg-card);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+.filter-tab {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all var(--transition-fast);
+}
+.filter-tab.active { background: var(--emerald-500); color: #fff; }
