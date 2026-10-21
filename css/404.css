@@ -1,0 +1,56 @@
+body {
+  display: block;
+}
+
+.trang-loi {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #0b1120;
+}
+
+.hop-tbao {
+  max-width: 500px;
+  padding: 30px;
+  text-align: center;
+  background: #1e293b;
+  border-radius: 12px;
+}
+
+.bieu-tuong {
+  font-size: 40px;
+}
+
+.ma-loi {
+  margin: 5px;
+  color: #34d399;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.loi-nhan,
+.meo-xanh {
+  color: #94a3b8;
+}
+
+.cac-nut {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.nut-meo {
+  padding: 6px 10px;
+  color: #34d399;
+  background: transparent;
+  border: 1px solid #10b981;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nut-meo:hover {
+  background: rgba(16, 185, 129, 0.15);
+}
