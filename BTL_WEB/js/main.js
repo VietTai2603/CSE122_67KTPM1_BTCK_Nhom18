@@ -7,9 +7,16 @@ const SB = {
   // Chỉ nạp SEED khi localStorage chưa có -> không ghi đè dữ liệu người dùng đã thêm
   get(k) {
     try { const v = localStorage.getItem('sb_' + k); if (v) return JSON.parse(v); } catch (e) {}
+    if (!(k in SEED)) return null; // key chua co seed (module chua nap du) -> null, khong luu rac
     const d = structuredClone(SEED[k]); this.set(k, d); return d;
   },
   set(k, v) { try { localStorage.setItem('sb_' + k, JSON.stringify(v)); } catch (e) {} },
+  // Khôi phục dữ liệu mẫu gốc của một key (tiện cho demo/đánh giá lại từ đầu)
+  reset(k) { localStorage.removeItem('sb_' + k); return this.get(k); },
+  // Id ngắn gọn gần như chắc chắn không trùng: prefix + timestamp base36 + ngẫu nhiên
+  uid: p => p + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+  money: n => Number(n).toLocaleString('vi-VN') + ' ₫', // định dạng tiền VNĐ
+  dateVN: (d = new Date()) => { const p = n => String(n).padStart(2, '0'); return `${p(d.getDate())}/${p(d.getMonth() + 1)}/${d.getFullYear()}`; },
 
   toast(msg, type = 'success') {
     let c = document.querySelector('.toast-container');

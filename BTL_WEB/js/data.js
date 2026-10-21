@@ -69,3 +69,37 @@ Object.assign(SEED, {
     { id: 'fb3', room: 'Phòng họp B', category: 'devices', categoryLabel: 'Thiết bị', issueType: 'standby_waste', issueLabel: 'Thiết bị bật không người dùng (Lãng phí)', priority: 'low', description: 'Máy chiếu và màn hình họp vẫn bật suốt đêm.', status: 'resolved', adminNote: 'Đã cài hẹn giờ tắt tự động 19:00.', createdAt: '12/10/2026 09:15' }
   ]
 });
+
+/* =====================================================================
+   IOT MOCK ENGINE (TASK-03): sinh dữ liệu đo đạc giả lập có quy luật
+   - PRNG xác định: cùng seed -> cùng chuỗi số, demo ổn định giữa các lần tải
+   - readings(): 24 điểm kWh/giờ của một zone (đỉnh sáng + chiều, nhiễu nhẹ)
+   - sensorValue(): giá trị hiện tại theo loại cảm biến
+   - anomalies(): lọc điểm vượt 120% baseline -> đầu vào mô phỏng AI-1
+   ===================================================================== */
+const MOCK = (() => {
+  const rng = seed => { let a = seed >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; };
+  const seedOf = s => [...String(s)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) | 0, 7);
+  // Hệ số phụ tải theo giờ (0-23): đêm thấp, hai đỉnh sáng & chiều tối
+  const CURVE = [0.18, 0.15, 0.13, 0.12, 0.12, 0.14, 0.2, 0.34, 0.52, 0.66, 0.74, 0.78, 0.7, 0.62, 0.58, 0.6, 0.68, 0.76, 0.8, 0.72, 0.6, 0.46, 0.34, 0.24];
+  return {
+    readings(zone, opts = {}) {
+      const r = rng(seedOf(zone.name) + (opts.day || 0));
+      const rated = zone.ratedKw || 100;
+      return CURVE.map((c, h) => {
+        let kwh = +(rated * c * (0.9 + r() * 0.2)).toFixed(1);
+        let spike = false;
+        if (opts.spikeHour === h) { kwh = +(kwh * (1.4 + r() * 0.4)).toFixed(1); spike = true; }
+        return { hour: h, kwh, baseline: +(rated * c).toFixed(1), spike };
+      });
+    },
+    sensorValue(type, zoneName) {
+      const r = rng(seedOf(type + (zoneName || '')) + (Date.now() / 6e4 | 0));
+      if (/Nhiệt độ/.test(type)) return { value: +(22 + r() * 6).toFixed(1), unit: '°C' };
+      if (/Ánh sáng/.test(type)) return { value: Math.round(200 + r() * 600), unit: 'lux' };
+      if (/Điện/.test(type)) { const z = SEED.zones.find(z => z.name === zoneName); return { value: Math.round((z ? z.loadKw : 50) * (0.85 + r() * 0.3)), unit: 'kW' }; }
+      return { value: Math.round(40 + r() * 30), unit: '%' }; // độ ẩm
+    },
+    anomalies(points) { return points.filter(p => p.kwh > p.baseline * 1.2); }
+  };
+})();
