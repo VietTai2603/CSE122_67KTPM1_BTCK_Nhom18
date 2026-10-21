@@ -86,6 +86,24 @@
     margin: 10px;
     width: 100%;
   }
+
+  /* Toast trải rộng mép dưới cho dễ đọc trên màn hình nhỏ */
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    align-items: stretch;
+  }
+
+  /* Cho phép cuộn ngang dải tab thay vì xuống hàng chiếm diện tích */
+  .filter-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filter-tab {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 480px) {
