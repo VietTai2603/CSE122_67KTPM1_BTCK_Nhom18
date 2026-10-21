@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Center - SmartBuilding (Operator)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="grid-cols-4" id="stats"></section>
+
+      <section class="card section">
+        <div class="card-header">
+          <h2 class="card-title">🤖 AI-1 Energy Anomaly Detector</h2>
+          <div class="toolbar">
+            <button class="btn btn-ai" onclick="scanAI()">Quét bất thường bằng AI</button>
+            <button class="btn btn-secondary btn-sm" id="failBtn" onclick="toggleAiFail('failBtn')">Mô phỏng AI lỗi: TẮT</button>
+          </div>
+        </div>
+        <div id="aiOut"><p class="muted">Nhấn "Quét" để AI phân tích phụ tải các khu vực.</p></div>
+      </section>
+
+      <section class="card section">
+        <div class="card-header">
+          <h2 class="card-title">Danh sách cảnh báo hệ thống</h2>
+          <button class="btn btn-primary btn-sm" onclick="toggleForm()">+ Tạo cảnh báo thủ công</button>
+        </div>
+
+        <form id="cf" class="form-row section" hidden onsubmit="submitAlert(event)" novalidate>
+          <div class="form-group"><label class="form-label" for="zone">Khu vực</label><select class="form-control" id="zone"></select><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="issue">Sự cố</label><input class="form-control" id="issue" placeholder="Mô tả sự cố (≥ 5 ký tự)"><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="level">Mức độ</label><select class="form-control" id="level"><option value="warning">Warning</option><option value="critical">Critical</option></select><div class="form-error-msg"></div></div>
+          <div class="form-group"><button class="btn btn-primary">Lưu cảnh báo</button></div>
+        </form>
+
+        <div class="tabs">
+          <button class="tab active" onclick="setTab('all', this)">Tất cả</button>
+          <button class="tab" onclick="setTab('critical', this)">Critical</button>
+          <button class="tab" onclick="setTab('warning', this)">Warning</button>
+          <button class="tab" onclick="setTab('resolved', this)">Đã giải quyết</button>
+        </div>
+
+        <div class="table-responsive section">
+          <table class="custom-table">
+            <thead><tr><th>Mã ID</th><th>Khu vực</th><th>Sự cố</th><th>Mức độ / Trạng thái</th><th>Thao tác</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="../javascript/data.js"></script>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/operator-alert-center.js"></script>
+</body>
+</html>

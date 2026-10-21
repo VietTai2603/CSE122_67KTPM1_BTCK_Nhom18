@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Điểm thưởng và đổi quà - SmartBuilding</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/occupant-rewards.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header"><div class="brand-icon">⚡</div><div><div class="brand-title">SmartBuilding</div><div class="brand-sub">CSE122 • BTL-36</div></div></div>
+    <nav class="sidebar-menu">
+      <div class="menu-label">VAI TRÒ: NGƯỜI DÙNG TÒA NHÀ</div>
+      <a href="occupant-dashboard.html" class="nav-item"><span>🏠</span><span>Tổng quan cá nhân</span></a>
+      <a href="occupant-comfort-feedback.html" class="nav-item"><span>💬</span><span>Phản hồi tiện nghi</span></a>
+      <a href="occupant-energy-challenges.html" class="nav-item"><span>✅</span><span>Thử thách năng lượng</span></a>
+      <a href="occupant-energy-history.html" class="nav-item"><span>📈</span><span>Lịch sử năng lượng</span></a>
+      <a href="occupant-rewards.html" class="nav-item active"><span>🎁</span><span>Điểm thưởng & đổi quà</span></a>
+      <div class="menu-label" style="margin-top:16px">HỆ THỐNG</div>
+      <a href="../index.html" class="nav-item"><span>↩</span><span>Trang chủ Portal</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="user-snippet"><div class="user-info"><div class="user-name" id="sidebarUserName">Nguyễn Văn An</div><div class="user-role-badge" id="sidebarUserRoom">Phòng 402 - Khu Đông</div></div></div></div>
+  </aside>
+  <div class="main-wrapper">
+    <header class="topbar"><div class="topbar-left"><button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Mở menu">☰</button><div><h1 class="page-title">Điểm thưởng và đổi quà</h1><div class="page-subtitle">Đổi Điểm Xanh lấy những phần quà nhỏ</div></div></div><div class="topbar-right"><div class="points-pill" id="userPointsDisplay">420 Điểm Xanh</div></div></header>
+    <main class="content-area">
+      <section class="card dau-trang-doi-qua"><div><span class="badge badge-resolved">HÀNH ĐỘNG XANH ĐƯỢC GHI NHẬN</span><h2>Điểm của bạn đang tạo nên thay đổi</h2><p class="chu-phu">Tham gia thử thách, gửi phản hồi hoặc áp dụng gợi ý tiết kiệm để tích lũy Điểm Xanh.</p></div><div class="tong-diem"><span id="rewardPoints">420</span><small>Điểm Xanh hiện có</small></div></section>
+      <section><div class="dau-muc"><div><h2 class="card-title">Quà tặng có thể đổi</h2><p class="chu-phu">Chọn một phần quà phù hợp với số điểm của bạn.</p></div></div><div class="grid-cols-3" id="rewardsList"></div></section>
+      <section class="card lich-su-doi-qua"><h2 class="card-title">Lịch sử đổi quà</h2><div id="rewardHistory"></div></section>
+    </main>
+  </div>
+  <script src="../javascript/data.js"></script><script src="../javascript/main.js"></script><script src="../javascript/occupant-rewards.js"></script>
+</body>
+</html>

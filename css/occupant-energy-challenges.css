@@ -1,0 +1,57 @@
+/* CSS riêng của trang occupant-energy-challenges */
+.the-thu-thach {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+.the-thu-thach:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  transform: translateY(-3px);
+}
+.bieu-tuong-huy-hieu {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+.dau-the-thu-thach {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.diem-thuong {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--emerald-400);
+  background: rgba(16, 185, 129, 0.15);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+.khung-tien-do {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: 14px 0 8px;
+}
+.muc-tien-do {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #38bdf8);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+.thong-tin-thu-thach {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+}

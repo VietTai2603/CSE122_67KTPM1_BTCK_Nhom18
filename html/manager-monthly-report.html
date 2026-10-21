@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Report – SmartBuilding</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+  <link rel="stylesheet" href="../css/manager.css">
+</head>
+<body data-page="reports">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <div class="card-header no-print"><h2 class="card-title">Kho lưu trữ báo cáo</h2><button class="btn btn-primary" id="add">+ Lập báo cáo mới</button></div>
+      <section class="grid-cols-3 no-print" id="stats" aria-label="Thống kê báo cáo"></section>
+      <form id="cf" class="card section form-row no-print" hidden onsubmit="createReport(event)" novalidate>
+        <div class="form-group"><label class="form-label" for="month">Tháng báo cáo</label><input class="form-control" id="month" type="month"><div class="form-error-msg"></div></div>
+        <div class="form-group"><label class="form-label" for="title">Tiêu đề báo cáo</label><input class="form-control" id="title" placeholder="VD: Báo cáo năng lượng tháng 10/2026"><div class="form-error-msg"></div></div>
+        <div class="form-group"><button class="btn btn-primary">Tạo báo cáo (tự tổng hợp)</button></div>
+      </form>
+      <section class="card section" aria-label="Chi tiết báo cáo" id="detail"></section>
+      <section class="section no-print" aria-label="Danh sách báo cáo" id="list"></section>
+    </main>
+  </div>
+</div>
+<script src="../javascript/data.js"></script>
+<script src="../javascript/manager-data.js"></script>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/manager-monthly-report.js"></script>
+</body>
+</html>
