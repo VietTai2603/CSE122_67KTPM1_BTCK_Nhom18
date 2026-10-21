@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "cse122-btl36-team18-smartbuilding",
+  "cleanUrls": false,
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/html/404.html"
+    }
+  ]
+}
