@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management – SmartBuilding (Admin)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="grid-cols-3" id="stats"></section>
+      <section class="card section">
+        <h2 class="card-title" style="margin-bottom:16px">Thêm / sửa tài khoản</h2>
+        <form id="af" class="form-row" onsubmit="saveUser(event)" novalidate>
+          <div class="form-group"><label class="form-label" for="name">Họ tên</label><input class="form-control" id="name" placeholder="Nguyễn Văn A"><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="email">Email</label><input class="form-control" id="email" type="email" placeholder="ten@smartbuilding.vn"><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="role">Vai trò</label><select class="form-control" id="role"><option>Occupant</option><option>Operator</option><option>Facility Manager</option><option>Admin</option></select><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="zone">Khu vực phụ trách</label><select class="form-control" id="zone"></select><div class="form-error-msg"></div></div>
+          <div class="form-group"><button class="btn btn-primary" id="submitBtn">Lưu người dùng</button> <button type="button" class="btn btn-secondary" id="cancelBtn" hidden onclick="resetForm()">Hủy sửa</button></div>
+        </form>
+      </section>
+      <section class="card section">
+        <div class="card-header">
+          <h2 class="card-title">Danh sách tài khoản hệ thống</h2>
+          <input class="form-control" id="q" placeholder="Tìm kiếm…" aria-label="Tìm kiếm" style="max-width:260px">
+        </div>
+        <div class="table-responsive">
+          <table class="custom-table">
+            <thead><tr><th>Họ tên</th><th>Vai trò</th><th>Khu vực phụ trách</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="../javascript/data.js"></script>
+<script src="../javascript/manager-data.js"></script>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/admin-user-management.js"></script>
+</body>
+</html>

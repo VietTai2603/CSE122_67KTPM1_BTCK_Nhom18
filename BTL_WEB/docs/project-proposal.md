@@ -82,7 +82,7 @@ Hệ thống phục vụ 4 nhóm đối tượng chính với chu trình phối 
 
 - **Frontend Core:** HTML5 Semantic, CSS3 hiện đại (CSS Custom Properties, Flexbox, Grid, Glassmorphism, Dark Mode Theme).
 - **Client Logic:** JavaScript ES6+ (DOM Manipulation, Event Delegation, Modular Scripting, LocalStorage Persistence).
-- **Data & Mock Engine:** Dữ liệu khởi tạo JSON trong `js/data.js` đồng bộ hóa 2 chiều với Web Storage API (`localStorage`).
+- **Data & Mock Engine:** Dữ liệu khởi tạo JSON trong `javascript/data.js` đồng bộ hóa 2 chiều với Web Storage API (`localStorage`).
 - **Development Server:** Node.js HTTP Server (`server.js`) nhẹ, zero-dependency, sẵn sàng chạy cổng local 3000.
 - **Quản lý & Minh chứng:** Git, GitHub, Trello, OBS Studio, Figma.
 

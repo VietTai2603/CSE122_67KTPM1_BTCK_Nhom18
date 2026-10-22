@@ -15,7 +15,7 @@ Người sử dụng tòa nhà (nhân viên văn phòng, cư dân hoặc ngườ
 
 ### 2. Luồng nghiệp vụ chi tiết của 3 màn hình SV1
 
-#### Màn hình 1: Occupant Dashboard (`pages/occupant-dashboard.html`) - Thao tác Read (R)
+#### Màn hình 1: Occupant Dashboard (`html/occupant-dashboard.html`) - Thao tác Read (R)
 - **Luồng thao tác:**
   1. Người dùng truy cập dashboard.
   2. Hệ thống tải dữ liệu chỉ số điện hôm nay của phòng/khu vực tương ứng.
@@ -28,7 +28,7 @@ Người sử dụng tòa nhà (nhân viên văn phòng, cư dân hoặc ngườ
   - `Alert`: Cảnh báo màu vàng/đỏ khi mức tiêu thụ phòng vượt ngưỡng 120% định mức.
   - `Empty`: Khi chưa có dữ liệu đo đạc từ cảm biến.
 
-#### Màn hình 2: Comfort Feedback (`pages/occupant-comfort-feedback.html`) - Đầy đủ C / R / U / D
+#### Màn hình 2: Comfort Feedback (`html/occupant-comfort-feedback.html`) - Đầy đủ C / R / U / D
 - **Luồng thao tác:**
   1. **Create (Tạo):** Người dùng điền form phản hồi:
      - Chọn vị trí phòng (VD: Phòng 402, Khu làm việc mở Tầng 4).
@@ -41,7 +41,7 @@ Người sử dụng tòa nhà (nhân viên văn phòng, cư dân hoặc ngườ
   4. **Delete (Xóa/Hủy):** Người dùng có thể xóa hoặc hủy yêu cầu nếu vấn đề đã tự hết. Có hộp thoại xác nhận (Confirm modal).
 - **Lưu trữ dữ liệu:** Toàn bộ dữ liệu được quản lý đồng bộ vào `localStorage` (key: `sb_occupant_feedbacks`).
 
-#### Màn hình 3: Energy Challenges (`pages/occupant-energy-challenges.html`) - C / R / U
+#### Màn hình 3: Energy Challenges (`html/occupant-energy-challenges.html`) - C / R / U
 - **Luồng thao tác:**
   1. **Read (Đọc):** Xem danh sách thử thách tiết kiệm năng lượng của tòa nhà (VD: *"Chế độ Eco 26°C"*, *"Giờ Trái Đất văn phòng"*, *"Tắt thiết bị trước khi về"*).
   2. **Create/Join (Tham gia):** Nhấn "Tham gia thử thách" -> Chuyển trạng thái thẻ từ `Chưa tham gia` sang `Đang thực hiện`.
@@ -63,7 +63,7 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
 
 ### 2. Luồng nghiệp vụ chi tiết của 3 màn hình SV2
 
-#### Màn hình 1: Energy Monitor (`pages/operator-energy-monitor.html`) - Thao tác Read (R)
+#### Màn hình 1: Energy Monitor (`html/operator-energy-monitor.html`) - Thao tác Read (R)
 - **Luồng thao tác:**
   1. Nhân viên truy cập màn hình giám sát năng lượng toàn tòa nhà.
   2. Hiển thị tổng công suất tức thời (kW), tổng điện năng tiêu thụ trong ngày (kWh), số khu vực đang hoạt động bình thường vs đang cảnh báo.
@@ -71,7 +71,7 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
   4. Bộ lọc hiển thị: Lọc theo Tầng, Trạng thái hoạt động, Loại phụ tải (Điều hòa HVAC, Chiếu sáng, Ổ cắm).
   5. Xem biểu đồ phụ tải 24 giờ so sánh với đường chuẩn định mức (Baseline).
 
-#### Màn hình 2: Alert Center (`pages/operator-alert-center.html`) - C / R / U
+#### Màn hình 2: Alert Center (`html/operator-alert-center.html`) - C / R / U
 - **Luồng thao tác:**
   1. **Read (Đọc):** Xem danh mục các cảnh báo sự cố điện năng thời gian thực.
   2. **Tích hợp AI-1 (Energy Anomaly Detector):** 
@@ -79,7 +79,7 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
   3. **Create (Tạo cảnh báo thủ công):** Tạo sự cố mới khi phát hiện bằng mắt thường hoặc qua kiểm tra thực địa.
   4. **Update (Cập nhật trạng thái):** Chuyển trạng thái từ `Chờ xử lý (New)` ➔ `Đang điều tra (Investigating)` ➔ `Đã giải quyết (Resolved)` hoặc `Bác bỏ (Dismissed)`.
 
-#### Màn hình 3: Saving Actions (`pages/operator-saving-actions.html`) - Đầy đủ C / R / U / D
+#### Màn hình 3: Saving Actions (`html/operator-saving-actions.html`) - Đầy đủ C / R / U / D
 - **Luồng thao tác:**
   1. **Read (Đọc):** Xem danh sách các hành động tiết kiệm điện đang được triển khai (ví dụ: *"Tăng nhiệt độ điều hòa Tầng 3 lên 26°C"*, *"Tắt 50% đèn hành lang sau 18h"*).
   2. **Create (Tạo mới):** 
@@ -100,18 +100,18 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
 
 ### 2. Luồng nghiệp vụ chi tiết của 6 màn hình SV3
 
-#### Màn hình 1: Energy KPIs (`pages/manager-energy-kpis.html`) - Thao tác Read (R)
+#### Màn hình 1: Energy KPIs (`html/manager-energy-kpis.html`) - Thao tác Read (R)
 - **Nghiệp vụ:** Theo dõi các chỉ số đo lường hiệu quả cốt lõi: EUI ($kWh/m^2/\text{năm}$), Tổng tiền điện tháng này so với ngân sách dự trù, Tỷ lệ năng lượng xanh, Điểm tuân thủ xanh.
 - **Trực quan hóa:** Các thẻ KPI với chỉ báo phần trăm tăng/giảm và biểu đồ radar hoặc xu hướng tháng.
 
-#### Màn hình 2: Zone Comparison (`pages/manager-zone-comparison.html`) - C / R / U
+#### Màn hình 2: Zone Comparison (`html/manager-zone-comparison.html`) - C / R / U
 - **Nghiệp vụ:** So sánh hiệu quả tiêu thụ điện giữa các khu vực (Tầng 1 vs Tầng 2 vs Tầng 3 vs Tầng 4).
 - **Tích hợp AI-3 (What-If Simulator):**
   - Kéo thanh trượt điều chỉnh kịch bản: Giảm % công suất HVAC ở các zone tiêu thụ cao.
   - AI tính toán tức thời: Số kWh tiết kiệm dự kiến, số tiền tiết kiệm hàng tháng (VND), và lượng khí thải $CO_2$ giảm được.
   - Lưu cấu hình giả định làm mốc định mức mới cho tháng tiếp theo.
 
-#### Màn hình 3: Monthly Report (`pages/manager-monthly-report.html`) - Đầy đủ C / R / U / D
+#### Màn hình 3: Monthly Report (`html/manager-monthly-report.html`) - Đầy đủ C / R / U / D
 - **Nghiệp vụ:**
   - **Read:** Xem danh sách các kỳ báo cáo năng lượng hàng tháng.
   - **Create:** Nhấn "Tạo báo cáo tháng mới", chọn tháng, hệ thống tổng hợp tự động số liệu từ mock engine.
@@ -119,11 +119,11 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
   - **Delete:** Xóa báo cáo bản nháp (`Draft`).
   - **Export:** Hỗ trợ tính năng in ấn / xuất bản PDF báo cáo trực tiếp từ trình duyệt (`window.print()`).
 
-#### Màn hình 4: Zone Management (`pages/admin-zone-management.html`) - C / R / U / D
+#### Màn hình 4: Zone Management (`html/admin-zone-management.html`) - C / R / U / D
 - **Nghiệp vụ:** Quản lý danh mục các tầng và khu vực chức năng trong tòa nhà (Tên zone, diện tích $m^2$, số lượng nhân sự, công suất định mức kW, trạng thái hoạt động).
 
-#### Màn hình 5: Sensor Management (`pages/admin-sensor-management.html`) - C / R / U / D
+#### Màn hình 5: Sensor Management (`html/admin-sensor-management.html`) - C / R / U / D
 - **Nghiệp vụ:** Quản lý thiết bị đo đếm IoT (Mã cảm biến, loại cảm biến: Đo điện/Nhiệt độ/Độ ẩm/Ánh sáng, vị trí lắp đặt, tần suất đọc dữ liệu, trạng thái kết nối Online/Offline).
 
-#### Màn hình 6: User Management (`pages/admin-user-management.html`) - C / R / U / D
+#### Màn hình 6: User Management (`html/admin-user-management.html`) - C / R / U / D
 - **Nghiệp vụ:** Quản lý tài khoản hệ thống (Họ tên, email, vai trò: Occupant / Operator / Facility Manager / Admin, trạng thái kích hoạt, phân quyền khu vực quản lý).

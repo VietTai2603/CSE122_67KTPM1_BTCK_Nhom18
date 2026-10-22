@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT') {
-        fs.readFile(path.join(__dirname, 'pages', '404.html'), (e, page) => {
+        fs.readFile(path.join(__dirname, 'html', '404.html'), (e, page) => {
           res.writeHead(404, { 'Content-Type': e ? 'text/plain; charset=utf-8' : 'text/html; charset=utf-8' });
           res.end(e ? '404 Not Found: ' + reqPath : page);
         });

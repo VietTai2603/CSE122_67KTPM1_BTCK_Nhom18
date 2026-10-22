@@ -7,112 +7,7 @@
   <meta name="description" content="Học phần CSE122 - Phát triển ứng dụng Web cơ bản. Đề tài BTL-36 SmartBuilding Energy Dashboard.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <style>
-    .portal-hero {
-      text-align: center;
-      padding: 60px 20px 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .portal-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      color: var(--emerald-400);
-      border-radius: var(--radius-full);
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .portal-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #34d399 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .portal-desc {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 32px;
-    }
-    .role-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      max-width: 1200px;
-      margin: 0 auto 60px;
-      padding: 0 20px;
-    }
-    .role-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      position: relative;
-      transition: all var(--transition-smooth);
-      display: flex;
-      flex-direction: column;
-    }
-    .role-card:hover {
-      border-color: var(--emerald-500);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--emerald-glow);
-    }
-    .role-card.highlight {
-      border-color: rgba(16, 185, 129, 0.4);
-      background: linear-gradient(180deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 0.95) 100%);
-    }
-    .role-badge-tag {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--emerald-400);
-      background: rgba(16, 185, 129, 0.15);
-      padding: 4px 10px;
-      border-radius: var(--radius-sm);
-      display: inline-block;
-      margin-bottom: 12px;
-    }
-    .screen-link-list {
-      list-style: none;
-      margin: 20px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .screen-link-item a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      color: var(--text-main);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: all var(--transition-fast);
-    }
-    .screen-link-item a:hover {
-      background: rgba(16, 185, 129, 0.15);
-      border-color: var(--emerald-500);
-      color: var(--emerald-400);
-      padding-left: 18px;
-    }
-    .portal-footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid var(--border-color);
-      color: var(--text-dim);
-      font-size: 0.85rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body style="display: block;">
 
@@ -130,9 +25,8 @@
         </div>
       </div>
       <div style="display: flex; gap: 12px;">
-        <a href="docs/screen-list.md" target="_blank" class="btn btn-secondary btn-sm">Xem Bảng kiểm kê (docs)</a>
-        <a href="pages/occupant-dashboard.html" class="btn btn-primary btn-sm">Vào Dashboard SV1 &rarr;</a>
-      </div>
+        <a href="html/login.html" class="btn btn-secondary btn-sm">Đăng nhập</a>
+        <a href="html/404.html" class="btn btn-secondary btn-sm">Xem thử 404</a>
     </div>
   </header>
 
@@ -163,19 +57,19 @@
 
         <ul class="screen-link-list">
           <li class="screen-link-item">
-            <a href="pages/occupant-dashboard.html">
+            <a href="html/occupant-dashboard.html">
               <span><strong>1. Occupant Dashboard</strong> (Xem chỉ số & KPI)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/occupant-comfort-feedback.html">
+            <a href="html/occupant-comfort-feedback.html">
               <span><strong>2. Comfort Feedback</strong> (CRUD Phản hồi)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/occupant-energy-challenges.html">
+            <a href="html/occupant-energy-challenges.html">
               <span><strong>3. Energy Challenges</strong> (C/R/U Thử thách)</span>
               <span>&rarr;</span>
             </a>
@@ -184,7 +78,7 @@
 
         <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
           <span style="font-size: 0.8rem; color: var(--emerald-400); font-weight: 600;">3 màn hình đã sẵn sàng</span>
-          <a href="pages/occupant-dashboard.html" class="btn btn-primary btn-sm">Mở giao diện &rarr;</a>
+          <a href="html/occupant-dashboard.html" class="btn btn-primary btn-sm">Mở giao diện &rarr;</a>
         </div>
       </div>
 
@@ -200,25 +94,25 @@
 
         <ul class="screen-link-list">
           <li class="screen-link-item">
-            <a href="pages/operator-energy-monitor.html">
+            <a href="html/operator-energy-monitor.html">
               <span><strong>4. Energy Monitor</strong> (Giám sát phụ tải)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/operator-alert-center.html">
+            <a href="html/operator-alert-center.html">
               <span><strong>5. Alert Center</strong> (C/R/U + AI-1)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/operator-saving-actions.html">
+            <a href="html/operator-saving-actions.html">
               <span><strong>6. Saving Actions</strong> (C/R/U/D + AI-2)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/operator-zone-control.html">
+            <a href="html/operator-zone-control.html">
               <span><strong>+ Zone Live Control</strong> (Điều khiển thiết bị)</span>
               <span>&rarr;</span>
             </a>
@@ -227,7 +121,7 @@
 
         <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
           <span style="font-size: 0.8rem; color: var(--sky-400); font-weight: 600;">4 màn hình đã sẵn sàng</span>
-          <a href="pages/operator-energy-monitor.html" class="btn btn-primary btn-sm">Mở giao diện &rarr;</a>
+          <a href="html/operator-energy-monitor.html" class="btn btn-primary btn-sm">Mở giao diện &rarr;</a>
         </div>
       </div>
 
@@ -243,37 +137,37 @@
 
         <ul class="screen-link-list">
           <li class="screen-link-item">
-            <a href="pages/manager-energy-kpis.html">
+            <a href="html/manager-energy-kpis.html">
               <span><strong>7. Energy KPIs</strong> (Chỉ số KPI)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/manager-zone-comparison.html">
+            <a href="html/manager-zone-comparison.html">
               <span><strong>8. Zone Comparison</strong> (C/R/U + AI-3)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/manager-monthly-report.html">
+            <a href="html/manager-monthly-report.html">
               <span><strong>9. Monthly Report</strong> (C/R/U/D)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/admin-zone-management.html">
+            <a href="html/admin-zone-management.html">
               <span><strong>10. Zone Management</strong> (C/R/U/D)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/admin-sensor-management.html">
+            <a href="html/admin-sensor-management.html">
               <span><strong>11. Sensor Management</strong> (C/R/U/D)</span>
               <span>&rarr;</span>
             </a>
           </li>
           <li class="screen-link-item">
-            <a href="pages/admin-user-management.html">
+            <a href="html/admin-user-management.html">
               <span><strong>12. User Management</strong> (C/R/U/D)</span>
               <span>&rarr;</span>
             </a>
@@ -282,7 +176,7 @@
 
         <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
           <span style="font-size: 0.8rem; color: var(--purple-400); font-weight: 600;">6 màn hình đã sẵn sàng</span>
-          <a href="pages/manager-energy-kpis.html" class="btn btn-primary btn-sm">Mở giao diện &rarr;</a>
+          <a href="html/manager-energy-kpis.html" class="btn btn-primary btn-sm">Mở giao diện &rarr;</a>
         </div>
       </div>
     </section>
@@ -292,7 +186,8 @@
     <p>© 2026 SmartBuilding CSE122 Team. Đề tài BTL-36. Bảng kiểm kê màn hình & Nguyên tắc lát cắt dọc.</p>
   </footer>
 
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="javascript/data.js"></script>
+  <script src="javascript/main.js"></script>
 </body>
 </html>
+

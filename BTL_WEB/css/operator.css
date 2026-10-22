@@ -28,3 +28,8 @@
 .is-loading>*{display:none}
 .is-loading::after{content:'⏳ Đang tải dữ liệu…';display:block;text-align:center;padding:60px;color:var(--text-muted)}
 .skeleton{height:16px;border-radius:8px;background:rgba(255,255,255,.08);margin-bottom:10px;animation:pulse-dot 1.2s infinite}.skeleton.short{width:60%}
+/* Biểu đồ cột đơn giản (div) và form nhiều cột */
+.bars{display:flex;align-items:flex-end;gap:4px;height:200px;border-bottom:1px solid var(--border-color)}
+.bars div{flex:1;background:var(--sky-400);border-radius:3px 3px 0 0;min-height:2px}
+.form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:end}
+.form-row .form-group{margin-bottom:0}

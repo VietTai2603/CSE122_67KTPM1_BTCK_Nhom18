@@ -1,0 +1,80 @@
+/* Occupant Dashboard (R): điện hôm nay, biểu đồ theo giờ, gợi ý AI, tóm tắt thử thách và phản hồi */
+
+function renderHourlyChart() {   // mỗi giờ một cột; cột đỏ nếu dùng nhiều hơn mức chuẩn (baseline)
+  var usage = getStore().energyStats.hourlyUsage;
+  var maxKwh = 0;
+  for (var i = 0; i < usage.length; i++) {
+    if (usage[i].kwh > maxKwh) { maxKwh = usage[i].kwh; }
+    if (usage[i].baseline > maxKwh) { maxKwh = usage[i].baseline; }
+  }
+  maxKwh = maxKwh * 1.15;   // chừa khoảng trống phía trên
+
+  var html = '';
+  for (var j = 0; j < usage.length; j++) {
+    var item = usage[j];
+    var heightPercent = Math.round(item.kwh / maxKwh * 100);
+    var color = 'linear-gradient(180deg, var(--emerald-400) 0%, var(--emerald-600) 100%)';
+    if (item.kwh > item.baseline) { color = 'linear-gradient(180deg, #f87171 0%, #dc2626 100%)'; }
+    html += '<div class="chart-col"><div class="chart-bar-wrap">' +
+      '<div class="chart-bar-fill" style="height: ' + heightPercent + '%; background: ' + color + ';" data-tooltip="' + item.kwh + ' kWh (Chuẩn: ' + item.baseline + ' kWh)"></div>' +
+      '</div><span class="chart-label">' + item.hour + '</span></div>';
+  }
+  document.getElementById('barChartContainer').innerHTML = html;
+}
+
+function renderAiSuggestions() {
+  var list = getStore().aiSuggestions, html = '';
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i], badge = '<span class="badge badge-pending">Khuyến nghị</span>', button = '';
+    if (item.applied) { badge = '<span class="badge badge-resolved">Đã áp dụng</span>'; }
+    else { button = '<button class="btn btn-primary btn-sm" onclick="applySuggestion(\'' + item.id + '\')">Áp dụng</button>'; }
+    html += '<div class="suggest-card"><div class="row-between"><strong>' + item.title + '</strong>' + badge + '</div>' +
+      '<p class="small-muted">' + item.description + '</p>' +
+      '<div class="row-between"><span class="saving-text">Tiết kiệm: ' + item.potentialSavings + '</span>' + button + '</div></div>';
+  }
+  document.getElementById('aiSuggestionsList').innerHTML = html;
+}
+
+function applySuggestion(id) {   // áp dụng gợi ý thì được thưởng 25 điểm xanh
+  var store = getStore();
+  for (var i = 0; i < store.aiSuggestions.length; i++) {
+    if (store.aiSuggestions[i].id === id) {
+      store.aiSuggestions[i].applied = true;
+      store.currentUser.points += 25;
+      saveStore(store);
+      renderAiSuggestions();
+      updateTopBarUserInfo();
+      showToast('Đã áp dụng gợi ý tiết kiệm thành công! Bạn nhận được +25 Điểm Xanh.', 'success');
+    }
+  }
+}
+
+function renderQuickSummaries() {
+  var store = getStore();
+  var active = store.challenges[0];   // ưu tiên thử thách đang thực hiện
+  for (var i = 0; i < store.challenges.length; i++) {
+    if (store.challenges[i].status === 'in-progress') { active = store.challenges[i]; break; }
+  }
+  if (active) {
+    document.getElementById('quickChallengesSummary').innerHTML = '<div class="quick-card">' +
+      '<div class="row-between"><strong>' + active.title + '</strong><span class="badge badge-pending">' + active.progress + '%</span></div>' +
+      '<div class="mini-track"><div class="mini-fill" style="width: ' + active.progress + '%;"></div></div>' +
+      '<div class="meta-line"><span>Phần thưởng: ' + active.rewardPoints + ' điểm</span><span>Hạn chót: ' + active.deadline + '</span></div></div>';
+  }
+  var latest = store.feedbacks[0];    // phản hồi mới nhất nằm đầu danh sách
+  if (latest) {
+    var statusText = 'Chờ duyệt';
+    if (latest.status === 'investigating') { statusText = 'Đang xử lý'; }
+    if (latest.status === 'resolved') { statusText = 'Đã giải quyết'; }
+    document.getElementById('quickFeedbackSummary').innerHTML = '<div class="quick-card">' +
+      '<div class="row-between"><strong>' + latest.issueLabel + '</strong><span class="badge badge-' + latest.status + '">' + statusText + '</span></div>' +
+      '<p class="small-muted">' + latest.description.slice(0, 90) + '...</p>' +
+      '<div class="meta-line"><span>Gửi lúc: ' + latest.createdAt + '</span></div></div>';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  renderHourlyChart();
+  renderAiSuggestions();
+  renderQuickSummaries();
+});

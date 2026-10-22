@@ -1,5 +1,5 @@
 /* DỮ LIỆU GIẢ LẬP bổ sung cho SV3 (nạp SAU data.js, TRƯỚC main.js). Mở rộng SEED, không sửa file của người khác. */
-Object.assign(SEED, {
+var managerData = {
   sensors: [
     { id: 1, code: 'SEN-001', type: 'Nhiệt độ / độ ẩm', zone: 'Lobby Area', status: 'online', intervalSec: 5 },
     { id: 2, code: 'SEN-002', type: 'Điện năng', zone: 'Office Tower A', status: 'online', intervalSec: 5 },
@@ -33,7 +33,15 @@ Object.assign(SEED, {
   },
   // Hệ số "kỳ này / kỳ trước" theo khu vực: [so với tháng trước, so với cùng kỳ năm trước]
   prev: { 'Office Tower A': [1.04, 0.98], 'Lobby Area': [0.97, 1.03], 'Data Center': [1.12, 1.08], 'Chiller Plant': [0.99, 0.94] }
-});
+};
+for (var key in managerData) {   // gộp dữ liệu SV3 vào SEED
+  SEED[key] = managerData[key];
+}
 // Bổ sung trường cho zones (mã, diện tích, trạng thái) – các trang khác không bị ảnh hưởng
-const ZX = { 'Office Tower A': ['Z-01', 20000], 'Lobby Area': ['Z-02', 4000], 'Data Center': ['Z-03', 1500], 'Chiller Plant': ['Z-04', 1000] };
-SEED.zones.forEach(z => Object.assign(z, { code: ZX[z.name][0], areaM2: ZX[z.name][1], status: 'active' }));
+var ZX = { 'Office Tower A': ['Z-01', 20000], 'Lobby Area': ['Z-02', 4000], 'Data Center': ['Z-03', 1500], 'Chiller Plant': ['Z-04', 1000] };
+for (var i = 0; i < SEED.zones.length; i++) {
+  var z = SEED.zones[i];
+  z.code = ZX[z.name][0];
+  z.areaM2 = ZX[z.name][1];
+  z.status = 'active';
+}

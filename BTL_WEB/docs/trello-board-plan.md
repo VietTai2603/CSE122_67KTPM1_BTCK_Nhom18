@@ -32,7 +32,7 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 ```markdown
 ### [MÃ_TASK] - Tên công việc
 - **Người thực hiện:** [Phùng Viết Tài / Lê Quang Tiến / Lê Đức Quang]
-- **Màn hình / Tệp:** `pages/[ten-tep].html` | `css/[...].css` | `js/[...].js`
+- **Màn hình / Tệp:** `html/[ten-tep].html` | `css/[...].css` | `javascript/[...].js`
 - **Nhánh Git:** `feature/[ten-nhanh]`
 - **Hạn hoàn thành:** [Ngày/Tháng/Năm]
 - **Mô tả chi tiết:**
@@ -64,10 +64,10 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | :---: | :--- | :---: | :--- | :--- |
 | **TASK-01** | Khởi tạo tài liệu dự án, bảng kiểm kê màn hình & đặc tả vai trò | Phùng Viết Tài (Lead) | `docs/*.md` | `docs/init-documentation` |
 | **TASK-02** | Xây dựng bộ Design System (CSS Variables, màu sắc Dark Emerald, Typography) | Phùng Viết Tài | `css/style.css`, `css/responsive.css` | `feature/design-system-core` |
-| **TASK-03** | Khởi tạo mô hình dữ liệu IoT Mock Engine & tiện ích LocalStorage | Lê Quang Tiến | `js/data.js`, `js/main.js` | `feature/mock-data-engine` |
+| **TASK-03** | Khởi tạo mô hình dữ liệu IoT Mock Engine & tiện ích LocalStorage | Lê Quang Tiến | `javascript/data.js`, `javascript/main.js` | `feature/mock-data-engine` |
 | **TASK-04** | Hoàn thiện trang Portal điều hướng hệ thống | Phùng Viết Tài | `index.html` | `feature/portal-homepage` |
-| **TASK-05** | Xây dựng màn hình Đăng nhập mô phỏng phân quyền 4 vai trò | Lê Quang Tiến | `pages/login.html` | `feature/auth-login` |
-| **TASK-06** | Xây dựng trang thông báo lỗi điều hướng 404 Not Found | Lê Đức Quang | `pages/404.html` | `feature/404-not-found` |
+| **TASK-05** | Xây dựng màn hình Đăng nhập mô phỏng phân quyền 4 vai trò | Lê Quang Tiến | `html/login.html` | `feature/auth-login` |
+| **TASK-06** | Xây dựng trang thông báo lỗi điều hướng 404 Not Found | Lê Đức Quang | `html/404.html` | `feature/404-not-found` |
 
 ---
 
@@ -75,9 +75,9 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 
 | Mã Task | Tên công việc | Màn hình & Tệp | CRUD / Nghiệp vụ | Video OBS quy định |
 | :---: | :--- | :--- | :---: | :--- |
-| **TASK-07** | **Occupant Dashboard:** Giao diện thẻ chỉ số điện, biểu đồ tiêu thụ 24h & mẹo tiết kiệm | `pages/occupant-dashboard.html` | **R** (Read)<br>Trạng thái: Normal, Skeleton loading, Empty, Alert | `SV1-01-occupant-dashboard.mp4` |
-| **TASK-08** | **Comfort Feedback:** Quản lý phản ánh tiện nghi nhiệt độ/ánh sáng đầy đủ C/R/U/D | `pages/occupant-comfort-feedback.html` | **C/R/U/D**<br>Form validate, Modal popup sửa, Lưu `localStorage` | `SV1-02-occupant-comfort-feedback.mp4` |
-| **TASK-09** | **Energy Challenges:** Tham gia thử thách xanh, cập nhật tiến độ & tích điểm thưởng | `pages/occupant-energy-challenges.html` | **C/R/U**<br>Tab filter, Thăng hạng Level, Huy hiệu xanh | `SV1-03-occupant-energy-challenges.mp4` |
+| **TASK-07** | **Occupant Dashboard:** Giao diện thẻ chỉ số điện, biểu đồ tiêu thụ 24h & mẹo tiết kiệm | `html/occupant-dashboard.html` | **R** (Read)<br>Trạng thái: Normal, Skeleton loading, Empty, Alert | `SV1-01-occupant-dashboard.mp4` |
+| **TASK-08** | **Comfort Feedback:** Quản lý phản ánh tiện nghi nhiệt độ/ánh sáng đầy đủ C/R/U/D | `html/occupant-comfort-feedback.html` | **C/R/U/D**<br>Form validate, Modal popup sửa, Lưu `localStorage` | `SV1-02-occupant-comfort-feedback.mp4` |
+| **TASK-09** | **Energy Challenges:** Tham gia thử thách xanh, cập nhật tiến độ & tích điểm thưởng | `html/occupant-energy-challenges.html` | **C/R/U**<br>Tab filter, Thăng hạng Level, Huy hiệu xanh | `SV1-03-occupant-energy-challenges.mp4` |
 
 ---
 
@@ -85,9 +85,9 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 
 | Mã Task | Tên công việc | Màn hình & Tệp | CRUD / Nghiệp vụ | Video OBS quy định |
 | :---: | :--- | :--- | :---: | :--- |
-| **TASK-10** | **Energy Monitor:** Giám sát phụ tải tức thời theo từng tầng/zone, cảnh báo quá tải | `pages/operator-energy-monitor.html` | **R** (Read)<br>Grid bản đồ Zone, Bộ lọc trạng thái, Gauge tải điện | `SV2-01-operator-energy-monitor.mp4` |
-| **TASK-11** | **Alert Center:** Trung tâm xử lý cảnh báo & Tích hợp AI-1 (Energy Anomaly Detector) | `pages/operator-alert-center.html` | **C/R/U**<br>Quét Spike bằng AI, Tạo sự cố, Đổi trạng thái xử lý | `SV2-02-operator-alert-center.mp4` |
-| **TASK-12** | **Saving Actions:** Điều phối lệnh tiết kiệm điện & Tích hợp AI-2 (Saving Recommendation) | `pages/operator-saving-actions.html` | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm | `SV2-03-operator-saving-actions.mp4` |
+| **TASK-10** | **Energy Monitor:** Giám sát phụ tải tức thời theo từng tầng/zone, cảnh báo quá tải | `html/operator-energy-monitor.html` | **R** (Read)<br>Grid bản đồ Zone, Bộ lọc trạng thái, Gauge tải điện | `SV2-01-operator-energy-monitor.mp4` |
+| **TASK-11** | **Alert Center:** Trung tâm xử lý cảnh báo & Tích hợp AI-1 (Energy Anomaly Detector) | `html/operator-alert-center.html` | **C/R/U**<br>Quét Spike bằng AI, Tạo sự cố, Đổi trạng thái xử lý | `SV2-02-operator-alert-center.mp4` |
+| **TASK-12** | **Saving Actions:** Điều phối lệnh tiết kiệm điện & Tích hợp AI-2 (Saving Recommendation) | `html/operator-saving-actions.html` | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm | `SV2-03-operator-saving-actions.mp4` |
 
 ---
 
@@ -95,12 +95,12 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 
 | Mã Task | Tên công việc | Màn hình & Tệp | CRUD / Nghiệp vụ | Video OBS quy định |
 | :---: | :--- | :--- | :---: | :--- |
-| **TASK-13** | **Energy KPIs:** Dashboard vĩ mô theo dõi chỉ số EUI, chi phí tiền điện & phát thải $CO_2$ | `pages/manager-energy-kpis.html` | **R** (Read)<br>Thẻ KPI, Biểu đồ so sánh tháng, Chỉ số xanh | `SV3-01-manager-energy-kpis.mp4` |
-| **TASK-14** | **Zone Comparison & AI-3 Simulator:** So sánh định mức & Mô phỏng What-If giảm % phụ tải | `pages/manager-zone-comparison.html` | **C/R/U**<br>Slider What-If AI, Tính tiền điện & $CO_2$ tiết kiệm | `SV3-02-manager-zone-comparison.mp4` |
-| **TASK-15** | **Monthly Report:** Quản lý kỳ báo cáo năng lượng, phê duyệt bản nháp & In ấn PDF | `pages/manager-monthly-report.html` | **C/R/U/D**<br>Tạo báo cáo tháng, Duyệt/Hủy, In ấn `window.print()` | `SV3-03-manager-monthly-report.mp4` |
-| **TASK-16** | **Zone Management:** Quản lý danh mục các tầng và khu vực tòa nhà | `pages/admin-zone-management.html` | **C/R/U/D**<br>Thêm/Sửa/Khóa Zone, validate diện tích & công suất | `SV3-04-admin-zone-management.mp4` |
-| **TASK-17** | **Sensor Management:** Quản lý danh mục cảm biến IoT giả lập | `pages/admin-sensor-management.html` | **C/R/U/D**<br>Thêm/Sửa cảm biến, toggle Online/Offline mock | `SV3-05-admin-sensor-management.mp4` |
-| **TASK-18** | **User Management:** Quản lý danh sách tài khoản & phân quyền 4 vai trò | `pages/admin-user-management.html` | **C/R/U/D**<br>Thêm/Sửa/Khóa user, phân quyền truy cập theo Zone | `SV3-06-admin-user-management.mp4` |
+| **TASK-13** | **Energy KPIs:** Dashboard vĩ mô theo dõi chỉ số EUI, chi phí tiền điện & phát thải $CO_2$ | `html/manager-energy-kpis.html` | **R** (Read)<br>Thẻ KPI, Biểu đồ so sánh tháng, Chỉ số xanh | `SV3-01-manager-energy-kpis.mp4` |
+| **TASK-14** | **Zone Comparison & AI-3 Simulator:** So sánh định mức & Mô phỏng What-If giảm % phụ tải | `html/manager-zone-comparison.html` | **C/R/U**<br>Slider What-If AI, Tính tiền điện & $CO_2$ tiết kiệm | `SV3-02-manager-zone-comparison.mp4` |
+| **TASK-15** | **Monthly Report:** Quản lý kỳ báo cáo năng lượng, phê duyệt bản nháp & In ấn PDF | `html/manager-monthly-report.html` | **C/R/U/D**<br>Tạo báo cáo tháng, Duyệt/Hủy, In ấn `window.print()` | `SV3-03-manager-monthly-report.mp4` |
+| **TASK-16** | **Zone Management:** Quản lý danh mục các tầng và khu vực tòa nhà | `html/admin-zone-management.html` | **C/R/U/D**<br>Thêm/Sửa/Khóa Zone, validate diện tích & công suất | `SV3-04-admin-zone-management.mp4` |
+| **TASK-17** | **Sensor Management:** Quản lý danh mục cảm biến IoT giả lập | `html/admin-sensor-management.html` | **C/R/U/D**<br>Thêm/Sửa cảm biến, toggle Online/Offline mock | `SV3-05-admin-sensor-management.mp4` |
+| **TASK-18** | **User Management:** Quản lý danh sách tài khoản & phân quyền 4 vai trò | `html/admin-user-management.html` | **C/R/U/D**<br>Thêm/Sửa/Khóa user, phân quyền truy cập theo Zone | `SV3-06-admin-user-management.mp4` |
 
 ---
 

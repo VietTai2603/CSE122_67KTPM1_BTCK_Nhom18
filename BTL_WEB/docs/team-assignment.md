@@ -9,9 +9,9 @@
 
 | STT | Họ và tên | MSSV | Vai trò chính trong dự án | Các màn hình phụ trách chính |
 | :---: | :--- | :---: | :--- | :--- |
-| **1** | **Phùng Viết Tài** *(Trưởng nhóm)* | SV1 | **Người sử dụng tòa nhà (Occupant)** & Phụ trách Giao diện Portal | 1. `pages/occupant-dashboard.html`<br>2. `pages/occupant-energy-challenges.html`<br>3. `pages/occupant-comfort-feedback.html`<br>4. Đồng phụ trách: `index.html` |
-| **2** | **Lê Quang Tiến** | SV2 | **Nhân viên vận hành (Operator)** | 1. `pages/operator-energy-monitor.html`<br>2. `pages/operator-alert-center.html`<br>3. `pages/operator-saving-actions.html`<br>4. Đồng phụ trách: `pages/login.html` |
-| **3** | **Lê Đức Quang** | SV3 | **Quản lý cơ sở (Facility Manager)** & **Quản trị viên (Admin)** | 1. `pages/manager-energy-kpis.html`<br>2. `pages/manager-zone-comparison.html`<br>3. `pages/manager-monthly-report.html`<br>4. `pages/admin-zone-management.html`<br>5. `pages/admin-sensor-management.html`<br>6. `pages/admin-user-management.html`<br>7. Đồng phụ trách: `pages/404.html` |
+| **1** | **Phùng Viết Tài** *(Trưởng nhóm)* | SV1 | **Người sử dụng tòa nhà (Occupant)** & Phụ trách Giao diện Portal | 1. `html/occupant-dashboard.html`<br>2. `html/occupant-energy-challenges.html`<br>3. `html/occupant-comfort-feedback.html`<br>4. Đồng phụ trách: `index.html` |
+| **2** | **Lê Quang Tiến** | SV2 | **Nhân viên vận hành (Operator)** | 1. `html/operator-energy-monitor.html`<br>2. `html/operator-alert-center.html`<br>3. `html/operator-saving-actions.html`<br>4. Đồng phụ trách: `html/login.html` |
+| **3** | **Lê Đức Quang** | SV3 | **Quản lý cơ sở (Facility Manager)** & **Quản trị viên (Admin)** | 1. `html/manager-energy-kpis.html`<br>2. `html/manager-zone-comparison.html`<br>3. `html/manager-monthly-report.html`<br>4. `html/admin-zone-management.html`<br>5. `html/admin-sensor-management.html`<br>6. `html/admin-user-management.html`<br>7. Đồng phụ trách: `html/404.html` |
 
 ---
 
@@ -37,8 +37,8 @@ graph TD
    - Đảm bảo chuẩn tiếp cận Web A11y (độ tương phản màu sắc, thuộc tính ARIA, hỗ trợ phím Tab).
 
 2. **Lê Quang Tiến (SV2) - Phụ trách Tầng dữ liệu & Logic JavaScript dùng chung (Data Engine & JavaScript):**
-   - Thiết kế cấu trúc các thực thể dữ liệu gốc trong `js/data.js` (`zones`, `sensors`, `readings`, `alerts`, `actions`, `challenges`, `feedbacks`).
-   - Viết các hàm tiện ích dùng chung trong `js/main.js`: hàm đọc/ghi `localStorage`, hàm tạo thông báo nổi (Toast Notification), hàm mở/đóng Modal Popup, hàm định dạng số điện và tiền tệ.
+   - Thiết kế cấu trúc các thực thể dữ liệu gốc trong `javascript/data.js` (`zones`, `sensors`, `readings`, `alerts`, `actions`, `challenges`, `feedbacks`).
+   - Viết các hàm tiện ích dùng chung trong `javascript/main.js`: hàm đọc/ghi `localStorage`, hàm tạo thông báo nổi (Toast Notification), hàm mở/đóng Modal Popup, hàm định dạng số điện và tiền tệ.
    - Đảm bảo toàn bộ thao tác CRUD trên mọi màn hình phản ánh đồng bộ vào `localStorage`.
 
 3. **Lê Đức Quang (SV3) - Phụ trách Kiến trúc AI mô phỏng & Đảm bảo chất lượng (AI Architecture & QA):**

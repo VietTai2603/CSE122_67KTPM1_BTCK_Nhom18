@@ -1,5 +1,5 @@
 /* DỮ LIỆU GIẢ LẬP (mock). Lần đầu nạp vào localStorage (key sb_<tên>), sau đó ưu tiên dữ liệu trong trình duyệt. */
-const SEED = {
+var SEED = {
   zones: [
     { id: 1, name: 'Office Tower A', floor: '1-10', type: 'HVAC', ratedKw: 1200, loadKw: 987, baselineKw: 900 },
     { id: 2, name: 'Lobby Area', floor: '1', type: 'Chiếu sáng', ratedKw: 800, loadKw: 542, baselineKw: 500 },
@@ -38,11 +38,11 @@ const SEED = {
 };
 
 /* ===== DỮ LIỆU SV1 – Occupant (key localStorage: sb_occupant_*) ===== */
-Object.assign(SEED, {
+var occupantData = {
   occupant_user: { name: 'Nguyễn Văn An', room: 'Phòng 402 - Khu Đông', points: 420 },
   occupant_stats: {
     roomTemp: 25.4,
-    // 12 mốc giờ; tổng = 14,8 kWh. kwh > baseline => cột đỏ (spike)
+    // 12 mốc giờ; tổng = 14,8 kWh. kwh lớn hơn baseline thì cột màu đỏ (spike)
     hourlyUsage: [
       { hour: '07h', kwh: 0.5, baseline: 0.5 }, { hour: '08h', kwh: 1.0, baseline: 1.0 }, { hour: '09h', kwh: 1.4, baseline: 1.4 },
       { hour: '10h', kwh: 1.6, baseline: 1.5 }, { hour: '11h', kwh: 1.5, baseline: 1.5 }, { hour: '12h', kwh: 1.0, baseline: 1.1 },
@@ -68,4 +68,7 @@ Object.assign(SEED, {
     { id: 'fb2', room: 'Khu làm việc mở Tầng 4', category: 'lighting', categoryLabel: 'Chiếu sáng', issueType: 'lights_on_bright_day', issueLabel: 'Bật đèn khi trời sáng rực', priority: 'medium', description: 'Dãy đèn sát cửa sổ vẫn bật dù trời nắng, có thể tắt bớt.', status: 'pending', adminNote: '', createdAt: '14/10/2026 15:20' },
     { id: 'fb3', room: 'Phòng họp B', category: 'devices', categoryLabel: 'Thiết bị', issueType: 'standby_waste', issueLabel: 'Thiết bị bật không người dùng (Lãng phí)', priority: 'low', description: 'Máy chiếu và màn hình họp vẫn bật suốt đêm.', status: 'resolved', adminNote: 'Đã cài hẹn giờ tắt tự động 19:00.', createdAt: '12/10/2026 09:15' }
   ]
-});
+};
+for (var key in occupantData) {   // gộp dữ liệu SV1 vào SEED
+  SEED[key] = occupantData[key];
+}
