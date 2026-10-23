@@ -1,0 +1,15 @@
+/* CSS riêng của trang login */
+.auth-wrap { min-height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.auth-card { width: 100%; max-width: 440px; }
+.auth-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.pw-wrap { position: relative; }
+.pw-wrap .form-control { padding-right: 70px; }
+.pw-toggle { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--sky-400); cursor: pointer; font-size: 0.78rem; font-weight: 600; }
+.auth-msg { display: none; padding: 10px 14px; border-radius: var(--radius-md); font-size: 0.85rem; margin-bottom: 16px; }
+.auth-msg.error { display: block; background: rgba(248, 113, 113, 0.12); border: 1px solid rgba(248, 113, 113, 0.35); color: var(--rose-400); }
+.auth-msg.info { display: block; background: rgba(14, 165, 233, 0.12); border: 1px solid rgba(14, 165, 233, 0.35); color: var(--sky-400); }
+.demo { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border-color); }
+.demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.spinner { width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; display: none; }
+.is-checking .spinner { display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
