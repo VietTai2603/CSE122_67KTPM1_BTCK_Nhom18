@@ -78,9 +78,9 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 
 |   Mã Task   | Tên công việc                                                                           | Màn hình & Tệp                         |                          CRUD / Nghiệp vụ                          | Video OBS quy định                      |
 | :---------: | :-------------------------------------------------------------------------------------- | :------------------------------------- | :----------------------------------------------------------------: | :-------------------------------------- |
-| **TASK-07** | **Occupant Dashboard:** Giao diện thẻ chỉ số điện, biểu đồ tiêu thụ 24h & mẹo tiết kiệm | `html/occupant-dashboard.html`         | **R** (Read)<br>Trạng thái: Normal, Skeleton loading, Empty, Alert | `SV1-01-occupant-dashboard.mp4`         |
+| **TASK-07** | **Occupant Dashboard:** Giao diện thẻ chỉ số điện, biểu đồ tiêu thụ 24h & mẹo tiết kiệm | `html/occupant-dashboard.html`, `html/occupant-energy-history.html` | **R** (Read)<br>Dashboard, lịch sử tiêu thụ; Normal, Skeleton loading, Empty, Alert | `SV1-01-occupant-dashboard.mp4`         |
 | **TASK-08** | **Comfort Feedback:** Quản lý phản ánh tiện nghi nhiệt độ/ánh sáng đầy đủ C/R/U/D       | `html/occupant-comfort-feedback.html`  | **C/R/U/D**<br>Form validate, Modal popup sửa, Lưu `localStorage`  | `SV1-02-occupant-comfort-feedback.mp4`  |
-| **TASK-09** | **Energy Challenges:** Tham gia thử thách xanh, cập nhật tiến độ & tích điểm thưởng     | `html/occupant-energy-challenges.html` |      **C/R/U**<br>Tab filter, Thăng hạng Level, Huy hiệu xanh      | `SV1-03-occupant-energy-challenges.mp4` |
+| **TASK-09** | **Energy Challenges:** Tham gia thử thách xanh, cập nhật tiến độ & tích điểm thưởng     | `html/occupant-energy-challenges.html`, `html/occupant-rewards.html` | **C/R/U**<br>Tab filter, tiến độ, điểm/Level, huy hiệu & phần thưởng | `SV1-03-occupant-energy-challenges.mp4` |
 
 ---
 
@@ -119,3 +119,4 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | **TASK-24** | Diễn tập bảo vệ và chuẩn bị các kịch bản Live-coding ngẫu nhiên (5-10 phút)   |    Cả 3 thành viên    | Sẵn sàng thêm trường nhập liệu mới, đổi bảng sang thẻ card, thêm bộ lọc |
 
 ---
+
