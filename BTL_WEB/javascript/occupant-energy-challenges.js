@@ -2,7 +2,7 @@
 var activeFilter = 'all';
 
 function setupFilterTabs() {   // bấm tab nào thì lọc theo tab đó
-  var tabs = document.querySelectorAll('#challengeTabs .filter-tab');
+  var tabs = document.querySelectorAll('#challengeTabs .nut-tab-loc');
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', function () {
       for (var j = 0; j < tabs.length; j++) { tabs[j].classList.remove('active'); }
@@ -32,14 +32,14 @@ function renderChallenges() {
       statusBadge = '<span class="badge badge-resolved">Đã hoàn thành xuất sắc</span>';
       actionBtn = '<button class="btn btn-secondary" style="opacity: 0.7; cursor: default;" disabled>✓ Đã nhận ' + ch.rewardPoints + ' điểm</button>';
     }
-    html += '<div class="challenge-card"><div class="challenge-header"><div>' +
-      '<span class="challenge-badge-icon">' + ch.badge.split(' ')[0] + '</span>' +
+    html += '<div class="the-thu-thach"><div class="dau-the-thu-thach"><div>' +
+      '<span class="bieu-tuong-huy-hieu">' + ch.badge.split(' ')[0] + '</span>' +
       '<span class="badge" style="margin-left: 6px; background: rgba(255,255,255,0.05); color: var(--text-dim);">' + ch.category + '</span>' +
       '<h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 6px; color: #fff;">' + ch.title + '</h3></div>' +
-      '<div style="text-align: right;"><span class="challenge-points">+' + ch.rewardPoints + ' Điểm</span><div style="margin-top: 6px;">' + statusBadge + '</div></div></div>' +
+      '<div style="text-align: right;"><span class="diem-thuong">+' + ch.rewardPoints + ' Điểm</span><div style="margin-top: 6px;">' + statusBadge + '</div></div></div>' +
       '<p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: auto;">' + ch.description + '</p>' +
-      '<div class="progress-bar-wrap"><div class="progress-bar-fill" style="width: ' + ch.progress + '%;"></div></div>' +
-      '<div class="challenge-meta"><span>Tiến độ: <strong>' + ch.current + '/' + ch.target + ' mốc (' + ch.progress + '%)</strong></span>' +
+      '<div class="khung-tien-do"><div class="muc-tien-do" style="width: ' + ch.progress + '%;"></div></div>' +
+      '<div class="thong-tin-thu-thach"><span>Tiến độ: <strong>' + ch.current + '/' + ch.target + ' mốc (' + ch.progress + '%)</strong></span>' +
       '<span>' + ch.participantsCount + ' người tham gia • Hạn: ' + ch.deadline + '</span></div>' +
       '<div style="margin-top: 12px;">' + actionBtn + '</div></div>';
   }

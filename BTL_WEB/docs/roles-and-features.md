@@ -13,7 +13,7 @@ Người sử dụng tòa nhà (nhân viên văn phòng, cư dân hoặc ngườ
 - **Tác động hai chiều (Phản hồi tiện nghi):** Nếu phòng quá nóng hoặc quá lạnh (gây lãng phí điều hòa), họ có thể gửi phản hồi để hệ thống điều phối lại nhiệt độ tự động hoặc thủ công.
 - **Hành vi hóa tiết kiệm (Gamification):** Tham gia các thử thách tiết kiệm ngắn hạn (ví dụ: tắt đèn buổi trưa, chỉnh điều hòa lên 26°C), tích điểm đổi phần thưởng/huy hiệu.
 
-### 2. Luồng nghiệp vụ chi tiết của 3 màn hình SV1
+### 2. Luồng nghiệp vụ chi tiết của 5 màn hình SV1
 
 #### Màn hình 1: Occupant Dashboard (`html/occupant-dashboard.html`) - Thao tác Read (R)
 - **Luồng thao tác:**
@@ -49,6 +49,16 @@ Người sử dụng tòa nhà (nhân viên văn phòng, cư dân hoặc ngườ
      - Người dùng cập nhật mốc hoàn thành (ví dụ: ngày 1/5, ngày 2/5).
      - Khi đạt 100%, nhấn "Nhận thưởng" -> Hệ thống cộng điểm thưởng xanh vào tài khoản và cập nhật trạng thái `Đã hoàn thành`.
 - **Trạng thái:** Lọc theo tab (Tất cả, Đang tham gia, Đã hoàn thành).
+
+#### Màn hình 4: Energy History (`html/occupant-energy-history.html`) - Read (R)
+- Chọn khoảng thời gian 7 ngày hoặc 30 ngày.
+- Xem biểu đồ cột, tổng điện năng, mức trung bình mỗi ngày và so sánh với định mức mẫu 15 kWh/ngày.
+- Dùng dữ liệu minh họa để người dùng tập đọc xu hướng; màn hình không sửa dữ liệu cảm biến.
+
+#### Màn hình 5: Rewards (`html/occupant-rewards.html`) - Read / Update (R / U)
+- Xem số Điểm Xanh hiện có và danh sách quà cùng mức điểm cần đổi.
+- Chỉ đổi được quà khi đủ điểm; đổi thành công thì trừ điểm trong `sb_occupant_user`.
+- Lịch sử đổi quà được lưu trong `sb_occupant_reward_history` trên `localStorage`.
 
 ---
 

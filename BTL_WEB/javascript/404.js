@@ -1,6 +1,6 @@
-// Nút quay lại trang trước
-const backButton = document.getElementById('backButton');
-backButton.addEventListener('click', function () {
+const nutQuayLai = document.getElementById('nutQuayLai');
+
+nutQuayLai.addEventListener('click', function () {
   if (window.history.length > 1) {
     window.history.back();
   } else {
@@ -8,18 +8,22 @@ backButton.addEventListener('click', function () {
   }
 });
 
-// Nút tạo hiệu ứng sáng cho biểu tượng năng lượng
-const energyButton = document.getElementById('energyButton');
-const energyIcon = document.getElementById('energyIcon');
-const energyMessage = document.getElementById('energyMessage');
+const danhSachMeo = [
+  '💡 Mẹo xanh: Tắt đèn khi rời khỏi phòng nhé!',
+  '🌤️ Mở rèm để tận dụng ánh sáng tự nhiên ban ngày.',
+  '🔌 Rút sạc khi không sử dụng để tránh hao điện.'
+];
 
-energyButton.addEventListener('click', function () {
-  energyIcon.classList.toggle('glow');
+let viTriMeo = 0;
+const nutDoiMeo = document.getElementById('nutDoiMeo');
+const noiDungMeo = document.getElementById('noiDungMeo');
 
-  if (energyIcon.classList.contains('glow')) {
-    energyMessage.textContent = 'Đã nạp đầy năng lượng! Chọn một lối để tiếp tục nhé.';
-  } else {
-    energyMessage.textContent = 'Mạng lưới vẫn ổn định.';
+nutDoiMeo.addEventListener('click', function () {
+  viTriMeo = viTriMeo + 1;
+
+  if (viTriMeo >= danhSachMeo.length) {
+    viTriMeo = 0;
   }
-});
 
+  noiDungMeo.textContent = danhSachMeo[viTriMeo];
+});

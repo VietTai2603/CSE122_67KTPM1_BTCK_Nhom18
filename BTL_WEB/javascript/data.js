@@ -67,7 +67,13 @@ var occupantData = {
     { id: 'fb1', room: 'Phòng 402', category: 'temperature', categoryLabel: 'Nhiệt độ', issueType: 'too_cold', issueLabel: 'Quá lạnh (Lãng phí điện điều hòa)', priority: 'high', description: 'Buổi chiều điều hòa chạy quá lạnh, cả phòng phải mặc thêm áo khoác.', status: 'investigating', adminNote: 'Đội vận hành đang chỉnh nhiệt độ về 26°C.', createdAt: '15/10/2026 10:30' },
     { id: 'fb2', room: 'Khu làm việc mở Tầng 4', category: 'lighting', categoryLabel: 'Chiếu sáng', issueType: 'lights_on_bright_day', issueLabel: 'Bật đèn khi trời sáng rực', priority: 'medium', description: 'Dãy đèn sát cửa sổ vẫn bật dù trời nắng, có thể tắt bớt.', status: 'pending', adminNote: '', createdAt: '14/10/2026 15:20' },
     { id: 'fb3', room: 'Phòng họp B', category: 'devices', categoryLabel: 'Thiết bị', issueType: 'standby_waste', issueLabel: 'Thiết bị bật không người dùng (Lãng phí)', priority: 'low', description: 'Máy chiếu và màn hình họp vẫn bật suốt đêm.', status: 'resolved', adminNote: 'Đã cài hẹn giờ tắt tự động 19:00.', createdAt: '12/10/2026 09:15' }
-  ]
+  ],
+  occupant_rewards: [
+    { id: 'rw1', name: 'Voucher cà phê', description: 'Giảm giá một đồ uống tại quầy cà phê tầng 1.', points: 100, icon: '☕' },
+    { id: 'rw2', name: 'Bình nước thân thiện môi trường', description: 'Bình nước cá nhân dùng nhiều lần.', points: 250, icon: '🥤' },
+    { id: 'rw3', name: 'Voucher nhà ăn', description: 'Giảm 30.000đ cho hóa đơn tại nhà ăn.', points: 300, icon: '🍱' }
+  ],
+  occupant_reward_history: []
 };
 for (var key in occupantData) {   // gộp dữ liệu SV1 vào SEED
   SEED[key] = occupantData[key];

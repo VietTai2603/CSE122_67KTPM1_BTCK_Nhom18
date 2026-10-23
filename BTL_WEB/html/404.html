@@ -3,47 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 – Không tìm thấy trang | SmartBuilding</title>
-  <link rel="stylesheet" href="../css/style.css" />
+    <title>404 – Không tìm thấy trang</title>
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/404.css" />
   </head>
   <body>
-    <main class="error-page">
-      <div class="error-card">
-        <a class="brand" href="../index.html">⚡ SmartBuilding</a>
-
-        <div class="energy-icon" id="energyIcon" aria-hidden="true">⚡</div>
-        <p class="error-code">404</p>
+    <main class="trang-loi">
+      <section class="hop-tbao">
+        <div class="bieu-tuong">⚡</div>
+        <p class="ma-loi">404</p>
         <h1>Không tìm thấy trang</h1>
-        <p class="message">
-          Có vẻ bạn đã rẽ nhầm đường. Hãy chọn một lối bên dưới để tiếp tục nhé!
-        </p>
+        <p class="loi-nhan">Đường dẫn này chưa có trên bản đồ SmartBuilding.</p>
 
-        <div class="buttons">
+        <div class="cac-nut">
           <a class="btn btn-primary" href="../index.html">Về trang chủ</a>
-          <button class="btn btn-secondary" id="backButton" type="button">
+          <button class="btn btn-secondary" id="nutQuayLai" type="button">
             Quay lại
           </button>
         </div>
 
-        <p class="suggestion-title">Bạn có thể ghé qua</p>
-        <div class="shortcuts">
-          <a href="occupant-dashboard.html">Theo dõi năng lượng</a>
-          <a href="operator-energy-monitor.html">Giám sát vận hành</a>
-          <a href="manager-energy-kpis.html">Báo cáo hiệu suất</a>
+        <div class="meo-xanh">
+          <p id="noiDungMeo">💡 Mẹo xanh: Tắt đèn khi rời khỏi phòng nhé!</p>
+          <button class="nut-meo" id="nutDoiMeo" type="button">
+            Xem mẹo khác
+          </button>
         </div>
-
-        <button class="energy-button" id="energyButton" type="button">
-          Nạp năng lượng ✨
-        </button>
-        <p class="energy-message" id="energyMessage" aria-live="polite">
-          Mạng lưới vẫn ổn định.
-        </p>
-      </div>
+      </section>
     </main>
-
     <script src="../javascript/404.js"></script>
   </body>
 </html>
-
-

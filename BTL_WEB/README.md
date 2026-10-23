@@ -22,11 +22,10 @@
 Toàn bộ tài liệu chuẩn bị, quy trình kỹ nghệ phần mềm và báo cáo được lưu trữ đầy đủ trong thư mục `docs/`:
 
 1. [Đề cương dự án (Project Proposal)](docs/project-proposal.md): Ngữ cảnh, bài toán, mục tiêu và phạm vi.
-2. [Bảng kiểm kê màn hình (Screen List)](docs/screen-list.md): Danh mục 12 màn hình nghiệp vụ + 3 màn hình chung theo chuẩn C/R/U/D.
+2. [Bảng kiểm kê màn hình (Screen List)](docs/screen-list.md): Danh mục 14 màn hình nghiệp vụ + 3 màn hình chung theo chuẩn C/R/U/D.
 3. [Đặc tả vai trò & Luồng nghiệp vụ (Roles & Features)](docs/roles-and-features.md): Mô tả chi tiết hành trình người dùng của từng vai trò.
 4. [Bảng phân công nhiệm vụ (Team Assignment)](docs/team-assignment.md): Ma trận trách nhiệm RACI và trách nhiệm chéo.
-5. [Kế hoạch bảng công việc Trello (Trello Board Plan)](docs/trello-board-plan.md): Danh sách 24 task chi tiết từ Backlog đến Done.
-6. [Báo cáo khai báo sử dụng AI (AI Usage Report)](docs/ai-usage-report.md): Minh chứng câu lệnh, phần AI sinh ra, phần sinh viên kiểm chứng và 3 tính năng AI mô phỏng.
+5. [Báo cáo khai báo sử dụng AI (AI Usage Report)](docs/ai-usage-report.md): Minh chứng câu lệnh, phần AI sinh ra, phần sinh viên kiểm chứng và 3 tính năng AI mô phỏng.
 
 ---
 
@@ -34,16 +33,7 @@ Toàn bộ tài liệu chuẩn bị, quy trình kỹ nghệ phần mềm và bá
 
 Dự án được xây dựng hoàn toàn bằng **HTML5, CSS3 và Vanilla JavaScript**, kèm máy chủ tĩnh siêu nhẹ không phụ thuộc thư viện ngoài:
 
-### Cách 1: Sử dụng máy chủ Node.js có sẵn (Khuyên dùng)
-
-```bash
-# Khởi động server tĩnh tại cổng 3000
-node server.js
-```
-
-Truy cập trình duyệt tại địa chỉ: [http://localhost:3000](http://localhost:3000)
-
-### Cách 2: Sử dụng VS Code Live Server
+###  Sử dụng VS Code Live Server
 
 Mở file `index.html` trong VS Code, nhấp chuột phải và chọn **"Open with Live Server"**.
 

@@ -1,5 +1,5 @@
 /* CSS riêng của trang occupant-energy-challenges */
-.challenge-card {
+.the-thu-thach {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -9,22 +9,22 @@
   position: relative;
   transition: all var(--transition-smooth);
 }
-.challenge-card:hover {
+.the-thu-thach:hover {
   border-color: rgba(16, 185, 129, 0.4);
   transform: translateY(-3px);
 }
-.challenge-badge-icon {
+.bieu-tuong-huy-hieu {
   font-size: 1.8rem;
   margin-bottom: 12px;
   display: inline-block;
 }
-.challenge-header {
+.dau-the-thu-thach {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 12px;
 }
-.challenge-points {
+.diem-thuong {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -35,20 +35,20 @@
   padding: 4px 10px;
   border-radius: var(--radius-full);
 }
-.progress-bar-wrap {
+.khung-tien-do {
   height: 10px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-full);
   overflow: hidden;
   margin: 14px 0 8px;
 }
-.progress-bar-fill {
+.muc-tien-do {
   height: 100%;
   background: linear-gradient(90deg, #10b981, #38bdf8);
   border-radius: var(--radius-full);
   transition: width 0.5s ease;
 }
-.challenge-meta {
+.thong-tin-thu-thach {
   display: flex;
   justify-content: space-between;
   font-size: 0.78rem;

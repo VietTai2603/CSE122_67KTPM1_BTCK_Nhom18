@@ -26,7 +26,7 @@ function updateIssueOptions() {
 }
 
 function setupFilterTabs() {
-  var tabs = document.querySelectorAll('.filter-tab');
+  var tabs = document.querySelectorAll('.nut-tab-loc');
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', function () {
       for (var j = 0; j < tabs.length; j++) { tabs[j].classList.remove('active'); }
@@ -50,7 +50,7 @@ function renderFeedbackList() {
   document.getElementById('countResolved').textContent = resolved;
 
   var list = getFeedbacks(currentFilter), table = document.getElementById('feedbackTable'), emptyState = document.getElementById('emptyState');
-  if (list.length === 0) {   // trạng thái rỗng
+  if (list.length === 0) {
     document.getElementById('feedbackTableBody').innerHTML = '';
     table.style.display = 'none';
     emptyState.style.display = 'block';
@@ -68,13 +68,13 @@ function renderFeedbackList() {
     if (item.priority === 'high') { priorityLabel = '<span class="badge badge-priority-high">Cao</span>'; }
     else if (item.priority === 'medium') { priorityLabel = 'Trung bình'; }
     else { priorityLabel = 'Thấp'; }
-    if (item.adminNote) { note = '<div class="cell-note">↳ BQL: ' + item.adminNote + '</div>'; }
+    if (item.adminNote) { note = '<div class="ghi-chu-quan-ly">↳ BQL: ' + item.adminNote + '</div>'; }
 
     html += '<tr><td><strong>' + item.room + '</strong></td>' +
-      '<td><span class="cat-text">' + item.categoryLabel + '</span></td>' +
-      '<td><div class="cell-title">' + item.issueLabel + '</div><div class="cell-desc">' + item.description + '</div>' + note + '</td>' +
-      '<td>' + priorityLabel + '</td><td>' + statusBadge + '</td><td class="cell-date">' + item.createdAt + '</td>' +
-      '<td class="cell-actions"><button class="btn btn-secondary btn-sm" onclick="openEditFeedbackModal(\'' + item.id + '\')">Sửa</button> ' +
+      '<td><span class="ten-danh-muc">' + item.categoryLabel + '</span></td>' +
+      '<td><div class="tieu-de-o">' + item.issueLabel + '</div><div class="mo-ta-o">' + item.description + '</div>' + note + '</td>' +
+      '<td>' + priorityLabel + '</td><td>' + statusBadge + '</td><td class="ngay-gui">' + item.createdAt + '</td>' +
+      '<td class="nut-thao-tac"><button class="btn btn-secondary btn-sm" onclick="openEditFeedbackModal(\'' + item.id + '\')">Sửa</button> ' +
       '<button class="btn btn-danger btn-sm" onclick="promptDeleteFeedback(\'' + item.id + '\')">Xóa</button></td></tr>';
   }
   document.getElementById('feedbackTableBody').innerHTML = html;
@@ -90,7 +90,7 @@ function handleCreateFeedback(event) {
   event.preventDefault();
   var categorySelect = document.getElementById('selectCategory'), issueSelect = document.getElementById('selectIssue');
   var description = document.getElementById('inputDescription').value.trim();
-  if (description.length < 10) {   // kiểm tra hợp lệ: mô tả tối thiểu 10 ký tự
+  if (description.length < 10) {
     document.getElementById('grpDescription').classList.add('has-error');
     return;
   }

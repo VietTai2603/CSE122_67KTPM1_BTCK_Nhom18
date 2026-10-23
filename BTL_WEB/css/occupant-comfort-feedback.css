@@ -1,5 +1,5 @@
 /* CSS riêng của trang occupant-comfort-feedback */
-.filter-bar {
+.thanh-loc {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   margin-bottom: 24px;
   flex-wrap: wrap;
 }
-.filter-tabs {
+.cac-tab-loc {
   display: flex;
   gap: 8px;
   background: var(--bg-card);
@@ -15,7 +15,7 @@
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
 }
-.filter-tab {
+.nut-tab-loc {
   padding: 6px 14px;
   border-radius: var(--radius-sm);
   font-size: 0.82rem;
@@ -26,15 +26,15 @@
   border: none;
   transition: all var(--transition-fast);
 }
-.filter-tab.active {
+.nut-tab-loc.active {
   background: var(--emerald-500);
   color: #fff;
 }
 
 /* Các lớp dùng cho JS khi vẽ bảng phản hồi */
-.cell-title { font-weight: 600; margin-bottom: 2px; }
-.cell-desc { font-size: 0.78rem; color: var(--text-muted); max-width: 300px; white-space: normal; line-height: 1.3; }
-.cell-note { font-size: 0.72rem; color: var(--sky-400); margin-top: 4px; }
-.cell-date { font-size: 0.78rem; color: var(--text-dim); }
-.cat-text { font-size: 0.8rem; color: var(--emerald-400); }
-.cell-actions { text-align: right; }
+.tieu-de-o { font-weight: 600; margin-bottom: 2px; }
+.mo-ta-o { font-size: 0.78rem; color: var(--text-muted); max-width: 300px; white-space: normal; line-height: 1.3; }
+.ghi-chu-quan-ly { font-size: 0.72rem; color: var(--sky-400); margin-top: 4px; }
+.ngay-gui { font-size: 0.78rem; color: var(--text-dim); }
+.ten-danh-muc { font-size: 0.8rem; color: var(--emerald-400); }
+.nut-thao-tac { text-align: right; }

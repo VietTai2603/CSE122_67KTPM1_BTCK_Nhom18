@@ -1,143 +1,56 @@
-/* Bố cục riêng cho trang 404 */
 body {
   display: block;
 }
-.error-page {
-  width: 100%;
+
+.trang-loi {
   min-height: 100vh;
-  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at top, #14243a, #0b1120 65%);
+  padding: 20px;
+  background: #0b1120;
 }
 
-.error-card {
-  width: 100%;
-  max-width: 900px;
-  padding: 48px 40px;
+.hop-tbao {
+  max-width: 500px;
+  padding: 30px;
   text-align: center;
   background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 18px;
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
 }
 
-.brand {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: #f8fafc;
-  font-weight: 700;
+.bieu-tuong {
+  font-size: 40px;
 }
 
-.energy-icon {
-  width: 68px;
-  height: 68px;
-  margin: 0 auto 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 32px;
-  background: #059669;
-  border-radius: 18px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.energy-icon.glow {
-  transform: scale(1.12) rotate(8deg);
-  box-shadow: 0 0 28px #34d399;
-}
-
-.error-code {
-  margin: 8px 0;
+.ma-loi {
+  margin: 5px;
   color: #34d399;
-  font-size: 96px;
-  font-weight: 800;
-  line-height: 1;
+  font-size: 64px;
+  font-weight: bold;
 }
 
-.error-card h1 {
-  margin: 12px 0;
-  font-size: 1.9rem;
-}
-
-.message {
-  max-width: 650px;
-  margin: 0 auto;
+.loi-nhan,
+.meo-xanh {
   color: #94a3b8;
-  font-size: 1.05rem;
-  line-height: 1.7;
 }
 
-.buttons {
+.cac-nut {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
-  margin: 24px 0;
+  margin: 20px 0;
 }
 
-.suggestion-title {
-  margin: 24px 0 10px;
-  color: #94a3b8;
-  font-size: 0.85rem;
-}
-
-.shortcuts {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.shortcuts a {
-  padding: 9px 12px;
-  color: #cbd5e1;
-  font-size: 0.82rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
-
-.shortcuts a:hover {
-  color: #34d399;
-  border-color: #34d399;
-}
-
-.energy-button {
-  margin-top: 24px;
-  padding: 8px 12px;
+.nut-meo {
+  padding: 6px 10px;
   color: #34d399;
   background: transparent;
   border: 1px solid #10b981;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.energy-button:hover {
-  background: rgba(16, 185, 129, 0.12);
+.nut-meo:hover {
+  background: rgba(16, 185, 129, 0.15);
 }
-
-.energy-message {
-  min-height: 22px;
-  margin: 8px 0 0;
-  color: #64748b;
-  font-size: 0.8rem;
-}
-
-@media (max-width: 480px) {
-  .error-card {
-    padding: 32px 20px;
-  }
-
-  .error-code {
-    font-size: 72px;
-  }
-
-  .shortcuts {
-    flex-direction: column;
-  }
-}
-
-
