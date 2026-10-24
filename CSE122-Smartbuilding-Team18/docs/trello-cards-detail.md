@@ -84,7 +84,7 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 ## TASK-05 — Màn hình xác thực và tài khoản dùng chung
 **Người phụ trách:** Lê Quang Tiến (Đăng nhập, Cài đặt); Lê Đức Quang (403, Hồ sơ)  
-**Tệp:** `html/login.html`, `html/settings.html`, `html/403.html`, `html/profile.html`, `javascript/login.js`, `javascript/shared-pages.js`, `css/shared-pages.css`
+**Tệp:** `html/login.html`, `css/login.css`, `javascript/login.js`; `html/settings.html`, `css/settings.css`, `javascript/settings.js`; `html/403.html`, `css/403.css`, `javascript/403.js`; `html/profile.html`, `css/profile.css`, `javascript/profile.js`
 **Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
 **Nhánh Git:** `feature/common-account-screens`
 **Pull Request GitHub:** [Điền URL PR sau khi tạo]
@@ -105,7 +105,7 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 ## TASK-06 — Trang 404 và khôi phục mật khẩu
 **Người phụ trách:** Phùng Viết Tài  
-**Tệp:** `html/404.html`, `javascript/404.js`, `html/forgot-password.html`, `javascript/shared-pages.js`, `css/404.css`, `css/shared-pages.css`
+**Tệp:** `html/404.html`, `css/404.css`, `javascript/404.js`; `html/forgot-password.html`, `css/forgot-password.css`, `javascript/forgot-password.js`
 **Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
 **Nhánh Git:** `feature/common-error-recovery`
 **Pull Request GitHub:** [Điền URL PR sau khi tạo]
