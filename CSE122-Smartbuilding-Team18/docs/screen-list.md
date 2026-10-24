@@ -23,8 +23,14 @@
 | Vai trò   | Mục tiêu người dùng                                                | Nhiệm vụ người dùng                                                                      | Màn hình               | Tệp (.html)        | Trạng thái giao diện                     | Người phụ trách |
 | :-------- | :----------------------------------------------------------------- | :--------------------------------------------------------------------------------------- | :--------------------- | :----------------- | :--------------------------------------- | :-------------- |
 | **Chung** | Giới thiệu tổng quan hệ thống BTL-36, điều hướng nhanh các vai trò | - Giới thiệu sản phẩm<br>- Chọn vai trò trải nghiệm<br>- Xem liên kết tài liệu & báo cáo | **Portal / Trang chủ** | `index.html`       | Bình thường, Điều hướng tương tác        | SV1 + Nhóm      |
-| **Chung** | Xác thực người dùng và phân quyền theo vai trò                     | - Đăng nhập tài khoản<br>- Chuyển vai trò thử nghiệm                                     | **Đăng nhập**          | `html/login.html` | Bình thường, Đang kiểm tra, Lỗi xác thực | Đồng phụ trách  |
-| **Chung** | Thông báo lỗi không tìm thấy trang                                 | - Hiển thị hướng dẫn quay lại                                                            | **404 Not Found**      | `html/404.html`   | Trạng thái lỗi 404                       | Đồng phụ trách  |
+| **Chung** | Xác thực người dùng và phân quyền theo vai trò                     | - Đăng nhập tài khoản<br>- Chuyển vai trò thử nghiệm                                     | **Đăng nhập**          | `html/login.html` | Bình thường, Đang kiểm tra, Lỗi xác thực | Lê Quang Tiến |
+| **Chung** | Thông báo lỗi không tìm thấy trang                                 | - Hiển thị hướng dẫn quay lại                                                            | **404 Not Found**      | `html/404.html`   | Trạng thái lỗi 404                       | Phùng Viết Tài |
+| **Chung** | Thông báo người dùng đã đăng nhập nhưng không đủ quyền             | - Giải thích lỗi truy cập<br>- Quay về Portal hoặc đăng nhập tài khoản khác              | **403 Forbidden**      | `html/403.html` | Trạng thái lỗi 403 | Lê Đức Quang |
+| **Chung** | Cho phép người dùng xem và cập nhật thông tin tài khoản            | - Xem tên, email, vai trò<br>- Cập nhật tên hiển thị<br>- Đăng xuất                       | **Hồ sơ cá nhân**      | `html/profile.html` | Bình thường, Chưa đăng nhập, Lưu thành công | Lê Đức Quang |
+| **Chung** | Cho phép người dùng quản lý thông tin bảo mật tài khoản            | - Đổi mật khẩu<br>- Xác nhận mật khẩu mới                                                | **Cài đặt tài khoản**  | `html/settings.html` | Bình thường, Lỗi xác thực, Cập nhật thành công | Lê Quang Tiến |
+| **Chung** | Hỗ trợ người dùng lấy lại quyền truy cập tài khoản                  | - Nhập email tài khoản<br>- Tạo và xác nhận mật khẩu mới                     | **Quên mật khẩu**      | `html/forgot-password.html` | Bình thường, Email không tồn tại, Hướng dẫn khôi phục | Phùng Viết Tài |
+
+> **Lưu ý phạm vi demo:** Hồ sơ và mật khẩu được lưu cục bộ trong `localStorage` của trình duyệt. Khôi phục mật khẩu hoạt động trên trình duyệt hiện tại; dự án chưa kết nối dịch vụ email hoặc máy chủ.
 
 ---
 

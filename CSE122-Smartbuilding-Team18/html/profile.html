@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hồ sơ cá nhân – SmartBuilding</title>
+  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/responsive.css"><link rel="stylesheet" href="../css/shared-pages.css">
+</head>
+<body style="display:block">
+  <main class="shared-shell"><section class="shared-card shared-form-card" aria-labelledby="title">
+    <a class="shared-back" href="../index.html">← SmartBuilding Portal</a>
+    <div class="shared-brand"><span class="brand-icon">⚡</span><span><strong class="brand-title">SmartBuilding</strong><small class="brand-sub">BTL-36 • CSE122</small></span></div>
+    <h1 id="title">Hồ sơ cá nhân</h1><p class="shared-lead">Xem và cập nhật thông tin tài khoản đang đăng nhập.</p>
+    <div id="notice" class="shared-notice" role="status" aria-live="polite"></div>
+    <form id="profileForm">
+      <label class="shared-label" for="name">Họ và tên</label><input class="form-control" id="name" required maxlength="80">
+      <label class="shared-label" for="email">Email</label><input class="form-control" id="email" type="email" readonly>
+      <label class="shared-label" for="role">Vai trò</label><input class="form-control" id="role" readonly>
+      <button class="btn btn-primary shared-submit" type="submit">Lưu thay đổi</button>
+    </form>
+    <p class="shared-foot"><a href="settings.html">Cài đặt tài khoản</a> · <a href="login.html" id="logout">Đăng xuất</a></p>
+  </section></main><script src="../javascript/data.js"></script><script src="../javascript/manager-data.js"></script><script src="../javascript/main.js"></script><script src="../javascript/shared-pages.js"></script>
+</body>
+</html>
