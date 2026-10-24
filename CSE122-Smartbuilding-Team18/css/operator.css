@@ -1,35 +1,226 @@
-/* SV2 – Operator: phần bổ sung, dùng token của css/style.css */
-.section{margin-top:24px}.muted{color:var(--text-muted)}.ok-text{color:var(--emerald-400);font-weight:600}
-.v-sky{color:var(--sky-400)}.v-rose{color:var(--rose-400)}.v-amber{color:var(--amber-400)}.v-green{color:var(--emerald-400)}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.toolbar .form-control{width:auto}
-.split{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:start}
-@media(max-width:1024px){.split{grid-template-columns:1fr}}
-.progress{height:8px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin:10px 0}
-.progress i{display:block;height:100%;background:var(--sky-400)}
-.z-ok{border-left:4px solid var(--emerald-500)}.z-warn{border-left:4px solid var(--amber-400)}.z-bad{border-left:4px solid var(--rose-400)}
-.chart-svg{width:100%;height:auto}
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{padding:8px 16px;border-radius:99px;border:1px solid var(--border-color);background:transparent;color:var(--text-muted);cursor:pointer;font-weight:600}
-.tab.active{background:rgba(16,185,129,.15);color:var(--emerald-400);border-color:var(--emerald-500)}
-.ai-box{border:1px solid rgba(192,132,252,.4);background:rgba(192,132,252,.08);border-radius:var(--radius-lg);padding:20px}
-.ai-box h3{color:var(--purple-400);margin-bottom:8px}.ai-box .btn{margin:12px 8px 0 0}
-.ai-err{border-color:rgba(248,113,113,.4);background:rgba(248,113,113,.08)}
-.why{color:var(--text-muted);font-size:.85rem}
-.btn-ai{background:#7c3aed;color:#fff}.btn-ai:hover{background:#8b5cf6}
-.device{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--border-color)}
-.switch{position:relative;width:46px;height:26px;flex-shrink:0}
-.switch input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer;z-index:1}
-.switch span{position:absolute;inset:0;background:#334155;border-radius:99px;transition:.2s}
-.switch span::after{content:'';position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s}
-.switch input:checked+span{background:var(--emerald-500)}.switch input:checked+span::after{transform:translateX(20px)}
-.switch input:focus-visible+span{outline:2px solid var(--sky-400);outline-offset:2px}
-.timeline{list-style:none}.timeline li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--border-color)}
-.timeline time{color:var(--text-dim);width:48px;flex-shrink:0}.timeline li>div{flex:1}
-.is-loading>*{display:none}
-.is-loading::after{content:'⏳ Đang tải dữ liệu…';display:block;text-align:center;padding:60px;color:var(--text-muted)}
-.skeleton{height:16px;border-radius:8px;background:rgba(255,255,255,.08);margin-bottom:10px;animation:pulse-dot 1.2s infinite}.skeleton.short{width:60%}
-/* Biểu đồ cột đơn giản (div) và form nhiều cột */
-.bars{display:flex;align-items:flex-end;gap:4px;height:200px;border-bottom:1px solid var(--border-color)}
-.bars div{flex:1;background:var(--sky-400);border-radius:3px 3px 0 0;min-height:2px}
-.form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:end}
-.form-row .form-group{margin-bottom:0}
+.section{
+  margin-top:24px;
+}
+.muted{
+  color:var(--text-muted);
+}
+.ok-text{
+  color:var(--emerald-400);
+  font-weight:600;
+}
+.v-sky{
+  color:var(--sky-400);
+}
+.v-rose{
+  color:var(--rose-400);
+}
+.v-amber{
+  color:var(--amber-400);
+}
+.v-green{
+  color:var(--emerald-400);
+}
+.toolbar{
+  display:flex;gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.toolbar 
+.form-control{
+  width:auto;
+}
+.split{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:24px;
+  align-items:start;
+}
+@media(max-width:1024px){
+  .split{
+    grid-template-columns:1fr;
+  }
+}
+.progress{
+  height:8px;
+  background:rgba(255,255,255,.08);
+  border-radius:99px;
+  overflow:hidden;
+  margin:10px 0;
+}
+.progress i{
+  display:block;
+  height:100%;
+  background:var(--sky-400);
+}
+.z-ok{
+  border-left:4px solid var(--emerald-500);
+}
+.z-warn{
+  border-left:4px solid var(--amber-400);
+}
+.z-bad{
+  border-left:4px solid var(--rose-400);
+}
+.chart-svg{
+  width:100%;
+  height:auto;
+}
+.tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.tab{
+  padding:8px 16px;
+  border-radius:99px;
+  border:1px solid var(--border-color);
+  background:transparent;
+  color:var(--text-muted);
+  cursor:pointer;
+  font-weight:600;
+}
+.tab.active{
+  background:rgba(16,185,129,.15);
+  color:var(--emerald-400);
+  border-color:var(--emerald-500);
+}
+.ai-box{
+  border:1px solid rgba(192,132,252,.4);
+  background:rgba(192,132,252,.08);
+  border-radius:var(--radius-lg);
+  padding:20px;
+}
+.ai-box h3{
+  color:var(--purple-400);
+  margin-bottom:8px;
+}
+.ai-box 
+.btn{
+  margin:12px 8px 0 0;
+}
+.ai-err{
+  border-color:rgba(248,113,113,.4);
+  background:rgba(248,113,113,.08);
+}
+.why{
+  color:var(--text-muted);
+  font-size:.85rem;
+}
+.btn-ai{
+  background:#7c3aed;
+  color:#fff;
+}
+.btn-ai:hover{
+  background:#8b5cf6;
+}
+.device{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid var(--border-color);
+}
+.switch{
+  position:relative;
+  width:46px;
+  height:26px;
+  flex-shrink:0;
+}
+.switch input{
+  position:absolute;
+  inset:0;width:100%;
+  height:100%;
+  opacity:0;
+  margin:0;
+  cursor:pointer;
+  z-index:1;
+}
+.switch span{
+  position:absolute;
+  inset:0;
+  background:#334155;
+  border-radius:99px;
+  transition:.2s;
+}
+.switch span::after{
+  content:'';
+  position:absolute;
+  top:3px;
+  left:3px;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#fff;
+  transition:.2s;
+}
+.switch input:checked+span{
+  background:var(--emerald-500);
+}
+.switch input:checked+span::after{
+  transform:translateX(20px);
+}
+.switch input:focus-visible+span{
+  outline:2px solid var(--sky-400);
+  outline-offset:2px;
+}
+.timeline{
+  list-style:none;
+}
+.timeline li{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid var(--border-color);
+}
+.timeline time{
+  color:var(--text-dim);
+  width:48px;
+  flex-shrink:0;
+}
+.timeline li>div{
+  flex:1;
+}
+.is-loading>*{
+  display:none;
+}
+.is-loading::after{
+  content:'⏳ Đang tải dữ liệu…';
+  display:block;
+  text-align:center;
+  padding:60px;color:var(--text-muted);
+}
+.skeleton{
+  height:16px;
+  border-radius:8px;
+  background:rgba(255,255,255,.08);
+  margin-bottom:10px;
+  animation:pulse-dot 1.2s infinite;
+}
+.skeleton.short{
+  width:60%;
+}
+.bars{
+  display:flex;
+  align-items:flex-end;
+  gap:4px;
+  height:200px;
+  border-bottom:1px solid var(--border-color);
+}
+.bars div{
+  flex:1;
+  background:var(--sky-400);
+  border-radius:3px 3px 0 0;
+  min-height:2px;
+}
+.form-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:12px;
+  align-items:end;
+}
+.form-row 
+.form-group{
+  margin-bottom:0;
+}
