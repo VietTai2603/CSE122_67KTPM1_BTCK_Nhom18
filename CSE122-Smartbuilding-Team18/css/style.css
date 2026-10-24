@@ -1,12 +1,6 @@
-/* ========================================================
-   SMARTBUILDING DESIGN SYSTEM (CSE122 - BTL-36)
-   Theme: Eco-Tech Smart Energy Dashboard
-   ======================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette */
   --bg-main: #0b1120;
   --bg-sidebar: #0f172a;
   --bg-card: #1e293b;
@@ -16,7 +10,6 @@
   --border-color: rgba(255, 255, 255, 0.08);
   --border-focus: #10b981;
 
-  /* Brand Accents */
   --emerald-400: #34d399;
   --emerald-500: #10b981;
   --emerald-600: #059669;
@@ -28,12 +21,10 @@
   --rose-400: #f87171;
   --purple-400: #c084fc;
 
-  /* Typography */
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
 
-  /* UI Tokens */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -47,7 +38,6 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
-/* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -73,16 +63,12 @@ button, input, select, textarea {
   font-family: inherit;
 }
 
-/* ========================================================
-   APP LAYOUT (Sidebar + Main App Container)
-   ======================================================== */
 .app-layout {
   display: flex;
   width: 100%;
   min-height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
   width: 280px;
   background-color: var(--bg-sidebar);
@@ -131,7 +117,6 @@ button, input, select, textarea {
   letter-spacing: 0.05em;
 }
 
-/* Nav Menu */
 .sidebar-menu {
   flex: 1;
   padding: 20px 14px;
@@ -180,7 +165,6 @@ button, input, select, textarea {
   flex-shrink: 0;
 }
 
-/* User Profile card on bottom of sidebar */
 .sidebar-footer {
   padding: 16px;
   border-top: 1px solid var(--border-color);
@@ -223,9 +207,6 @@ button, input, select, textarea {
   display: inline-block;
 }
 
-/* ========================================================
-   MAIN CONTENT WRAPPER
-   ======================================================== */
 .main-wrapper {
   margin-left: 280px;
   flex: 1;
@@ -235,7 +216,6 @@ button, input, select, textarea {
   min-height: 100vh;
 }
 
-/* TOPBAR */
 .topbar {
   height: 70px;
   background-color: rgba(15, 23, 42, 0.8);
@@ -321,15 +301,11 @@ button, input, select, textarea {
   100% { transform: scale(0.95); opacity: 0.8; }
 }
 
-/* CONTENT CONTAINER */
 .content-area {
   padding: 32px;
   flex: 1;
 }
 
-/* ========================================================
-   CARDS & GRIDS
-   ======================================================== */
 .grid-cols-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -376,7 +352,6 @@ button, input, select, textarea {
   gap: 8px;
 }
 
-/* STAT KPI CARDS */
 .stat-card {
   position: relative;
   overflow: hidden;
@@ -438,9 +413,6 @@ button, input, select, textarea {
   color: var(--rose-400);
 }
 
-/* ========================================================
-   BUTTONS
-   ======================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -493,9 +465,6 @@ button, input, select, textarea {
   font-size: 0.78rem;
 }
 
-/* ========================================================
-   FORMS & INPUTS
-   ======================================================== */
 .form-group {
   margin-bottom: 18px;
 }
@@ -544,9 +513,6 @@ button, input, select, textarea {
   display: block;
 }
 
-/* ========================================================
-   STATUS BADGES
-   ======================================================== */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -580,9 +546,6 @@ button, input, select, textarea {
   color: var(--rose-400);
 }
 
-/* ========================================================
-   TABLES & LISTS
-   ======================================================== */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
@@ -616,9 +579,6 @@ button, input, select, textarea {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* ========================================================
-   MODAL POPUP
-   ======================================================== */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -683,9 +643,6 @@ button, input, select, textarea {
   gap: 12px;
 }
 
-/* ========================================================
-   TOAST NOTIFICATION
-   ======================================================== */
 .toast-container {
   position: fixed;
   bottom: 24px;
@@ -728,7 +685,6 @@ button, input, select, textarea {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* EMPTY STATE */
 .empty-state {
   text-align: center;
   padding: 48px 24px;
@@ -749,9 +705,6 @@ button, input, select, textarea {
   margin-bottom: 6px;
 }
 
-/* ========================================================
-   FILTER TABS (dùng chung: Comfort Feedback, Energy Challenges)
-   ======================================================== */
 .filter-tabs {
   display: flex;
   gap: 8px;
