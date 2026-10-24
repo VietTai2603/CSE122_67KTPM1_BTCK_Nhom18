@@ -1,0 +1,7 @@
+/* Styles riêng cho màn hình 403; giữ cùng ngôn ngữ giao diện SmartBuilding. */
+.shared-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px;background:radial-gradient(ellipse at 50% 0%,rgba(16,185,129,.12),transparent 55%),var(--bg-main)}
+.shared-card{width:min(100%,540px);padding:36px;border:1px solid var(--border-color);border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-card);text-align:center}
+.shared-icon{font-size:2.5rem;margin-bottom:12px}.shared-code{font-size:3.5rem;line-height:1;color:var(--amber-400);font-weight:800;letter-spacing:.08em;margin-bottom:12px}
+.shared-card h1{font-size:1.55rem;margin-bottom:10px}.shared-lead{color:var(--text-muted);font-size:.92rem;line-height:1.7;margin-bottom:24px}
+.shared-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+@media(max-width:480px){.shared-card{padding:25px 20px}.shared-card h1{font-size:1.35rem}}
