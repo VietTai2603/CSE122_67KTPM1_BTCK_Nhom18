@@ -1,8 +1,10 @@
 # ĐỀ CƯƠNG DỰ ÁN BÀI TẬP LỚN (PROJECT PROPOSAL)
+
 **Học phần:** PHÁT TRIỂN ỨNG DỤNG WEB CƠ BẢN – CSE122  
 **Đề tài (BTL-36):** SmartBuilding – Bảng điều khiển năng lượng & Điều phối tiết kiệm  
 **Nhóm thực hiện:** Nhóm 18  
 **Thành viên:**
+
 1. Phùng Viết Tài (SV1 - Trưởng nhóm)
 2. Lê Quang Tiến (SV2)
 3. Lê Đức Quang (SV3)
@@ -12,9 +14,11 @@
 ## 1. Ngữ cảnh & Đặt vấn đề (Context & Problem Statement)
 
 ### 1.1. Ngữ cảnh thực tế
+
 Trong xu thế phát triển đô thị thông minh (Smart City) và công trình xanh (Green Building), việc tối ưu hóa mức tiêu thụ năng lượng điện tại các tòa nhà văn phòng, trường học và khu chung cư là ưu tiên hàng đầu. Một tòa nhà thương mại tiêu chuẩn tiêu thụ hàng trăm ngàn kWh điện mỗi tháng từ hệ thống điều hòa không khí (HVAC), chiếu sáng, máy chủ và các thiết bị văn phòng.
 
 ### 1.2. Vấn đề tồn tại (Pain Points)
+
 1. **Dữ liệu thô khó tiếp cận:** Dữ liệu từ đồng hồ đo và cảm biến IoT thường ở dạng số thô hoặc bảng kỹ thuật phức tạp, người vận hành và người dùng thông thường khó đọc hiểu.
 2. **Khó phát hiện bất thường kịp thời:** Việc rò rỉ điện, điều hòa chạy qua đêm hoặc thiết bị quá tải (Spike tiêu thụ) thường chỉ được phát hiện khi nhận hóa đơn tiền điện cuối tháng.
 3. **Thiếu sự phối hợp hai chiều:** Người sử dụng phòng (occupant) cảm thấy quá nóng/quá lạnh nhưng không có kênh phản hồi chính thức; ban quản lý vận hành điều hòa cục bộ gây lãng phí năng lượng.
@@ -31,12 +35,12 @@ Trong xu thế phát triển đô thị thông minh (Smart City) và công trìn
   - Mỗi vai trò có từ 3 màn hình chuyên biệt với đầy đủ thao tác C/R/U/D mô phỏng thực tế.
   - Sử dụng JavaScript DOM thuần (Vanilla JS), mô-đun hóa logic xử lý và lưu trữ trạng thái bền vững qua `localStorage` / Mock JSON.
 - **Tích hợp 3 trải nghiệm AI mô phỏng:**
-  1. *AI-1: Energy Anomaly Detector* (Phát hiện điểm tiêu thụ điện bất thường / Spike).
-  2. *AI-2: Saving Recommendation* (Gợi ý lệnh tiết kiệm điện theo khu vực).
-  3. *AI-3: What-If Simulator* (Mô phỏng tác động giảm tải và ước tính chi phí tiết kiệm).
+  1. _AI-1: Energy Anomaly Detector_ (Phát hiện điểm tiêu thụ điện bất thường / Spike).
+  2. _AI-2: Saving Recommendation_ (Gợi ý lệnh tiết kiệm điện theo khu vực).
+  3. _AI-3: What-If Simulator_ (Mô phỏng tác động giảm tải và ước tính chi phí tiết kiệm).
 - **Tuân thủ chuẩn quy trình phát triển kỹ nghệ phần mềm:**
   - Quản lý công việc bằng Trello Board (Backlog ➔ To Do ➔ In Progress ➔ Review ➔ Done).
-  - Quản lý mã nguồn theo Git Flow (main, dev, feature/*, fix/*) với commit message chuẩn Conventional Commits.
+  - Quản lý mã nguồn theo Git Flow (main, dev, feature/_, fix/_) với commit message chuẩn Conventional Commits.
   - Thực hiện Pull Request và Code Review chéo giữa các thành viên.
   - Mỗi màn hình có 1 video OBS minh chứng trực tiếp quá trình lập trình và giải thích logic.
 
@@ -63,6 +67,8 @@ Hệ thống phục vụ 4 nhóm đối tượng chính với chu trình phối 
    - Xem chỉ số điện năng tiêu thụ cá nhân/phòng ban.
    - Gửi phản ánh mức độ tiện nghi nhiệt độ/ánh sáng để điều phối tối ưu.
    - Tham gia thử thách tiết kiệm năng lượng, nhận điểm thưởng xanh.
+   - Xem biểu đồ và lịch sử sử dụng điện.
+   - Xem điểm xanh, thử thách tiết kiệm và quà có thể đổi.
 2. **Nhân viên vận hành (Operator - Lê Quang Tiến):**
    - Giám sát lưới điện tiêu thụ thời gian thực theo từng tầng/khu vực.
    - Tiếp nhận và xử lý cảnh báo quá tải/bất thường từ AI.
@@ -84,14 +90,15 @@ Hệ thống phục vụ 4 nhóm đối tượng chính với chu trình phối 
 - **Client Logic:** JavaScript ES6+ (DOM Manipulation, Event Delegation, Modular Scripting, LocalStorage Persistence).
 - **Data & Mock Engine:** Dữ liệu khởi tạo JSON trong `javascript/data.js` đồng bộ hóa 2 chiều với Web Storage API (`localStorage`).
 - **Development Server:** Node.js HTTP Server (`server.js`) nhẹ, zero-dependency, sẵn sàng chạy cổng local 3000.
-- **Quản lý & Minh chứng:** Git, GitHub, Trello, OBS Studio, Figma.
+- **Quản lý & Minh chứng:** Git, GitHub, Trello, OBS Studio, Canva.
 
 ---
 
 ## 5. Tiêu chí Đánh giá & Định nghĩa Hoàn thành (Definition of Done)
 
 Một màn hình được nghiệm thu hoàn thành (DONE) khi đáp ứng toàn bộ các tiêu chí:
-1. Có bản thiết kế wireframe/mockup tương ứng trên Figma.
+
+1. Có bản thiết kế wireframe/mockup tương ứng trên Canva.
 2. HTML viết theo chuẩn ngữ nghĩa (Semantic HTML5: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`).
 3. CSS hoàn chỉnh, giao diện tối màu chuyên nghiệp (Green Tech Dark Theme), hỗ trợ hiển thị mượt mà trên Desktop, Tablet và Mobile.
 4. Có ít nhất một tương tác JavaScript có ý nghĩa: lọc tìm kiếm, thêm mới, sửa, xóa, modal popup, toast thông báo.

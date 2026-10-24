@@ -69,8 +69,8 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | **TASK-02** | Xây dựng bộ Design System (CSS Variables, màu sắc Dark Emerald, Typography) |     Lê Đức Quang      | `css/style.css`, `css/responsive.css`      | `feature/design-system-core` |
 | **TASK-03** | Khởi tạo mô hình dữ liệu IoT Mock Engine & tiện ích LocalStorage            |     Lê Quang Tiến     | `javascript/data.js`, `javascript/main.js` | `feature/mock-data-engine`   |
 | **TASK-04** | Hoàn thiện trang Portal điều hướng hệ thống                                 |    Phùng Viết Tài     | `index.html`                               | `feature/portal-homepage`    |
-| **TASK-05** | Xây dựng màn hình Đăng nhập mô phỏng phân quyền 4 vai trò                   |     Lê Quang Tiến     | `html/login.html`                          | `feature/auth-login`         |
-| **TASK-06** | Xây dựng trang thông báo lỗi điều hướng 404 Not Found                       |    Phùng Viết Tài     | `html/404.html`                            | `feature/404-not-found`      |
+| **TASK-05** | Xây dựng màn hình xác thực & tài khoản dùng chung: Đăng nhập, Cài đặt, 403 và Hồ sơ | Lê Quang Tiến (Đăng nhập, Cài đặt); Lê Đức Quang (403, Hồ sơ) | `html/login.html`, `html/settings.html`, `html/403.html`, `html/profile.html`, `javascript/login.js`, `javascript/shared-pages.js`, `css/shared-pages.css` | `feature/common-account-screens` |
+| **TASK-06** | Xây dựng trang 404 và Quên mật khẩu (khôi phục trong demo)                  |    Phùng Viết Tài     | `html/404.html`, `html/forgot-password.html`, `css/shared-pages.css`, `javascript/shared-pages.js` | `feature/common-error-recovery` |
 
 ---
 

@@ -127,7 +127,12 @@ function setHtml(id, html) { var el = document.getElementById(id); if (el) { el.
 
 function updateTopBarUserInfo() {   // đổ điểm xanh, tên, phòng, số điện hôm nay lên giao diện
   if (!document.getElementById('userPointsDisplay') && !document.getElementById('sidebarUserName')) { return; }
-  var s = getStore(), kwh = 0;
+var s = getStore(), kwh = 0;
+  var currentSession = null;
+  try { currentSession = JSON.parse(localStorage.getItem('sb_session') || 'null'); } catch (e) { currentSession = null; }
+  if (currentSession && currentSession.role === 'Occupant' && currentSession.name) {
+    s.currentUser.name = currentSession.name;
+  }
   for (var i = 0; i < s.energyStats.hourlyUsage.length; i++) { kwh += s.energyStats.hourlyUsage[i].kwh; }
   kwh = Math.round(kwh * 10) / 10;
   var unit = function (t) { return ' <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">' + t + '</span>'; };

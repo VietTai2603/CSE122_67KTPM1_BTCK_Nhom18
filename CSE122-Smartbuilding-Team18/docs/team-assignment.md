@@ -9,9 +9,9 @@
 
 | STT | Họ và tên | MSSV | Vai trò chính trong dự án | Các màn hình phụ trách chính |
 | :---: | :--- | :---: | :--- | :--- |
-| **1** | **Phùng Viết Tài** *(Trưởng nhóm)* | SV1 | **Người sử dụng tòa nhà (Occupant)** & Phụ trách Giao diện Portal | 1. `html/occupant-dashboard.html`<br>2. `html/occupant-energy-challenges.html`<br>3. `html/occupant-comfort-feedback.html`<br>4. `html/occupant-energy-history.html`<br>5. `html/occupant-rewards.html`<br>6. Đồng phụ trách: `index.html` |
-| **2** | **Lê Quang Tiến** | SV2 | **Nhân viên vận hành (Operator)** | 1. `html/operator-energy-monitor.html`<br>2. `html/operator-alert-center.html`<br>3. `html/operator-saving-actions.html`<br>4. Đồng phụ trách: `html/login.html` |
-| **3** | **Lê Đức Quang** | SV3 | **Quản lý cơ sở (Facility Manager)** & **Quản trị viên (Admin)** | 1. `html/manager-energy-kpis.html`<br>2. `html/manager-zone-comparison.html`<br>3. `html/manager-monthly-report.html`<br>4. `html/admin-zone-management.html`<br>5. `html/admin-sensor-management.html`<br>6. `html/admin-user-management.html`<br>7. Đồng phụ trách: `html/404.html` |
+| **1** | **Phùng Viết Tài** *(Trưởng nhóm)* | SV1 | **Người sử dụng tòa nhà (Occupant)** & Phụ trách Giao diện Portal | 1. `html/occupant-dashboard.html`<br>2. `html/occupant-energy-challenges.html`<br>3. `html/occupant-comfort-feedback.html`<br>4. `html/occupant-energy-history.html`<br>5. `html/occupant-rewards.html`<br>6. Đồng phụ trách: `index.html`, `html/404.html`, `html/forgot-password.html` |
+| **2** | **Lê Quang Tiến** | SV2 | **Nhân viên vận hành (Operator)** | 1. `html/operator-energy-monitor.html`<br>2. `html/operator-alert-center.html`<br>3. `html/operator-saving-actions.html`<br>4. Đồng phụ trách: `html/login.html`, `html/settings.html` |
+| **3** | **Lê Đức Quang** | SV3 | **Quản lý cơ sở (Facility Manager)** & **Quản trị viên (Admin)** | 1. `html/manager-energy-kpis.html`<br>2. `html/manager-zone-comparison.html`<br>3. `html/manager-monthly-report.html`<br>4. `html/admin-zone-management.html`<br>5. `html/admin-sensor-management.html`<br>6. `html/admin-user-management.html`<br>7. Đồng phụ trách: `html/403.html`, `html/profile.html` |
 
 ---
 
