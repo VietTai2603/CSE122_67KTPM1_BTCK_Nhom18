@@ -76,11 +76,11 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 
 ### PHẦN II: LÁT CẮT DỌC SV1 – PHÙNG VIẾT TÀI (NGƯỜI SỬ DỤNG TÒA NHÀ)
 
-|   Mã Task   | Tên công việc                                                                           | Màn hình & Tệp                         |                          CRUD / Nghiệp vụ                          | Video OBS quy định                      |
-| :---------: | :-------------------------------------------------------------------------------------- | :------------------------------------- | :----------------------------------------------------------------: | :-------------------------------------- |
-| **TASK-07** | **Occupant Dashboard:** Giao diện thẻ chỉ số điện, biểu đồ tiêu thụ 24h & mẹo tiết kiệm | `html/occupant-dashboard.html`, `html/occupant-energy-history.html` | **R** (Read)<br>Dashboard, lịch sử tiêu thụ; Normal, Skeleton loading, Empty, Alert | `SV1-01-occupant-dashboard.mp4`         |
-| **TASK-08** | **Comfort Feedback:** Quản lý phản ánh tiện nghi nhiệt độ/ánh sáng đầy đủ C/R/U/D       | `html/occupant-comfort-feedback.html`  | **C/R/U/D**<br>Form validate, Modal popup sửa, Lưu `localStorage`  | `SV1-02-occupant-comfort-feedback.mp4`  |
-| **TASK-09** | **Energy Challenges:** Tham gia thử thách xanh, cập nhật tiến độ & tích điểm thưởng     | `html/occupant-energy-challenges.html`, `html/occupant-rewards.html` | **C/R/U**<br>Tab filter, tiến độ, điểm/Level, huy hiệu & phần thưởng | `SV1-03-occupant-energy-challenges.mp4` |
+|   Mã Task   | Tên công việc                                                                           | Màn hình & Tệp                                                       |                                  CRUD / Nghiệp vụ                                   | Video OBS quy định                      |
+| :---------: | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------- | :---------------------------------------------------------------------------------: | :-------------------------------------- |
+| **TASK-07** | **Occupant Dashboard:** Giao diện thẻ chỉ số điện, biểu đồ tiêu thụ 24h & mẹo tiết kiệm | `html/occupant-dashboard.html`, `html/occupant-energy-history.html`  | **R** (Read)<br>Dashboard, lịch sử tiêu thụ; Normal, Skeleton loading, Empty, Alert | `SV1-01-occupant-dashboard.mp4`         |
+| **TASK-08** | **Comfort Feedback:** Quản lý phản ánh tiện nghi nhiệt độ/ánh sáng đầy đủ C/R/U/D       | `html/occupant-comfort-feedback.html`                                |          **C/R/U/D**<br>Form validate, Modal popup sửa, Lưu `localStorage`          | `SV1-02-occupant-comfort-feedback.mp4`  |
+| **TASK-09** | **Energy Challenges:** Tham gia thử thách xanh, cập nhật tiến độ & tích điểm thưởng     | `html/occupant-energy-challenges.html`, `html/occupant-rewards.html` |        **C/R/U**<br>Tab filter, tiến độ, điểm/Level, huy hiệu & phần thưởng         | `SV1-03-occupant-energy-challenges.mp4` |
 
 ---
 
@@ -91,6 +91,7 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | **TASK-10** | **Energy Monitor:** Giám sát phụ tải tức thời theo từng tầng/zone, cảnh báo quá tải       | `html/operator-energy-monitor.html` |  **R** (Read)<br>Grid bản đồ Zone, Bộ lọc trạng thái, Gauge tải điện  | `SV2-01-operator-energy-monitor.mp4` |
 | **TASK-11** | **Alert Center:** Trung tâm xử lý cảnh báo & Tích hợp AI-1 (Energy Anomaly Detector)      | `html/operator-alert-center.html`   |   **C/R/U**<br>Quét Spike bằng AI, Tạo sự cố, Đổi trạng thái xử lý    | `SV2-02-operator-alert-center.mp4`   |
 | **TASK-12** | **Saving Actions:** Điều phối lệnh tiết kiệm điện & Tích hợp AI-2 (Saving Recommendation) | `html/operator-saving-actions.html` | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm | `SV2-03-operator-saving-actions.mp4` |
+| **TASK-19** | **Zone Live Control:** Trạng thái tòa nhà hệ thống                                        | `html/operator-zone-control.html`   | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm |                                      |
 
 ---
 
@@ -111,12 +112,11 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 
 |   Mã Task   | Tên công việc                                                                 | Người phụ trách chính | Yêu cầu nghiệm thu                                                      |
 | :---------: | :---------------------------------------------------------------------------- | :-------------------: | :---------------------------------------------------------------------- |
-| **TASK-19** | Kiểm thử Responsive đa thiết bị (Desktop, iPad, iPhone/Android) & Tối ưu A11y |    Phùng Viết Tài     | Không vỡ layout, menu mobile hoạt động hoàn hảo, contrast màu chuẩn     |
-| **TASK-20** | Kiểm thử chu trình dữ liệu LocalStorage và kiểm tra sạch lỗi Console F12      |     Lê Quang Tiến     | Reset / Reload dữ liệu không sinh lỗi, validate form chặt chẽ           |
-| **TASK-21** | Tích hợp kiểm thử trải nghiệm thất bại của AI (Fallback & Retry state)        |     Lê Đức Quang      | Cả 3 tính năng AI đều có kịch bản xử lý khi gặp lỗi / thiếu dữ liệu     |
-| **TASK-22** | Quay và hoàn tất trọn bộ video OBS minh chứng của từng sinh viên              |    Cả 3 thành viên    | Mỗi màn hình có 1 video đúng quy cách (có mặt SV, live-code, commit)    |
-| **TASK-23** | Hoàn thiện file `docs/ai-usage-report.md` và `README.md` chính thức           | Phùng Viết Tài (Lead) | Đầy đủ bảng kiểm kê, liên kết commit, PR và link video                  |
-| **TASK-24** | Diễn tập bảo vệ và chuẩn bị các kịch bản Live-coding ngẫu nhiên (5-10 phút)   |    Cả 3 thành viên    | Sẵn sàng thêm trường nhập liệu mới, đổi bảng sang thẻ card, thêm bộ lọc |
+| **TASK-20** | Kiểm thử Responsive đa thiết bị (Desktop, iPad, iPhone/Android) & Tối ưu A11y |    Phùng Viết Tài     | Không vỡ layout, menu mobile hoạt động hoàn hảo, contrast màu chuẩn     |
+| **TASK-21** | Kiểm thử chu trình dữ liệu LocalStorage và kiểm tra sạch lỗi Console F12      |     Lê Quang Tiến     | Reset / Reload dữ liệu không sinh lỗi, validate form chặt chẽ           |
+| **TASK-22** | Tích hợp kiểm thử trải nghiệm thất bại của AI (Fallback & Retry state)        |     Lê Đức Quang      | Cả 3 tính năng AI đều có kịch bản xử lý khi gặp lỗi / thiếu dữ liệu     |
+| **TASK-23** | Quay và hoàn tất trọn bộ video OBS minh chứng của từng sinh viên              |    Cả 3 thành viên    | Mỗi màn hình có 1 video đúng quy cách (có mặt SV, live-code, commit)    |
+| **TASK-24** | Hoàn thiện file `docs/ai-usage-report.md` và `README.md` chính thức           | Phùng Viết Tài (Lead) | Đầy đủ bảng kiểm kê, liên kết commit, PR và link video                  |
+| **TASK-25** | Diễn tập bảo vệ và chuẩn bị các kịch bản Live-coding ngẫu nhiên (5-10 phút)   |    Cả 3 thành viên    | Sẵn sàng thêm trường nhập liệu mới, đổi bảng sang thẻ card, thêm bộ lọc |
 
 ---
-

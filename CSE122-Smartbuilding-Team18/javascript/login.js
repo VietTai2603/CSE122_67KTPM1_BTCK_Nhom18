@@ -52,7 +52,8 @@ function login(event) {
     button.classList.remove('is-checking');
     document.getElementById('submitText').textContent = 'Đăng nhập';
     var user = findUserByEmail(email);
-    if (user === null || password !== DEMO_PASSWORD) { showMessage('error', 'Email hoặc mật khẩu không đúng. Vui lòng thử lại.'); return; }   // lỗi xác thực
+    var savedPassword = user ? localStorage.getItem('sb_password_' + user.email.toLowerCase()) : null;
+    if (user === null || password !== (savedPassword || DEMO_PASSWORD)) { showMessage('error', 'Email hoặc mật khẩu không đúng. Vui lòng thử lại.'); return; }   // lỗi xác thực
     if (user.status !== 'active') { showMessage('error', 'Tài khoản này đã bị khóa. Vui lòng liên hệ Quản trị viên.'); return; }
     saveData('session', { id: user.id, name: user.name, email: user.email, role: user.role });
     showMessage('info', 'Xin chào <strong>' + escapeHtml(user.name) + '</strong> (' + ROLE_NAME[user.role] + '). Đang chuyển trang…');
@@ -70,6 +71,11 @@ function logout() {
 renderDemoButtons();
 var savedSession = localStorage.getItem('sb_session');   // đã đăng nhập từ trước?
 if (savedSession) {
-  var session = JSON.parse(savedSession);
-  showMessage('info', 'Đang đăng nhập với <strong>' + escapeHtml(session.name) + '</strong> (' + ROLE_NAME[session.role] + '). <a href="' + ROUTE[session.role] + '" style="text-decoration:underline">Tiếp tục</a> · <a href="#" onclick="return logout()" style="text-decoration:underline">Đăng xuất</a>');
+  try {
+    var session = JSON.parse(savedSession);
+    if (session && ROUTE[session.role]) {
+      showMessage('info', 'Đang đăng nhập với <strong>' + escapeHtml(session.name || '') + '</strong> (' + ROLE_NAME[session.role] + '). <a href="' + ROUTE[session.role] + '" style="text-decoration:underline">Tiếp tục</a> · <a href="#" onclick="return logout()" style="text-decoration:underline">Đăng xuất</a>');
+    } else { localStorage.removeItem('sb_session'); }
+  } catch (error) { localStorage.removeItem('sb_session'); }
 }
+

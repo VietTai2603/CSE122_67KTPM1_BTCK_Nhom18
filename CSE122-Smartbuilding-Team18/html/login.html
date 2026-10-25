@@ -7,16 +7,17 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/inline-overrides.css">
 </head>
-<body style="display: block;">
+<body class="page-style-login-001">
   <main class="auth-wrap">
     <section class="card auth-card" aria-labelledby="loginTitle">
       <div class="auth-brand">
         <div class="brand-icon" aria-hidden="true">⚡</div>
         <div><div class="brand-title">SmartBuilding</div><div class="brand-sub">BTL-36 • CSE122</div></div>
       </div>
-      <h1 id="loginTitle" style="font-size:1.4rem;font-weight:800;margin-bottom:4px">Đăng nhập hệ thống</h1>
-      <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:18px">Chọn tài khoản theo vai trò để trải nghiệm giao diện tương ứng.</p>
+      <h1 id="loginTitle" class="page-style-login-002">Đăng nhập hệ thống</h1>
+      <p class="page-style-login-003">Chọn tài khoản theo vai trò để trải nghiệm giao diện tương ứng.</p>
 
       <div id="msg" class="auth-msg" role="alert"></div>
 
@@ -34,20 +35,28 @@
           </div>
           <div class="form-error-msg"></div>
         </div>
-        <button class="btn btn-primary" id="submitBtn" style="width:100%"><span class="spinner"></span><span id="submitText">Đăng nhập</span></button>
+        <button class="btn btn-primary page-style-login-004" id="submitBtn"><span class="spinner"></span><span id="submitText">Đăng nhập</span></button>
       </form>
 
+      <p class="page-style-login-005"><a href="forgot-password.html" class="page-style-login-006">Quên mật khẩu?</a></p>
       <div class="demo">
-        <strong style="font-size:.85rem">Chuyển vai trò thử nghiệm</strong>
-        <div style="color:var(--text-dim);font-size:.75rem">Bấm để điền sẵn tài khoản. Mật khẩu chung: <code>123456</code></div>
+        <strong class="page-style-login-007">Chuyển vai trò thử nghiệm</strong>
+        <div class="page-style-login-008">Bấm để điền sẵn tài khoản. Mật khẩu chung: <code>123456</code></div>
         <div class="demo-grid" id="demo"></div>
       </div>
-      <p style="margin-top:18px;font-size:.82rem"><a href="../index.html" style="color:var(--sky-400)">&larr; Về trang chủ Portal</a></p>
+      <p class="page-style-login-009"><a href="../index.html" class="page-style-login-010">&larr; Về trang chủ Portal</a></p>
     </section>
   </main>
 <script src="../javascript/data.js"></script>
 <script src="../javascript/manager-data.js"></script>
 <script src="../javascript/main.js"></script>
 <script src="../javascript/login.js"></script>
+<footer class="app-footer">
+  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+</footer>
+<script src="../javascript/role-switcher.js"></script>
 </body>
 </html>
+
+
+

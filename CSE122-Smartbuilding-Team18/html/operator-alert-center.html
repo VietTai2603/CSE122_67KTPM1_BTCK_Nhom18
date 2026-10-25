@@ -7,14 +7,29 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/operator.css">
+  <link rel="stylesheet" href="../css/operator-alert-center.css">
+<link rel="stylesheet" href="../css/inline-overrides.css">
 </head>
 <body>
 <div class="app-layout">
   <aside class="sidebar" id="sidebar"></aside>
   <div class="main-wrapper">
-    <header class="topbar" id="topbar"></header>
+    <header class="topbar" id="topbar"><h1 class="page-title">Trung tâm cảnh báo</h1></header>
     <main class="content-area" id="main">
       <section class="grid-cols-4" id="stats"></section>
+
+      <section class="card section">
+        <div class="card-header">
+          <div><h2 class="card-title">Phản hồi tiện nghi từ cư dân</h2><p class="stat-label">Cập nhật tại đây sẽ hiển thị lại trên tài khoản SV1 và trang theo dõi SV3.</p></div>
+          <span class="badge badge-investigating" id="feedbackQueueCount">0 phản hồi</span>
+        </div>
+        <div class="table-responsive">
+          <table class="custom-table">
+            <thead><tr><th>Thời gian / Phòng</th><th>Nhóm vấn đề</th><th>Nội dung</th><th>Mức ưu tiên</th><th>Trạng thái</th><th>Cập nhật</th></tr></thead>
+            <tbody id="feedbackRows"></tbody>
+          </table>
+        </div>
+      </section>
 
       <section class="card section">
         <div class="card-header">
@@ -60,5 +75,13 @@
 <script src="../javascript/data.js"></script>
 <script src="../javascript/main.js"></script>
 <script src="../javascript/operator-alert-center.js"></script>
+<footer class="app-footer">
+  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+</footer>
+<script src="../javascript/role-switcher.js"></script>
 </body>
 </html>
+
+
+
+

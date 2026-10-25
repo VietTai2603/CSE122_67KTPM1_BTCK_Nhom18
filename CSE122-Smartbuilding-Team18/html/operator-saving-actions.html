@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/operator.css">
+<link rel="stylesheet" href="../css/inline-overrides.css">
 </head>
 <body>
 <div class="app-layout">
   <aside class="sidebar" id="sidebar"></aside>
   <div class="main-wrapper">
-    <header class="topbar" id="topbar"></header>
+    <header class="topbar" id="topbar"><h1 class="page-title">Hành động tiết kiệm</h1></header>
     <main class="content-area" id="main">
       <section class="grid-cols-3" id="stats"></section>
 
@@ -26,7 +27,7 @@
           <input class="form-control" id="aiTemp" type="number" value="33" placeholder="Nhiệt độ ngoài trời °C" aria-label="Nhiệt độ ngoài trời">
           <button class="btn btn-ai" onclick="askAI()">Gợi ý tiết kiệm</button>
         </div>
-        <p class="form-error-msg" id="aiErr" style="display:block"></p>
+        <p class="form-error-msg page-style-operator-saving-actions-001" id="aiErr"></p>
         <div id="aiOut"></div>
       </section>
 
@@ -37,7 +38,7 @@
         </section>
 
         <section class="card section">
-          <h2 class="card-title" style="margin-bottom:16px">Thêm / sửa tác vụ tiết kiệm</h2>
+          <h2 class="card-title page-style-operator-saving-actions-001">Thêm / sửa tác vụ tiết kiệm</h2>
           <form id="af" onsubmit="saveAction(event)" novalidate>
             <div class="form-group"><label class="form-label" for="title">Tên tác vụ</label><input class="form-control" id="title" placeholder="VD: Tắt đèn hành lang"><div class="form-error-msg"></div></div>
             <div class="form-group"><label class="form-label" for="zone">Khu vực áp dụng</label><select class="form-control" id="zone"></select><div class="form-error-msg"></div></div>
@@ -55,5 +56,14 @@
 <script src="../javascript/data.js"></script>
 <script src="../javascript/main.js"></script>
 <script src="../javascript/operator-saving-actions.js"></script>
+<footer class="app-footer">
+  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+</footer>
+<script src="../javascript/role-switcher.js"></script>
 </body>
 </html>
+
+
+
+
+

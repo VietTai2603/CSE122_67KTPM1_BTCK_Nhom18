@@ -11,9 +11,9 @@
 
 | STT | Họ và tên                   | MSSV | Vai trò chính                        | Trách nhiệm chéo & Màn hình phụ trách                                                                                                                                                                                                                                                                       |
 | :-: | :-------------------------- | :--: | :----------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  1  | **Phùng Viết Tài** _(Lead)_ | SV1  | **Người sử dụng tòa nhà (Occupant)** | **Design System & A11y**<br>- `html/occupant-dashboard.html`<br>- `html/occupant-comfort-feedback.html`<br>- `html/occupant-energy-challenges.html`<br>- Đồng phụ trách `index.html`                                                                                                                        |
-|  2  | **Lê Quang Tiến**           | SV2  | **Nhân viên vận hành (Operator)**    | **Data Engine & JS Logic**<br>- `html/operator-energy-monitor.html`<br>- `html/operator-alert-center.html`<br>- `html/operator-saving-actions.html`<br>- Đồng phụ trách `html/login.html`                                                                                                                   |
-|  3  | **Lê Đức Quang**            | SV3  | **Quản lý cơ sở & Quản trị viên**    | **Tích hợp & Mô phỏng AI**<br>- `html/manager-energy-kpis.html`<br>- `html/manager-zone-comparison.html`<br>- `html/manager-monthly-report.html`<br>- `html/admin-zone-management.html`<br>- `html/admin-sensor-management.html`<br>- `html/admin-user-management.html`<br>- Đồng phụ trách `html/404.html` |
+|  1  | **Phùng Viết Tài** _(Lead)_ | SV1  | **Người sử dụng tòa nhà (Occupant)** | **Design System & A11y**<br>- `html/occupant-dashboard.html`<br>- `html/occupant-comfort-feedback.html`<br>- `html/occupant-energy-challenges.html`<br>- Đồng phụ trách: `index.html`, `html/404.html`, `html/forgot-password.html` |
+|  2  | **Lê Quang Tiến**           | SV2  | **Nhân viên vận hành (Operator)**    | **Data Engine & JS Logic**<br>- `html/operator-energy-monitor.html`<br>- `html/operator-alert-center.html`<br>- `html/operator-saving-actions.html`<br>- Đồng phụ trách: `html/login.html`, `html/settings.html` |
+|  3  | **Lê Đức Quang**            | SV3  | **Quản lý cơ sở & Quản trị viên**    | **Tích hợp & Mô phỏng AI**<br>- `html/manager-energy-kpis.html`<br>- `html/manager-zone-comparison.html`<br>- `html/manager-monthly-report.html`<br>- `html/admin-zone-management.html`<br>- `html/admin-sensor-management.html`<br>- `html/admin-user-management.html`<br>- Đồng phụ trách: `html/403.html`, `html/profile.html` |
 
 ---
 
@@ -22,10 +22,11 @@
 Toàn bộ tài liệu chuẩn bị, quy trình kỹ nghệ phần mềm và báo cáo được lưu trữ đầy đủ trong thư mục `docs/`:
 
 1. [Đề cương dự án (Project Proposal)](docs/project-proposal.md): Ngữ cảnh, bài toán, mục tiêu và phạm vi.
-2. [Bảng kiểm kê màn hình (Screen List)](docs/screen-list.md): Danh mục 14 màn hình nghiệp vụ + 3 màn hình chung theo chuẩn C/R/U/D.
+2. [Bảng kiểm kê màn hình (Screen List)](docs/screen-inventory.md): Danh mục 15 màn hình nghiệp vụ + 7 màn hình dùng chung (22 giao diện tổng cộng) theo chuẩn truy vết.
 3. [Đặc tả vai trò & Luồng nghiệp vụ (Roles & Features)](docs/roles-and-features.md): Mô tả chi tiết hành trình người dùng của từng vai trò.
 4. [Bảng phân công nhiệm vụ (Team Assignment)](docs/team-assignment.md): Ma trận trách nhiệm RACI và trách nhiệm chéo.
 5. [Báo cáo khai báo sử dụng AI (AI Usage Report)](docs/ai-usage-report.md): Minh chứng câu lệnh, phần AI sinh ra, phần sinh viên kiểm chứng và 3 tính năng AI mô phỏng.
+6. [Chi tiết 24 task Trello](docs/trello-cards-detail.md): Mô tả, checklist và tiêu chí hoàn thành để cập nhật từng card.
 
 ---
 
@@ -65,3 +66,4 @@ cse122-smartbuilding-team18/
 ```
 
 Mỗi trang trong `html/` nối với `../css/...` bằng thẻ `<link>` và với `../javascript/...` bằng thẻ `<script>`.
+
