@@ -71,7 +71,7 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
 - Phát hiện sớm các sự cố rò rỉ, quá tải, tiêu thụ bất thường (Spike) bằng thuật toán AI-1.
 - Ra quyết định điều phối và phát hành các lệnh tiết kiệm điện (Saving Actions) gửi đến các bộ phận.
 
-### 2. Luồng nghiệp vụ chi tiết của 3 màn hình SV2
+### 2. Luồng nghiệp vụ chi tiết của 4 màn hình SV2
 
 #### Màn hình 1: Energy Monitor (`html/operator-energy-monitor.html`) - Thao tác Read (R)
 - **Luồng thao tác:**
@@ -98,6 +98,13 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
   3. **Update (Sửa):** Điều chỉnh thông số hành động hoặc cập nhật trạng thái tiến độ (`Scheduled` ➔ `In-progress` ➔ `Completed`).
   4. **Delete / Archive (Xóa / Lưu trữ):** Hủy bỏ hành động nếu tình hình thực tế thay đổi; có modal xác nhận trước khi xóa.
 - **Lưu trữ dữ liệu:** Đồng bộ hóa vào `localStorage` (key: `sb_operator_actions`).
+
+#### Màn hình 4: Zone Live Control (`html/operator-zone-control.html`) - C / R / U
+- **Luồng thao tác:**
+  1. **Read (Đọc):** Theo dõi trạng thái tòa nhà hệ thống.
+  2. **Create (Điều khiển chiếu sáng):** Tạo chiếu sáng, chiếu sáng tầng 2.
+  3. **Update (Đồng bộ thiết bị):** Chuyển trạng thái từ `Đồng bộ tất cả thiết bị` ➔ `Đang đồng bộ`.
+
 
 ---
 
