@@ -5,11 +5,7 @@ Nhóm thực hiện: Nhóm 18 (Phùng Viết Tài, Lê Quang Tiến, Lê Đức 
 
 1. ĐƯỜNG DẪN BẢN THIẾT KẾ FIGMA / CANVA CHÍNH THỨC:
 --------------------------------------------------------------------------------
-Link: https://www.figma.com/file/CSE122-BTL36-Team18-SmartBuilding/Design-System-and-Mockups?type=design&node-id=0-1&mode=design
-(Quyền truy cập: Anyone with the link can view - Mở công khai không cần đăng nhập)
-
-Hoặc Link Canva dự phòng:
-https://www.canva.com/design/DAG-CSE122-BTL36-Team18-SmartBuilding/view?utm_content=DAG-CSE122&utm_campaign=designshare&utm_medium=link
+Link:
 
 2. CẤU TRÚC CÁC FRAME / TRANG TRONG FILE THIẾT KẾ:
 --------------------------------------------------------------------------------
