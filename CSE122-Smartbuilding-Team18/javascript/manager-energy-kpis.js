@@ -54,7 +54,27 @@ function sumLoad(zones) {
   for (var i = 0; i < zones.length; i++) { total += zones[i].loadKw; }
   return total;
 }
+function renderOccupantFeedbacks() {
+  var feedbacks = getFeedbacks('all'), pending = 0, investigating = 0, resolved = 0, html = '';
+  for (var i = 0; i < feedbacks.length; i++) {
+    var f = feedbacks[i], status = '', priority = '';
+    if (f.status === 'pending') { pending++; status = '<span class="badge badge-pending">Chờ tiếp nhận</span>'; }
+    else if (f.status === 'investigating') { investigating++; status = '<span class="badge badge-investigating">Đang xử lý</span>'; }
+    else { resolved++; status = '<span class="badge badge-resolved">Đã giải quyết</span>'; }
+    if (f.priority === 'high') { priority = '<span class="badge badge-priority-high">Cao</span>'; }
+    else if (f.priority === 'medium') { priority = 'Trung bình'; }
+    else { priority = 'Thấp'; }
+    html += '<tr><td><strong>' + escapeHtml(f.room || 'Chưa rõ phòng') + '</strong><div class="stat-label">' + escapeHtml(f.createdAt || '') + '</div></td>' +
+      '<td>' + escapeHtml(f.categoryLabel || 'Khác') + '<div class="stat-label">' + escapeHtml(f.issueLabel || '') + '</div></td>' +
+      '<td class="feedback-description">' + escapeHtml(f.description || '') + (f.adminNote ? '<div class="feedback-note"><strong>Ghi chú:</strong> ' + escapeHtml(f.adminNote) + '</div>' : '') + '</td>' +
+      '<td>' + priority + '</td><td>' + status + '</td></tr>';
+  }
+  document.getElementById('feedbackStats').innerHTML = statCard('Chờ tiếp nhận', pending, 'v-amber') + statCard('Đang xử lý', investigating, 'v-sky') + statCard('Đã giải quyết', resolved, 'v-green');
+  if (!html) { html = '<tr><td colspan="5"><div class="empty-state"><div class="empty-state-title">Chưa có phản hồi</div><p>Phản ánh gửi từ SV1 sẽ xuất hiện tại đây.</p></div></td></tr>'; }
+  document.getElementById('managerFeedbackRows').innerHTML = html;
+}
 startPage(function () {
   var zones = getActiveZones();
-  renderStats(zones); renderTrend(); renderTable(zones);
+  renderStats(zones); renderTrend(); renderTable(zones); renderOccupantFeedbacks();
 });
+window.addEventListener('storage', function (event) { if (event.key === 'sb_occupant_feedbacks') { renderOccupantFeedbacks(); } });

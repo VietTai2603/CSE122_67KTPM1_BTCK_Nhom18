@@ -43,6 +43,33 @@ function renderTable() {
   if (html === '') { html = '<tr><td colspan="5"><div class="empty-state"><div class="empty-state-title">Chưa có dữ liệu</div><p>Không có cảnh báo trong nhóm này.</p></div></td></tr>'; }
   document.getElementById('rows').innerHTML = html;
 }
+function renderFeedbackQueue() {
+  var feedbacks = getFeedbacks('all'), html = '';
+  document.getElementById('feedbackQueueCount').textContent = feedbacks.length + ' phản hồi';
+  for (var i = 0; i < feedbacks.length; i++) {
+    var f = feedbacks[i], status = '', priority = '', actions = '';
+    if (f.status === 'pending') { status = '<span class="badge badge-pending">Chờ tiếp nhận</span>'; actions = '<button class="btn btn-primary btn-sm" onclick="updateOccupantFeedback(\'' + f.id + '\', \'investigating\')">Tiếp nhận</button>'; }
+    else if (f.status === 'investigating') { status = '<span class="badge badge-investigating">Đang xử lý</span>'; actions = '<button class="btn btn-primary btn-sm" onclick="updateOccupantFeedback(\'' + f.id + '\', \'resolved\')">Hoàn tất</button>'; }
+    else { status = '<span class="badge badge-resolved">Đã giải quyết</span>'; }
+    if (f.priority === 'high') { priority = '<span class="badge badge-priority-high">Cao</span>'; }
+    else if (f.priority === 'medium') { priority = '<span class="badge badge-pending">Trung bình</span>'; }
+    else { priority = '<span class="badge badge-resolved">Thấp</span>'; }
+    html += '<tr><td><strong>' + escapeHtml(f.room || 'Chưa rõ phòng') + '</strong><div class="stat-label">' + escapeHtml(f.createdAt || '') + '</div></td>' +
+      '<td>' + escapeHtml(f.categoryLabel || 'Khác') + '<div class="stat-label">' + escapeHtml(f.issueLabel || '') + '</div></td>' +
+      '<td class="feedback-description">' + escapeHtml(f.description || '') + (f.adminNote ? '<div class="feedback-note"><strong>Ghi chú:</strong> ' + escapeHtml(f.adminNote) + '</div>' : '') + '</td>' +
+      '<td>' + priority + '</td><td>' + status + '</td><td>' + actions + '</td></tr>';
+  }
+  if (!html) { html = '<tr><td colspan="6"><div class="empty-state"><div class="empty-state-title">Chưa có phản hồi</div><p>Phản ánh gửi từ SV1 sẽ xuất hiện tại đây.</p></div></td></tr>'; }
+  document.getElementById('feedbackRows').innerHTML = html;
+}
+function updateOccupantFeedback(id, status) {
+  var changes = { status: status };
+  if (status === 'investigating') { changes.adminNote = 'Đội vận hành đang tiếp nhận và kiểm tra phản ánh.'; }
+  if (status === 'resolved') { changes.adminNote = 'Đội vận hành đã xử lý phản ánh.'; }
+  updateFeedback(id, changes);
+  renderFeedbackQueue();
+  showToast('Đã cập nhật phản hồi cư dân');
+}
 function changeStatus(id, newStatus) {   // Update: đổi trạng thái cảnh báo
   var alerts = loadData('alerts');
   for (var i = 0; i < alerts.length; i++) { if (alerts[i].id === id) { alerts[i].status = newStatus; } }
@@ -103,5 +130,6 @@ function aiManual() { document.getElementById('aiOut').innerHTML = ''; showToast
 
 startPage(function () {
   fillSelect('zone', ['Office Tower A', 'Lobby Area', 'Data Center', 'Chiller Plant']);
-  renderStats(); renderTable();
+  renderStats(); renderTable(); renderFeedbackQueue();
 });
+window.addEventListener('storage', function (event) { if (event.key === 'sb_occupant_feedbacks') { renderFeedbackQueue(); } });

@@ -1,0 +1,4 @@
+/* Hàng đợi phản hồi tiện nghi từ SV1 trong trang vận hành SV2. */
+.feedback-description{min-width:220px;max-width:420px;white-space:normal;line-height:1.55}
+.feedback-note{margin-top:8px;padding:8px 10px;border-left:3px solid var(--sky-400);border-radius:4px;background:rgba(56,189,248,.08);color:var(--text-muted);font-size:.9rem}
+#feedbackRows td{vertical-align:top}

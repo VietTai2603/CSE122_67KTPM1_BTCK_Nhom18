@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/operator.css">
   <link rel="stylesheet" href="../css/manager-energy-kpis.css">
+<link rel="stylesheet" href="../css/inline-overrides.css">
 </head>
 <body>
 <div class="app-layout">
   <aside class="sidebar" id="sidebar"></aside>
   <div class="main-wrapper">
-    <header class="topbar" id="topbar"></header>
+    <header class="topbar" id="topbar"><h1 class="page-title">KPI năng lượng</h1></header>
     <main class="content-area" id="main">
       <section class="grid-cols-4" id="stats"></section>
 
@@ -22,7 +23,7 @@
           <h2 class="card-title">Mức sử dụng ngân sách điện tháng</h2>
           <span class="badge badge-investigating" id="budgetText"></span>
         </div>
-        <div class="progress"><i id="budgetBar" style="width:0; background:var(--emerald-500)"></i></div>
+        <div class="progress"><i id="budgetBar" class="page-style-manager-energy-kpis-001"></i></div>
       </section>
 
       <section class="card section">
@@ -34,11 +35,22 @@
       </section>
 
       <section class="card section">
-        <h2 class="card-title" style="margin-bottom:16px">Chỉ tiêu KPI theo khu vực</h2>
+        <h2 class="card-title page-style-manager-energy-kpis-001">Chỉ tiêu KPI theo khu vực</h2>
         <div class="table-responsive">
           <table class="custom-table">
             <thead><tr><th>Khu vực</th><th>Mục tiêu tháng (kWh)</th><th>Thực tế tháng này (kWh)</th><th>Đánh giá</th></tr></thead>
             <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card section manager-feedback-section">
+        <div class="card-header"><div><h2 class="card-title">Theo dõi phản hồi tiện nghi từ cư dân</h2><p class="stat-label">Dữ liệu liên thông từ SV1; trạng thái được đội vận hành cập nhật ở SV2.</p></div></div>
+        <div class="grid-cols-3 manager-feedback-stats" id="feedbackStats"></div>
+        <div class="table-responsive section">
+          <table class="custom-table">
+            <thead><tr><th>Phòng / Thời gian</th><th>Vấn đề</th><th>Nội dung</th><th>Ưu tiên</th><th>Trạng thái xử lý</th></tr></thead>
+            <tbody id="managerFeedbackRows"></tbody>
           </table>
         </div>
       </section>
@@ -49,5 +61,14 @@
 <script src="../javascript/manager-data.js"></script>
 <script src="../javascript/main.js"></script>
 <script src="../javascript/manager-energy-kpis.js"></script>
+<footer class="app-footer">
+  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+</footer>
+<script src="../javascript/role-switcher.js"></script>
 </body>
 </html>
+
+
+
+
+
