@@ -15,7 +15,7 @@
 
 ### 1.1. Ngữ cảnh thực tế
 
-Trong xu thế phát triển đô thị thông minh (Smart City) và công trình xanh (Green Building), việc tối ưu hóa mức tiêu thụ năng lượng điện tại các tòa nhà văn phòng, trường học và khu chung cư là ưu tiên hàng đầu. Một tòa nhà thương mại tiêu chuẩn tiêu thụ hàng trăm ngàn kWh điện mỗi tháng từ hệ thống điều hòa không khí (HVAC), chiếu sáng, máy chủ và các thiết bị văn phòng.
+Trong xu thế phát triển đô thị thông minh (Smart City) và công trình xanh (Green Building), việc tối ưu hóa mức tiêu thụ năng lượng điện tại các tòa nhà văn phòng, trường học và khu chung cư là ưu tiên hàng đầu. Một tòa nhà thương mại tiêu chuẩn tiêu thụ hàng trăm ngàn kWh điện mỗi tháng từ hệ thống điều hòa không khí (HVAC), chiếu sáng, máy chủ và các thiết bị văn phòng.sss
 
 ### 1.2. Vấn đề tồn tại (Pain Points)
 
