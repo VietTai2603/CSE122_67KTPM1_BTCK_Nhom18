@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zone Live Control - SmartBuilding (Operator)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+</head>
+<body data-page="control">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="card"><div class="card-header"><div><h2 class="card-title">Trạng thái tòa nhà toàn hệ thống</h2><p class="muted">Thiết bị vận hành trong ngưỡng cho phép.</p></div><div class="toolbar"><span id="sys"></span><button class="btn btn-primary" id="sync">Đồng bộ tất cả thiết bị</button></div></div></section>
+      <div class="grid-cols-3 section">
+        <section class="card"><h2 class="card-title">Điều khiển chiếu sáng</h2><div id="lights"></div></section>
+        <section class="card"><h2 class="card-title">Nhiệt độ &amp; HVAC</h2><div id="hvac"></div></section>
+        <section class="card"><h2 class="card-title">Lịch sử can thiệp trong ngày</h2><ul class="timeline" id="log"></ul></section>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../javascript/data.js"></script>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/operator-zone-control.js"></script>
+</body>
+</html>

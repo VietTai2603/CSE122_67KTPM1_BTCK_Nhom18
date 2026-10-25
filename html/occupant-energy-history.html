@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử năng lượng - SmartBuilding</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/occupant-energy-history.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header"><div class="brand-icon">⚡</div><div><div class="brand-title">SmartBuilding</div><div class="brand-sub">CSE122 • BTL-36</div></div></div>
+    <nav class="sidebar-menu">
+      <div class="menu-label">VAI TRÒ: NGƯỜI DÙNG TÒA NHÀ</div>
+      <a href="occupant-dashboard.html" class="nav-item"><span>🏠</span><span>Tổng quan cá nhân</span></a>
+      <a href="occupant-comfort-feedback.html" class="nav-item"><span>💬</span><span>Phản hồi tiện nghi</span></a>
+      <a href="occupant-energy-challenges.html" class="nav-item"><span>✅</span><span>Thử thách năng lượng</span></a>
+      <a href="occupant-energy-history.html" class="nav-item active"><span>📈</span><span>Lịch sử năng lượng</span></a>
+      <a href="occupant-rewards.html" class="nav-item"><span>🎁</span><span>Điểm thưởng & đổi quà</span></a>
+      <div class="menu-label" style="margin-top:16px">HỆ THỐNG</div>
+      <a href="../index.html" class="nav-item"><span>↩</span><span>Trang chủ Portal</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="user-snippet"><div class="user-info"><div class="user-name" id="sidebarUserName">Nguyễn Văn An</div><div class="user-role-badge" id="sidebarUserRoom">Phòng 402 - Khu Đông</div></div></div></div>
+  </aside>
+  <div class="main-wrapper">
+    <header class="topbar"><div class="topbar-left"><button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Mở menu">☰</button><div><h1 class="page-title">Lịch sử sử dụng năng lượng</h1><div class="page-subtitle">Theo dõi và so sánh điện năng của phòng bạn</div></div></div><div class="topbar-right"><div class="points-pill" id="userPointsDisplay">420 Điểm Xanh</div></div></header>
+    <main class="content-area">
+      <section class="grid-cols-3 hang-tom-tat-lich-su">
+        <article class="card stat-card"><div class="stat-label">Tổng điện năng</div><div class="stat-value" id="totalUsage">—</div><p class="chu-phu">Trong khoảng thời gian đã chọn</p></article>
+        <article class="card stat-card"><div class="stat-label">Trung bình mỗi ngày</div><div class="stat-value" id="averageUsage">—</div><p class="chu-phu">Đơn vị: kWh/ngày</p></article>
+        <article class="card stat-card"><div class="stat-label">So với định mức</div><div class="stat-value" id="usageCompare">—</div><p class="chu-phu">Định mức mẫu: 15 kWh/ngày</p></article>
+      </section>
+      <section class="card the-lich-su">
+        <div class="card-header"><div><h2 class="card-title">Điện năng theo ngày</h2><p class="chu-phu">Dữ liệu minh họa để bạn theo dõi xu hướng.</p></div><label class="nhan-khoang-thoi-gian" for="periodSelect">Xem theo <select class="form-control" id="periodSelect"><option value="week">7 ngày</option><option value="month">30 ngày</option></select></label></div>
+        <div class="bieu-do-lich-su" id="historyChart" aria-label="Biểu đồ điện năng"></div>
+        <p class="ghi-chu-bieu-do"><span class="cham-chu-giai"></span> Điện năng tiêu thụ (kWh)</p>
+      </section>
+      <section class="card"><h2 class="card-title">Cách đọc số liệu</h2><p class="chu-phu">Cột càng cao nghĩa là ngày đó dùng càng nhiều điện. Khi mức sử dụng cao hơn định mức 15 kWh/ngày, hãy xem lại thiết bị đang bật hoặc thử áp dụng gợi ý tiết kiệm trên trang Tổng quan.</p></section>
+    </main>
+  </div>
+  <script src="../javascript/data.js"></script><script src="../javascript/main.js"></script><script src="../javascript/occupant-energy-history.js"></script>
+</body>
+</html>
