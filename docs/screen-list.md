@@ -1,4 +1,4 @@
-# BẢNG KIỂM KÊ MÀN HÌNH – ĐỀ TÀI BTL-36 - TLU
+# BẢNG KIỂM KÊ MÀN HÌNH – ĐỀ TÀI BTL-36
 
 **Học phần:** PHÁT TRIỂN ỨNG DỤNG WEB CƠ BẢN – CSE122  
 **Tên đề tài:** SmartBuilding – Bảng điều khiển năng lượng và điều phối tiết kiệm  
