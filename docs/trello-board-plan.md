@@ -91,7 +91,7 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | **TASK-10** | **Energy Monitor:** Giám sát phụ tải tức thời theo từng tầng/zone, cảnh báo quá tải       | `html/operator-energy-monitor.html` |  **R** (Read)<br>Grid bản đồ Zone, Bộ lọc trạng thái, Gauge tải điện  | `SV2-01-operator-energy-monitor.mp4` |
 | **TASK-11** | **Alert Center:** Trung tâm xử lý cảnh báo & Tích hợp AI-1 (Energy Anomaly Detector)      | `html/operator-alert-center.html`   |   **C/R/U**<br>Quét Spike bằng AI, Tạo sự cố, Đổi trạng thái xử lý    | `SV2-02-operator-alert-center.mp4`   |
 | **TASK-12** | **Saving Actions:** Điều phối lệnh tiết kiệm điện & Tích hợp AI-2 (Saving Recommendation) | `html/operator-saving-actions.html` | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm | `SV2-03-operator-saving-actions.mp4` |
-
+| **TASK-19** | **Zone Live Control:** Trạng thái tòa nhà hệ thống                                         | `html/operator-zone-control.html` | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm ||
 ---
 
 ### PHẦN IV: LÁT CẮT DỌC SV3 – LÊ ĐỨC QUANG (QUẢN LÝ CƠ SỞ & QUẢN TRỊ VIÊN)
@@ -104,19 +104,18 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | **TASK-16** | **Zone Management:** Quản lý danh mục các tầng và khu vực tòa nhà                          | `html/admin-zone-management.html`   |  **C/R/U/D**<br>Thêm/Sửa/Khóa Zone, validate diện tích & công suất  | `SV3-04-admin-zone-management.mp4`   |
 | **TASK-17** | **Sensor Management:** Quản lý danh mục cảm biến IoT giả lập                               | `html/admin-sensor-management.html` |    **C/R/U/D**<br>Thêm/Sửa cảm biến, toggle Online/Offline mock     | `SV3-05-admin-sensor-management.mp4` |
 | **TASK-18** | **User Management:** Quản lý danh sách tài khoản & phân quyền 4 vai trò                    | `html/admin-user-management.html`   |  **C/R/U/D**<br>Thêm/Sửa/Khóa user, phân quyền truy cập theo Zone   | `SV3-06-admin-user-management.mp4`   |
-
 ---
 
 ### PHẦN V: KIỂM THỬ TỔNG THỂ, MINH CHỨNG & BẢO VỆ (CẢ NHÓM)
 
 |   Mã Task   | Tên công việc                                                                 | Người phụ trách chính | Yêu cầu nghiệm thu                                                      |
 | :---------: | :---------------------------------------------------------------------------- | :-------------------: | :---------------------------------------------------------------------- |
-| **TASK-19** | Kiểm thử Responsive đa thiết bị (Desktop, iPad, iPhone/Android) & Tối ưu A11y |    Phùng Viết Tài     | Không vỡ layout, menu mobile hoạt động hoàn hảo, contrast màu chuẩn     |
-| **TASK-20** | Kiểm thử chu trình dữ liệu LocalStorage và kiểm tra sạch lỗi Console F12      |     Lê Quang Tiến     | Reset / Reload dữ liệu không sinh lỗi, validate form chặt chẽ           |
-| **TASK-21** | Tích hợp kiểm thử trải nghiệm thất bại của AI (Fallback & Retry state)        |     Lê Đức Quang      | Cả 3 tính năng AI đều có kịch bản xử lý khi gặp lỗi / thiếu dữ liệu     |
-| **TASK-22** | Quay và hoàn tất trọn bộ video OBS minh chứng của từng sinh viên              |    Cả 3 thành viên    | Mỗi màn hình có 1 video đúng quy cách (có mặt SV, live-code, commit)    |
-| **TASK-23** | Hoàn thiện file `docs/ai-usage-report.md` và `README.md` chính thức           | Phùng Viết Tài (Lead) | Đầy đủ bảng kiểm kê, liên kết commit, PR và link video                  |
-| **TASK-24** | Diễn tập bảo vệ và chuẩn bị các kịch bản Live-coding ngẫu nhiên (5-10 phút)   |    Cả 3 thành viên    | Sẵn sàng thêm trường nhập liệu mới, đổi bảng sang thẻ card, thêm bộ lọc |
+| **TASK-20** | Kiểm thử Responsive đa thiết bị (Desktop, iPad, iPhone/Android) & Tối ưu A11y |    Phùng Viết Tài     | Không vỡ layout, menu mobile hoạt động hoàn hảo, contrast màu chuẩn     |
+| **TASK-21** | Kiểm thử chu trình dữ liệu LocalStorage và kiểm tra sạch lỗi Console F12      |     Lê Quang Tiến     | Reset / Reload dữ liệu không sinh lỗi, validate form chặt chẽ           |
+| **TASK-22** | Tích hợp kiểm thử trải nghiệm thất bại của AI (Fallback & Retry state)        |     Lê Đức Quang      | Cả 3 tính năng AI đều có kịch bản xử lý khi gặp lỗi / thiếu dữ liệu     |
+| **TASK-23** | Quay và hoàn tất trọn bộ video OBS minh chứng của từng sinh viên              |    Cả 3 thành viên    | Mỗi màn hình có 1 video đúng quy cách (có mặt SV, live-code, commit)    |
+| **TASK-24** | Hoàn thiện file `docs/ai-usage-report.md` và `README.md` chính thức           | Phùng Viết Tài (Lead) | Đầy đủ bảng kiểm kê, liên kết commit, PR và link video                  |
+| **TASK-25** | Diễn tập bảo vệ và chuẩn bị các kịch bản Live-coding ngẫu nhiên (5-10 phút)   |    Cả 3 thành viên    | Sẵn sàng thêm trường nhập liệu mới, đổi bảng sang thẻ card, thêm bộ lọc |
 
 ---
 
