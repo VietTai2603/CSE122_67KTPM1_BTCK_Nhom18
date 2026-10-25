@@ -8,16 +8,17 @@
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/operator.css">
   <link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="../css/inline-overrides.css">
 </head>
 <body>
 <div class="app-layout">
   <aside class="sidebar" id="sidebar"></aside>
   <div class="main-wrapper">
-    <header class="topbar" id="topbar"></header>
+    <header class="topbar" id="topbar"><h1 class="page-title">Quản lý cảm biến</h1></header>
     <main class="content-area" id="main">
       <section class="grid-cols-4" id="stats"></section>
       <section class="card section">
-        <h2 class="card-title" style="margin-bottom:16px">Đăng ký / cấu hình cảm biến</h2>
+        <h2 class="card-title page-style-admin-sensor-management-001">Đăng ký / cấu hình cảm biến</h2>
         <form id="af" class="form-row" onsubmit="saveSensor(event)" novalidate>
           <div class="form-group"><label class="form-label" for="code">Mã sensor</label><input class="form-control" id="code" placeholder="SEN-009"><div class="form-error-msg"></div></div>
           <div class="form-group"><label class="form-label" for="type">Loại cảm biến</label><select class="form-control" id="type"><option>Nhiệt độ / độ ẩm</option><option>Điện năng</option><option>Ánh sáng</option></select><div class="form-error-msg"></div></div>
@@ -29,7 +30,7 @@
       <section class="card section">
         <div class="card-header">
           <h2 class="card-title">Danh sách trạng thái cảm biến theo zone</h2>
-          <input class="form-control" id="q" placeholder="Tìm kiếm…" aria-label="Tìm kiếm" style="max-width:260px">
+          <input class="form-control page-style-admin-sensor-management-001" id="q" placeholder="Tìm kiếm…" aria-label="Tìm kiếm">
         </div>
         <div class="table-responsive">
           <table class="custom-table">
@@ -49,5 +50,14 @@
 <script src="../javascript/manager-data.js"></script>
 <script src="../javascript/main.js"></script>
 <script src="../javascript/admin-sensor-management.js"></script>
+<footer class="app-footer">
+  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+</footer>
+<script src="../javascript/role-switcher.js"></script>
 </body>
 </html>
+
+
+
+
+

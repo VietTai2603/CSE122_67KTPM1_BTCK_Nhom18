@@ -71,6 +71,11 @@ function logout() {
 renderDemoButtons();
 var savedSession = localStorage.getItem('sb_session');   // đã đăng nhập từ trước?
 if (savedSession) {
-  var session = JSON.parse(savedSession);
-  showMessage('info', 'Đang đăng nhập với <strong>' + escapeHtml(session.name) + '</strong> (' + ROLE_NAME[session.role] + '). <a href="' + ROUTE[session.role] + '" style="text-decoration:underline">Tiếp tục</a> · <a href="#" onclick="return logout()" style="text-decoration:underline">Đăng xuất</a>');
+  try {
+    var session = JSON.parse(savedSession);
+    if (session && ROUTE[session.role]) {
+      showMessage('info', 'Đang đăng nhập với <strong>' + escapeHtml(session.name || '') + '</strong> (' + ROLE_NAME[session.role] + '). <a href="' + ROUTE[session.role] + '" style="text-decoration:underline">Tiếp tục</a> · <a href="#" onclick="return logout()" style="text-decoration:underline">Đăng xuất</a>');
+    } else { localStorage.removeItem('sb_session'); }
+  } catch (error) { localStorage.removeItem('sb_session'); }
 }
+

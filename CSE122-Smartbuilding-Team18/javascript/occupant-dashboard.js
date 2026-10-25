@@ -28,9 +28,9 @@ function renderAiSuggestions() {
     var item = list[i], badge = '<span class="badge badge-pending">Khuyến nghị</span>', button = '';
     if (item.applied) { badge = '<span class="badge badge-resolved">Đã áp dụng</span>'; }
     else { button = '<button class="btn btn-primary btn-sm" onclick="applySuggestion(\'' + item.id + '\')">Áp dụng</button>'; }
-    html += '<div class="the-goi-y"><div class="hang-can-deu"><strong>' + item.title + '</strong>' + badge + '</div>' +
-      '<p class="chu-nho-mo">' + item.description + '</p>' +
-      '<div class="hang-can-deu"><span class="chu-tiet-kiem">Tiết kiệm: ' + item.potentialSavings + '</span>' + button + '</div></div>';
+    html += '<div class="the-goi-y"><div class="hang-can-deu"><strong>' + escapeHtml(item.title) + '</strong>' + badge + '</div>' +
+      '<p class="chu-nho-mo">' + escapeHtml(item.description) + '</p>' +
+      '<div class="hang-can-deu"><span class="chu-tiet-kiem">Tiết kiệm: ' + escapeHtml(item.potentialSavings) + '</span>' + button + '</div></div>';
   }
   document.getElementById('aiSuggestionsList').innerHTML = html;
 }
@@ -78,3 +78,5 @@ document.addEventListener('DOMContentLoaded', function () {
   renderAiSuggestions();
   renderQuickSummaries();
 });
+
+

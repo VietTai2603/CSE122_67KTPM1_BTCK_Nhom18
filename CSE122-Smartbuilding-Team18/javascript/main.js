@@ -2,10 +2,14 @@
 
 // ===== 1. Dữ liệu: đọc / lưu vào localStorage =====
 function loadData(key) {
-  var text = localStorage.getItem('sb_' + key);
-  if (text) { return JSON.parse(text); }                  // đã có dữ liệu người dùng -> dùng luôn
+  var storageKey = 'sb_' + key;
+  var text = localStorage.getItem(storageKey);
+  if (text) {
+    try { return JSON.parse(text); }                      // đã có dữ liệu người dùng -> dùng luôn
+    catch (error) { localStorage.removeItem(storageKey); } // dữ liệu hỏng thì khởi tạo lại từ dữ liệu mẫu
+  }
   var data = JSON.parse(JSON.stringify(SEED[key]));       // chưa có -> sao chép dữ liệu mẫu từ data.js
-  localStorage.setItem('sb_' + key, JSON.stringify(data));
+  localStorage.setItem(storageKey, JSON.stringify(data));
   return data;
 }
 function saveData(key, data) { localStorage.setItem('sb_' + key, JSON.stringify(data)); }
@@ -251,3 +255,4 @@ function getActiveZones() {   // bỏ qua khu vực đã bị Admin khóa
   for (var i = 0; i < zones.length; i++) { if (zones[i].status !== 'locked') { result.push(zones[i]); } }
   return result;
 }
+

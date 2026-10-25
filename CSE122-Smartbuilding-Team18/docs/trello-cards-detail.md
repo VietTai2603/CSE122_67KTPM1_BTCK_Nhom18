@@ -4,12 +4,12 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 ## TASK-01 — Khởi tạo tài liệu dự án
 **Người phụ trách:** Phùng Viết Tài (Lead)  
-**Tệp:** `docs/project-proposal.md`, `docs/roles-and-features.md`, `docs/screen-list.md`, `docs/team-assignment.md`, `docs/ai-usage-report.md`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Tệp:** `docs/project-proposal.md`, `docs/roles-and-features.md`, `docs/screen-inventory.md`, `docs/team-assignment.md`, `docs/ai-usage-report.md`
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `docs/init-documentation`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Chuẩn hóa tài liệu nền tảng của đề tài SmartBuilding: vấn đề, mục tiêu, vai trò người dùng, luồng nghiệp vụ, kiểm kê màn hình, phân công và việc sử dụng AI.
@@ -25,11 +25,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-02 — Xây dựng Design System
 **Người phụ trách:** Lê Đức Quang  
 **Tệp:** `css/style.css`, `css/responsive.css`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/design-system-core`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Xây dựng bộ quy tắc giao diện dùng chung cho các dashboard: màu nền tối, xanh emerald, typography, card, nút, form, badge, modal và trạng thái tương tác.
@@ -45,11 +45,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-03 — Xây dựng Mock Data Engine
 **Người phụ trách:** Lê Quang Tiến  
 **Tệp:** `javascript/data.js`, `javascript/manager-data.js`, `javascript/main.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/mock-data-engine`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Tạo dữ liệu mẫu cho zone, cảm biến, tài khoản, báo cáo và nghiệp vụ occupant/operator; cung cấp tiện ích đọc/ghi LocalStorage và hàm dùng chung.
@@ -65,11 +65,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-04 — Hoàn thiện Portal
 **Người phụ trách:** Phùng Viết Tài  
 **Tệp:** `index.html`, `css/index.css`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/portal-homepage`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Làm trang Portal giới thiệu đề tài và điều hướng tới các khu vực theo vai trò cùng màn hình dùng chung.
@@ -85,11 +85,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-05 — Màn hình xác thực và tài khoản dùng chung
 **Người phụ trách:** Lê Quang Tiến (Đăng nhập, Cài đặt); Lê Đức Quang (403, Hồ sơ)  
 **Tệp:** `html/login.html`, `css/login.css`, `javascript/login.js`; `html/settings.html`, `css/settings.css`, `javascript/settings.js`; `html/403.html`, `css/403.css`, `javascript/403.js`; `html/profile.html`, `css/profile.css`, `javascript/profile.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/common-account-screens`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Hoàn thiện luồng đăng nhập mô phỏng, trang không đủ quyền, trang hồ sơ và chức năng đổi mật khẩu.
@@ -106,11 +106,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-06 — Trang 404 và khôi phục mật khẩu
 **Người phụ trách:** Phùng Viết Tài  
 **Tệp:** `html/404.html`, `css/404.css`, `javascript/404.js`; `html/forgot-password.html`, `css/forgot-password.css`, `javascript/forgot-password.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/common-error-recovery`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Hoàn thiện trang báo không tìm thấy đường dẫn và luồng khôi phục mật khẩu mô phỏng trên trình duyệt.
@@ -127,11 +127,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-07 — Occupant Dashboard và Energy History
 **Người phụ trách:** Phùng Viết Tài  
 **Tệp:** `html/occupant-dashboard.html`, `javascript/occupant-dashboard.js`, `html/occupant-energy-history.html`, `javascript/occupant-energy-history.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/occupant-occupant-dashboard`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Hiển thị tổng quan tiêu thụ điện của người dùng, lịch sử theo ngày và gợi ý tiết kiệm.
@@ -148,11 +148,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-08 — Comfort Feedback
 **Người phụ trách:** Phùng Viết Tài  
 **Tệp:** `html/occupant-comfort-feedback.html`, `javascript/occupant-comfort-feedback.js`, CSS liên quan
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/occupant-comfort-feedback`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Cho người sử dụng gửi và quản lý phản ánh về nhiệt độ, điều hòa và ánh sáng.
@@ -169,11 +169,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-09 — Energy Challenges và Rewards
 **Người phụ trách:** Phùng Viết Tài  
 **Tệp:** `html/occupant-energy-challenges.html`, `javascript/occupant-energy-challenges.js`, `html/occupant-rewards.html`, `javascript/occupant-rewards.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/occupant-challenges-rewards`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Cho người sử dụng tham gia thử thách tiết kiệm, cập nhật tiến độ, tích điểm và đổi quà.
@@ -190,11 +190,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-10 — Operator Energy Monitor
 **Người phụ trách:** Lê Quang Tiến  
 **Tệp:** `html/operator-energy-monitor.html`, `javascript/operator-energy-monitor.js`, CSS operator
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/operator-energy-monitor`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Giám sát phụ tải theo tầng/khu vực, công suất và trạng thái zone.
@@ -211,11 +211,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-11 — Alert Center và AI-1
 **Người phụ trách:** Lê Quang Tiến  
 **Tệp:** `html/operator-alert-center.html`, `javascript/operator-alert-center.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/operator-alert-center`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Tiếp nhận cảnh báo, phát hiện bất thường tiêu thụ và hỗ trợ cập nhật tiến độ xử lý.
@@ -232,11 +232,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-12 — Saving Actions và AI-2
 **Người phụ trách:** Lê Quang Tiến  
 **Tệp:** `html/operator-saving-actions.html`, `javascript/operator-saving-actions.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/operator-saving-actions`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quản lý các lệnh tiết kiệm điện theo zone và sử dụng gợi ý từ hệ thống.
@@ -253,11 +253,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-13 — Energy KPIs
 **Người phụ trách:** Lê Đức Quang  
 **Tệp:** `html/manager-energy-kpis.html`, `javascript/manager-energy-kpis.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/manager-energy-kpis`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Cung cấp tổng quan KPI năng lượng và chi phí cho quản lý cơ sở.
@@ -273,11 +273,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-14 — Zone Comparison và AI-3 Simulator
 **Người phụ trách:** Lê Đức Quang  
 **Tệp:** `html/manager-zone-comparison.html`, `javascript/manager-zone-comparison.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/manager-zone-comparison`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** So sánh mức tiêu thụ giữa các khu vực và mô phỏng kịch bản giảm tải.
@@ -294,11 +294,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-15 — Monthly Report
 **Người phụ trách:** Lê Đức Quang  
 **Tệp:** `html/manager-monthly-report.html`, `javascript/manager-monthly-report.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/manager-monthly-report`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Tạo, xem, cập nhật và duyệt báo cáo năng lượng định kỳ.
@@ -315,11 +315,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-16 — Zone Management
 **Người phụ trách:** Lê Đức Quang  
 **Tệp:** `html/admin-zone-management.html`, `javascript/admin-zone-management.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/admin-zone-management`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quản trị danh mục các tầng/khu vực và thông số định mức.
@@ -336,11 +336,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-17 — Sensor Management
 **Người phụ trách:** Lê Đức Quang  
 **Tệp:** `html/admin-sensor-management.html`, `javascript/admin-sensor-management.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/admin-sensor-management`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quản lý danh mục cảm biến IoT giả lập và trạng thái kết nối.
@@ -357,11 +357,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-18 — User Management
 **Người phụ trách:** Lê Đức Quang  
 **Tệp:** `html/admin-user-management.html`, `javascript/admin-user-management.js`
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `feature/admin-user-management`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quản trị tài khoản, vai trò và trạng thái truy cập của người dùng.
@@ -378,11 +378,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-19 — Kiểm tra Responsive và Accessibility
 **Người phụ trách:** Phùng Viết Tài  
 **Phạm vi:** Toàn bộ HTML/CSS giao diện
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `fix/responsive-a11y`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Rà soát giao diện ở kích thước desktop, tablet và điện thoại; sửa lỗi bố cục và khả năng truy cập.
@@ -398,11 +398,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-20 — Kiểm tra dữ liệu và lỗi Console
 **Người phụ trách:** Lê Quang Tiến  
 **Phạm vi:** Các màn hình có JavaScript/LocalStorage
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `fix/localstorage-console`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Rà soát luồng nạp, lưu và tải lại dữ liệu; kiểm tra các form và xử lý lỗi JavaScript.
@@ -418,11 +418,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-21 — Kiểm tra AI fallback và retry
 **Người phụ trách:** Lê Đức Quang  
 **Phạm vi:** AI-1, AI-2, AI-3
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `fix/ai-fallback`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Bổ sung trạng thái dự phòng khi thiếu dữ liệu hoặc mô phỏng AI không tạo được kết quả.
@@ -438,11 +438,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-22 — Quay video OBS minh chứng
 **Người phụ trách:** Cả 3 thành viên  
 **Phạm vi:** Các màn hình do từng sinh viên phụ trách
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `docs/obs-evidence`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quay minh chứng quy trình sử dụng và phần triển khai theo yêu cầu môn học.
@@ -458,11 +458,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-23 — Hoàn thiện README và báo cáo AI
 **Người phụ trách:** Phùng Viết Tài (Lead), phối hợp cả nhóm  
 **Tệp:** `README.md`, `docs/ai-usage-report.md`, tài liệu liên quan
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `docs/final-readme-ai-report`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Hoàn thiện hướng dẫn chạy, phân công, kiểm kê màn hình, nguồn dữ liệu và báo cáo sử dụng AI.
@@ -478,11 +478,11 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 ## TASK-24 — Diễn tập bảo vệ và live-coding
 **Người phụ trách:** Cả 3 thành viên  
 **Phạm vi:** Demo tổng thể và các kịch bản phát sinh
-**Hạn hoàn thành:** [Điền ngày DD/MM/YYYY]
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `docs/defense-livecoding`
-**Pull Request GitHub:** [Điền URL PR sau khi tạo]
-**Commit Git:** [Điền mã SHA]
-**Video OBS:** [Điền link hoặc tên file video]
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+**Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
+**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Chuẩn bị phần trình bày, phân vai demo và luyện xử lý yêu cầu live-coding trong thời gian giới hạn.
@@ -494,3 +494,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 - [ ] Chuẩn bị phương án khi mạng/dịch vụ ngoài không khả dụng.
 
 **Hoàn thành khi:** Nhóm demo được toàn bộ luồng và hoàn thành một thay đổi live-coding có giải thích.
+
+
+

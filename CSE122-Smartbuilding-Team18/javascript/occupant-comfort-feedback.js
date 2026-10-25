@@ -68,12 +68,12 @@ function renderFeedbackList() {
     if (item.priority === 'high') { priorityLabel = '<span class="badge badge-priority-high">Cao</span>'; }
     else if (item.priority === 'medium') { priorityLabel = 'Trung bình'; }
     else { priorityLabel = 'Thấp'; }
-    if (item.adminNote) { note = '<div class="ghi-chu-quan-ly">↳ BQL: ' + item.adminNote + '</div>'; }
+    if (item.adminNote) { note = '<div class="ghi-chu-quan-ly">↳ BQL: ' + escapeHtml(item.adminNote) + '</div>'; }
 
-    html += '<tr><td><strong>' + item.room + '</strong></td>' +
-      '<td><span class="ten-danh-muc">' + item.categoryLabel + '</span></td>' +
-      '<td><div class="tieu-de-o">' + item.issueLabel + '</div><div class="mo-ta-o">' + item.description + '</div>' + note + '</td>' +
-      '<td>' + priorityLabel + '</td><td>' + statusBadge + '</td><td class="ngay-gui">' + item.createdAt + '</td>' +
+    html += '<tr><td><strong>' + escapeHtml(item.room) + '</strong></td>' +
+      '<td><span class="ten-danh-muc">' + escapeHtml(item.categoryLabel) + '</span></td>' +
+      '<td><div class="tieu-de-o">' + escapeHtml(item.issueLabel) + '</div><div class="mo-ta-o">' + escapeHtml(item.description) + '</div>' + note + '</td>' +
+      '<td>' + priorityLabel + '</td><td>' + statusBadge + '</td><td class="ngay-gui">' + escapeHtml(item.createdAt) + '</td>' +
       '<td class="nut-thao-tac"><button class="btn btn-secondary btn-sm" onclick="openEditFeedbackModal(\'' + item.id + '\')">Sửa</button> ' +
       '<button class="btn btn-danger btn-sm" onclick="promptDeleteFeedback(\'' + item.id + '\')">Xóa</button></td></tr>';
   }
@@ -158,3 +158,5 @@ document.addEventListener('DOMContentLoaded', function () {
   setupFilterTabs();
   renderFeedbackList();
 });
+
+

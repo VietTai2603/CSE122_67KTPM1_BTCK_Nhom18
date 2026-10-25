@@ -22,7 +22,7 @@
 Toàn bộ tài liệu chuẩn bị, quy trình kỹ nghệ phần mềm và báo cáo được lưu trữ đầy đủ trong thư mục `docs/`:
 
 1. [Đề cương dự án (Project Proposal)](docs/project-proposal.md): Ngữ cảnh, bài toán, mục tiêu và phạm vi.
-2. [Bảng kiểm kê màn hình (Screen List)](docs/screen-list.md): Danh mục 14 màn hình nghiệp vụ + 7 màn hình chung theo chuẩn C/R/U/D.
+2. [Bảng kiểm kê màn hình (Screen List)](docs/screen-inventory.md): Danh mục 15 màn hình nghiệp vụ + 7 màn hình dùng chung (22 giao diện tổng cộng) theo chuẩn truy vết.
 3. [Đặc tả vai trò & Luồng nghiệp vụ (Roles & Features)](docs/roles-and-features.md): Mô tả chi tiết hành trình người dùng của từng vai trò.
 4. [Bảng phân công nhiệm vụ (Team Assignment)](docs/team-assignment.md): Ma trận trách nhiệm RACI và trách nhiệm chéo.
 5. [Báo cáo khai báo sử dụng AI (AI Usage Report)](docs/ai-usage-report.md): Minh chứng câu lệnh, phần AI sinh ra, phần sinh viên kiểm chứng và 3 tính năng AI mô phỏng.
@@ -66,3 +66,4 @@ cse122-smartbuilding-team18/
 ```
 
 Mỗi trang trong `html/` nối với `../css/...` bằng thẻ `<link>` và với `../javascript/...` bằng thẻ `<script>`.
+

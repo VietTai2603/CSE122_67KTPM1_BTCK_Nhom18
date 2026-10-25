@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/operator.css">
+<link rel="stylesheet" href="../css/inline-overrides.css">
 </head>
 <body data-page="monitor">
 <div class="app-layout">
   <aside class="sidebar" id="sidebar"></aside>
   <div class="main-wrapper">
-    <header class="topbar" id="topbar"></header>
+    <header class="topbar" id="topbar"><h1 class="page-title">Giám sát năng lượng</h1></header>
     <main class="content-area" id="main">
       <section class="grid-cols-4" id="stats" aria-label="Chỉ số nhanh"></section>
-      <section class="section" aria-label="Bản đồ khu vực"><h2 class="card-title" style="margin-bottom:16px">Bản đồ trạng thái khu vực</h2><div class="grid-cols-4" id="zoneGrid"></div></section>
+      <section class="section" aria-label="Bản đồ khu vực"><h2 class="card-title page-style-operator-energy-monitor-001">Bản đồ trạng thái khu vực</h2><div class="grid-cols-4" id="zoneGrid"></div></section>
       <section class="card section"><div class="card-header"><h2 class="card-title">Biểu đồ phụ tải 24 giờ (kW)</h2></div><div id="chart"></div></section>
       <section class="card section"><div class="card-header"><h2 class="card-title">Bảng phân bổ năng lượng chi tiết</h2>
         <div class="toolbar"><input class="form-control" id="q" placeholder="Tìm khu vực…" aria-label="Tìm khu vực"><select class="form-control" id="fs" aria-label="Lọc trạng thái"><option value="">Tất cả trạng thái</option><option>Bình thường</option><option>Peak load</option><option>Quá tải</option></select></div></div>
@@ -26,5 +27,14 @@
 <script src="../javascript/data.js"></script>
 <script src="../javascript/main.js"></script>
 <script src="../javascript/operator-energy-monitor.js"></script>
+<footer class="app-footer">
+  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+</footer>
+<script src="../javascript/role-switcher.js"></script>
 </body>
 </html>
+
+
+
+
+
