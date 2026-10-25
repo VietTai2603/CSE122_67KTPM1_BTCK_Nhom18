@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập – SmartBuilding (BTL-36)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body style="display: block;">
+  <main class="auth-wrap">
+    <section class="card auth-card" aria-labelledby="loginTitle">
+      <div class="auth-brand">
+        <div class="brand-icon" aria-hidden="true">⚡</div>
+        <div><div class="brand-title">SmartBuilding</div><div class="brand-sub">BTL-36 • CSE122</div></div>
+      </div>
+      <h1 id="loginTitle" style="font-size:1.4rem;font-weight:800;margin-bottom:4px">Đăng nhập hệ thống</h1>
+      <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:18px">Chọn tài khoản theo vai trò để trải nghiệm giao diện tương ứng.</p>
+
+      <div id="msg" class="auth-msg" role="alert"></div>
+
+      <form id="lf" onsubmit="login(event)" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" id="email" type="email" placeholder="ten@smartbuilding.vn">
+          <div class="form-error-msg"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Mật khẩu</label>
+          <div class="pw-wrap">
+            <input class="form-control" id="password" type="password" placeholder="Nhập mật khẩu">
+            <button type="button" class="pw-toggle" id="pwToggle" onclick="togglePassword()">Hiện</button>
+          </div>
+          <div class="form-error-msg"></div>
+        </div>
+        <button class="btn btn-primary" id="submitBtn" style="width:100%"><span class="spinner"></span><span id="submitText">Đăng nhập</span></button>
+      </form>
+
+      <div class="demo">
+        <strong style="font-size:.85rem">Chuyển vai trò thử nghiệm</strong>
+        <div style="color:var(--text-dim);font-size:.75rem">Bấm để điền sẵn tài khoản. Mật khẩu chung: <code>123456</code></div>
+        <div class="demo-grid" id="demo"></div>
+      </div>
+      <p style="margin-top:18px;font-size:.82rem"><a href="../index.html" style="color:var(--sky-400)">&larr; Về trang chủ Portal</a></p>
+    </section>
+  </main>
+<script src="../javascript/data.js"></script>
+<script src="../javascript/manager-data.js"></script>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/login.js"></script>
+</body>
+</html>

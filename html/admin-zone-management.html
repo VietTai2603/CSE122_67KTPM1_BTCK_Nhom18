@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zone Management – SmartBuilding (Admin)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/operator.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-wrapper">
+    <header class="topbar" id="topbar"></header>
+    <main class="content-area" id="main">
+      <section class="grid-cols-3" id="stats"></section>
+      <section class="card section">
+        <h2 class="card-title" style="margin-bottom:16px">Thêm / sửa khu vực vật lý</h2>
+        <form id="af" class="form-row" onsubmit="saveZone(event)" novalidate>
+          <div class="form-group"><label class="form-label" for="code">Mã ID</label><input class="form-control" id="code" placeholder="Z-05"><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="name">Tên khu vực</label><input class="form-control" id="name" placeholder="VD: Parking B2"><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="floor">Tầng</label><input class="form-control" id="floor" placeholder="VD: B2"><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="type">Loại tải chính</label><select class="form-control" id="type"><option>HVAC</option><option>Chiếu sáng</option><option>Ổ cắm</option></select><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="areaM2">Diện tích (m²)</label><input class="form-control" id="areaM2" type="number" min="1"><div class="form-error-msg"></div></div>
+          <div class="form-group"><label class="form-label" for="ratedKw">Công suất định mức (kW)</label><input class="form-control" id="ratedKw" type="number" min="1"><div class="form-error-msg"></div></div>
+          <div class="form-group"><button class="btn btn-primary" id="submitBtn">Lưu khu vực</button> <button type="button" class="btn btn-secondary" id="cancelBtn" hidden onclick="resetForm()">Hủy sửa</button></div>
+        </form>
+      </section>
+      <section class="card section">
+        <div class="card-header">
+          <h2 class="card-title">Danh sách khu vực đang cấu hình</h2>
+          <input class="form-control" id="q" placeholder="Tìm kiếm…" aria-label="Tìm kiếm" style="max-width:260px">
+        </div>
+        <div class="table-responsive">
+          <table class="custom-table">
+            <thead><tr><th>Mã ID</th><th>Tên khu vực</th><th>Loại tải</th><th>Công suất định mức</th><th>Cảm biến gắn kèm</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card section"><h2 class="card-title">Tạm dừng hiển thị khu vực</h2><p class="muted">Khóa một khu vực để ẩn khỏi KPI và so sánh. Mở khóa để hiển thị lại.</p></section>
+    </main>
+  </div>
+</div>
+<script src="../javascript/data.js"></script>
+<script src="../javascript/manager-data.js"></script>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/admin-zone-management.js"></script>
+</body>
+</html>

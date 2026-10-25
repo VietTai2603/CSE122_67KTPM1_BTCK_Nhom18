@@ -1,0 +1,29 @@
+================================================================================
+SMARTBUILDING DESIGN SYSTEM & MOCKUPS (CSE122 - BTL-36)
+Nhóm thực hiện: Nhóm 18 (Phùng Viết Tài, Lê Quang Tiến, Lê Đức Quang)
+================================================================================
+
+1. ĐƯỜNG DẪN BẢN THIẾT KẾ FIGMA / CANVA CHÍNH THỨC:
+--------------------------------------------------------------------------------
+Link:
+
+2. CẤU TRÚC CÁC FRAME / TRANG TRONG FILE THIẾT KẾ:
+--------------------------------------------------------------------------------
+1. Design System & Component Guide:
+   - Bảng màu chuẩn: Emerald (#10b981), Slate Navy (#0b1120, #0f172a, #1e293b), Rose (#f87171), Sky (#38bdf8), Amber (#fbbf24)
+   - Typography: Plus Jakarta Sans / Inter (H1 28px, H2 20px, H3 16px, Body 14px, Caption 12px)
+   - Component UI: Button, Input, Badge, Stat Card, Modal Popup, Toast Notification
+2. Desktop Mockups (1440px x 900px):
+   - Màn hình Portal & Login
+   - 5 Màn hình SV1: Occupant Dashboard, Comfort Feedback, Energy Challenges, History, Rewards
+   - 4 Màn hình SV2: Energy Monitor, Alert Center, Saving Actions, Zone Live Control
+   - 6 Màn hình SV3: Energy KPIs, Zone Comparison, Monthly Report, Admin Zones, Sensors, Users
+3. Responsive Mobile Wireframes (375px x 812px):
+   - Điều hướng Hamburger Menu & Drawer
+   - Bố cục lưới Card 1 cột trên Mobile
+   - Bảng dữ liệu hỗ trợ cuộn ngang (table-responsive)
+4. AI UX & Edge Case States:
+   - Giao diện 6 bước: Input -> Processing (Skeleton) -> Output -> Explainability -> Action Buttons
+   - Trạng thái AI Failure / Uncertainty (Khi thiếu dữ liệu hoặc độ tin cậy thấp)
+5. Ảnh tĩnh kết xuất (Export):
+   - Đã lưu trữ đầy đủ trong thư mục `design/mockups/` để dự phòng khi không có Internet.
