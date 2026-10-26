@@ -185,21 +185,15 @@ node server.js
 
 | STT | Tên tệp Video OBS quy chuẩn | Màn hình tương ứng | Sinh viên thực hiện | Trạng thái |
 | :-: | :--- | :--- | :---: | :---: |
-| 1 | `SV1-01-occupant-dashboard.mp4` | Occupant Dashboard | Phùng Viết Tài | Đang hoàn thiện |
-| 2 | `SV1-02-occupant-comfort-feedback.mp4` | Comfort Feedback | Phùng Viết Tài | Đang hoàn thiện |
-| 3 | `SV1-03-occupant-energy-challenges.mp4` | Energy Challenges | Phùng Viết Tài | Đang hoàn thiện |
-| 4 | `SV1-04-occupant-energy-history.mp4` | Energy History | Phùng Viết Tài | Đang hoàn thiện |
-| 5 | `SV1-05-occupant-rewards.mp4` | Green Rewards | Phùng Viết Tài | Đang hoàn thiện |
-| 6 | `SV2-01-operator-energy-monitor.mp4` | Energy Monitor | Lê Quang Tiến | Đang hoàn thiện |
-| 7 | `SV2-02-operator-alert-center.mp4` | Alert Center & AI-1 | Lê Quang Tiến | Đang hoàn thiện |
-| 8 | `SV2-03-operator-saving-actions.mp4` | Saving Actions & AI-2 | Lê Quang Tiến | Đang hoàn thiện |
-| 9 | `SV2-04-operator-zone-control.mp4` | Zone Live Control | Lê Quang Tiến | Đang hoàn thiện |
-| 10 | `SV3-01-manager-energy-kpis.mp4` | Energy KPIs | Lê Đức Quang | Đang hoàn thiện |
-| 11 | `SV3-02-manager-zone-comparison.mp4` | Zone Comparison & AI-3 | Lê Đức Quang | Đang hoàn thiện |
-| 12 | `SV3-03-manager-monthly-report.mp4` | Monthly Report & Export | Lê Đức Quang | Đang hoàn thiện |
-| 13 | `SV3-04-admin-zone-management.mp4` | Zone Management | Lê Đức Quang | Đang hoàn thiện |
-| 14 | `SV3-05-admin-sensor-management.mp4` | Sensor Management | Lê Đức Quang | Đang hoàn thiện |
-| 15 | `SV3-06-admin-user-management.mp4` | User Management | Lê Đức Quang | Đang hoàn thiện |
+| 1 | `SV1-01-occupant-dashboard.mp4` | Occupant Dashboard | Phùng Viết Tài | Hoàn thiện |
+| 2 | `SV1-03-occupant-energy-challenges.mp4` | Energy Challenges | Phùng Viết Tài | Hoàn thiện |
+| 3 | `SV1-05-occupant-rewards.mp4` | Green Rewards | Phùng Viết Tài | Hoàn thiện |
+| 4 | `SV2-01-operator-energy-monitor.mp4` | Energy Monitor | Lê Quang Tiến | Hoàn thiện |
+| 5 | `SV2-02-operator-alert-center.mp4` | Alert Center & AI-1 | Lê Quang Tiến | Hoàn thiện |
+| 6 | `SV2-03-operator-saving-actions.mp4` | Saving Actions & AI-2 | Lê Quang Tiến | Hoàn thiện |
+| 7 | `SV3-01-manager-energy-kpis.mp4` | Energy KPIs | Lê Đức Quang | Đang hoàn thiện |
+| 8 | `SV3-02-manager-zone-comparison.mp4` | Zone Comparison & AI-3 | Lê Đức Quang | Hoàn thiện |
+| 9 | `SV3-03-manager-monthly-report.mp4` | Monthly Report & Export | Lê Đức Quang | Hoàn thiện |
 
 ---
 
