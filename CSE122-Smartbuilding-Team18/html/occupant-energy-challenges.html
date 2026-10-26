@@ -1,152 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thử thách tiết kiệm điện - SmartBuilding (SV1)</title>
-  <meta name="description" content="Energy Challenges - Tham gia thử thách tiết kiệm điện, tích lũy điểm thưởng xanh và nhận huy hiệu">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/occupant-energy-challenges.css">
-<link rel="stylesheet" href="../css/inline-overrides.css">
-</head>
-<body>
-
-  <!-- SIDEBAR DÙNG CHUNG -->
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <div class="brand-icon">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-        </svg>
-      </div>
-      <div>
-        <div class="brand-title">SmartBuilding</div>
-        <div class="brand-sub">CSE122 • BTL-36</div>
-      </div>
-    </div>
-
-    <nav class="sidebar-menu">
-      <div class="menu-label">VAI TRÒ: NGƯỜI DÙNG TÒA NHÀ</div>
-      <a href="occupant-dashboard.html" class="nav-item">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-        </svg>
-        <span>Tổng quan cá nhân</span>
-      </a>
-      <a href="occupant-comfort-feedback.html" class="nav-item">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-        </svg>
-        <span>Phản hồi tiện nghi</span>
-      </a>
-      <a href="occupant-energy-challenges.html" class="nav-item active">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-        </svg>
-        <span>Thử thách năng lượng</span>
-      </a>
-      <a href="occupant-energy-history.html" class="nav-item"><span>📈</span><span>Lịch sử năng lượng</span></a>
-      <a href="occupant-rewards.html" class="nav-item"><span>🎁</span><span>Điểm thưởng & đổi quà</span></a>
-
-      <div class="menu-label page-style-occupant-energy-challenges-001">HỆ THỐNG</div>
-      <a href="../index.html" class="nav-item">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-        </svg>
-        <span>Trang chủ Portal</span>
-      </a>
-    </nav>
-
-    <div class="sidebar-footer">
-      <div class="user-snippet">
-        <div class="page-style-occupant-energy-challenges-002">
-          VA
-        </div>
-        <div class="user-info">
-          <div class="user-name" id="sidebarUserName">Nguyễn Văn An</div>
-          <div class="user-role-badge" id="sidebarUserRoom">Phòng 402 - Khu Đông</div>
-        </div>
-      </div>
-    </div>
-  </aside>
-
-  <!-- MAIN WRAPPER -->
-  <div class="main-wrapper">
-    <header class="topbar">
-      <div class="topbar-left">
-        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle menu">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thử thách tiết kiệm điện - SmartBuilding</title>
+    <meta
+      name="description"
+      content="Energy Challenges - Tham gia thử thách tiết kiệm điện, tích lũy điểm thưởng xanh và nhận huy hiệu"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/occupant-energy-challenges.css" />
+    <link rel="stylesheet" href="../css/inline-overrides.css" />
+  </head>
+  <body>
+    <!-- SIDEBAR DÙNG CHUNG -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13 10V3L4 14h7v7l9-11h-7z"
+            />
           </svg>
-        </button>
+        </div>
         <div>
-          <h1 class="page-title">Thử thách năng lượng (Energy Challenges)</h1>
-          <div class="page-subtitle">Thay đổi hành vi nhỏ - Tạo tác động xanh lớn cho tòa nhà</div>
+          <div class="brand-title">SmartBuilding</div>
+          <div class="brand-sub">CSE122 • BTL-36</div>
         </div>
       </div>
 
-      <div class="topbar-right">
-        <div class="points-pill" id="userPointsDisplay">
-          420 Điểm Xanh
+      <nav class="sidebar-menu">
+        <div class="menu-label">VAI TRÒ: NGƯỜI DÙNG TÒA NHÀ</div>
+        <a href="occupant-dashboard.html" class="nav-item">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+          <span>Tổng quan cá nhân</span>
+        </a>
+        <a href="occupant-comfort-feedback.html" class="nav-item">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+            />
+          </svg>
+          <span>Phản hồi tiện nghi</span>
+        </a>
+        <a href="occupant-energy-challenges.html" class="nav-item active">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+            />
+          </svg>
+          <span>Thử thách năng lượng</span>
+        </a>
+        <a href="occupant-energy-history.html" class="nav-item"
+          ><span>📈</span><span>Lịch sử năng lượng</span></a
+        >
+        <a href="occupant-rewards.html" class="nav-item"
+          ><span>🎁</span><span>Điểm thưởng & đổi quà</span></a
+        >
+
+        <div class="menu-label page-style-occupant-energy-challenges-001">
+          HỆ THỐNG
+        </div>
+        <a href="../index.html" class="nav-item">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+          <span>Trang chủ Portal</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-snippet">
+          <div class="page-style-occupant-energy-challenges-002">VA</div>
+          <div class="user-info">
+            <div class="user-name" id="sidebarUserName">Nguyễn Văn An</div>
+            <div class="user-role-badge" id="sidebarUserRoom">
+              Phòng 402 - Khu Đông
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </aside>
 
-    <main class="content-area">
-      <!-- HERO BANNER TỔNG HỢP HUY HIỆU -->
-      <section class="card page-style-occupant-energy-challenges-003">
-        <div class="page-style-occupant-energy-challenges-004">
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button
+            class="menu-toggle-btn"
+            id="menuToggleBtn"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
           <div>
-            <span class="badge badge-resolved page-style-occupant-energy-challenges-005">CHƯƠNG TRÌNH GAMIFICATION TIẾT KIỆM ĐIỆN</span>
-            <h2 class="page-style-occupant-energy-challenges-006">Hành trình Chiến binh Xanh tòa nhà</h2>
-            <p class="page-style-occupant-energy-challenges-007">
-              Mỗi hành động tiết kiệm đều được quy đổi thành Điểm Xanh. Tích lũy điểm để thăng hạng và đổi các voucher cà phê/quà tặng tại quầy lễ tân tòa nhà.
-            </p>
-          </div>
-          <div class="page-style-occupant-energy-challenges-008">
-            <div class="page-style-occupant-energy-challenges-009">
-              <div class="page-style-occupant-energy-challenges-010">🧊</div>
-              <div class="page-style-occupant-energy-challenges-011">Vua Eco</div>
-            </div>
-            <div class="page-style-occupant-energy-challenges-009">
-              <div class="page-style-occupant-energy-challenges-010">🌙</div>
-              <div class="page-style-occupant-energy-challenges-014">Ngủ Trưa Xanh</div>
-            </div>
-            <div class="page-style-occupant-energy-challenges-015">
-              <div class="page-style-occupant-energy-challenges-010">⚡</div>
-              <div class="page-style-occupant-energy-challenges-017">Master Tiết Kiệm</div>
+            <h1 class="page-title">Thử thách năng lượng (Energy Challenges)</h1>
+            <div class="page-subtitle">
+              Thay đổi hành vi nhỏ - Tạo tác động xanh lớn cho tòa nhà
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- FILTER TABS -->
-      <div class="page-style-occupant-energy-challenges-018">
-        <div class="cac-tab-loc" id="challengeTabs">
-          <button class="nut-tab-loc active" data-filter="all">Tất cả thử thách</button>
-          <button class="nut-tab-loc" data-filter="in-progress">Đang tham gia</button>
-          <button class="nut-tab-loc" data-filter="available">Chưa tham gia</button>
-          <button class="nut-tab-loc" data-filter="completed">Đã hoàn thành</button>
+        <div class="topbar-right">
+          <div class="points-pill" id="userPointsDisplay">420 Điểm Xanh</div>
         </div>
-      </div>
+      </header>
 
-      <!-- GRID CÁC THẺ THỬ THÁCH (CREATE / READ / UPDATE) -->
-      <div class="grid-cols-2" id="challengesGrid">
-        <!-- Render từ JS -->
-      </div>
-    </main>
-  </div>
+      <main class="content-area">
+        <!-- HERO BANNER TỔNG HỢP HUY HIỆU -->
+        <section class="card page-style-occupant-energy-challenges-003">
+          <div class="page-style-occupant-energy-challenges-004">
+            <div>
+              <span
+                class="badge badge-resolved page-style-occupant-energy-challenges-005"
+                >CHƯƠNG TRÌNH GAMIFICATION TIẾT KIỆM ĐIỆN</span
+              >
+              <h2 class="page-style-occupant-energy-challenges-006">
+                Hành trình Chiến binh Xanh tòa nhà
+              </h2>
+              <p class="page-style-occupant-energy-challenges-007">
+                Mỗi hành động tiết kiệm đều được quy đổi thành Điểm Xanh. Tích
+                lũy điểm để thăng hạng và đổi các voucher cà phê/quà tặng tại
+                quầy lễ tân tòa nhà.
+              </p>
+            </div>
+            <div class="page-style-occupant-energy-challenges-008">
+              <div class="page-style-occupant-energy-challenges-009">
+                <div class="page-style-occupant-energy-challenges-010">🧊</div>
+                <div class="page-style-occupant-energy-challenges-011">
+                  Vua Eco
+                </div>
+              </div>
+              <div class="page-style-occupant-energy-challenges-009">
+                <div class="page-style-occupant-energy-challenges-010">🌙</div>
+                <div class="page-style-occupant-energy-challenges-014">
+                  Ngủ Trưa Xanh
+                </div>
+              </div>
+              <div class="page-style-occupant-energy-challenges-015">
+                <div class="page-style-occupant-energy-challenges-010">⚡</div>
+                <div class="page-style-occupant-energy-challenges-017">
+                  Master Tiết Kiệm
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <script src="../javascript/data.js"></script>
-  <script src="../javascript/main.js"></script>
-  <script src="../javascript/occupant-energy-challenges.js"></script>
-<footer class="app-footer">
-  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
-</footer>
-<script src="../javascript/role-switcher.js"></script>
-</body>
+        <!-- FILTER TABS -->
+        <div class="page-style-occupant-energy-challenges-018">
+          <div class="cac-tab-loc" id="challengeTabs">
+            <button class="nut-tab-loc active" data-filter="all">
+              Tất cả thử thách
+            </button>
+            <button class="nut-tab-loc" data-filter="in-progress">
+              Đang tham gia
+            </button>
+            <button class="nut-tab-loc" data-filter="available">
+              Chưa tham gia
+            </button>
+            <button class="nut-tab-loc" data-filter="completed">
+              Đã hoàn thành
+            </button>
+          </div>
+        </div>
+
+        <!-- GRID CÁC THẺ THỬ THÁCH (CREATE / READ / UPDATE) -->
+        <div class="grid-cols-2" id="challengesGrid">
+          <!-- Render từ JS -->
+        </div>
+      </main>
+    </div>
+
+    <script src="../javascript/data.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/occupant-energy-challenges.js"></script>
+    <footer class="app-footer">
+      <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+    </footer>
+    <script src="../javascript/role-switcher.js"></script>
+  </body>
 </html>
-
-
-
