@@ -1,8 +1,0 @@
-/* CSS riêng của trang Energy KPIs: biểu đồ cột xu hướng 12 tháng */
-.trend { display: flex; align-items: flex-end; gap: 8px; height: 220px; border-bottom: 1px solid var(--border-color); }
-.month { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
-.pair { display: flex; align-items: flex-end; gap: 2px; width: 100%; flex: 1; }
-.pair div { flex: 1; border-radius: 3px 3px 0 0; min-height: 2px; }
-.actual { background: var(--emerald-500); }
-.target { background: var(--sky-400); }
-.month span { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; }
