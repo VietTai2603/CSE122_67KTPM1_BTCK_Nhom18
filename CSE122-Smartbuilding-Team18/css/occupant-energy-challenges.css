@@ -1,4 +1,3 @@
-/* CSS riêng của trang occupant-energy-challenges */
 .the-thu-thach {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -39,7 +38,7 @@
   height: 10px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-full);
-  overflow: hidden;
+  overflow: hidden; 1
   margin: 14px 0 8px;
 }
 .muc-tien-do {
