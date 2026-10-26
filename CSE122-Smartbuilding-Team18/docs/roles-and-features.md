@@ -99,6 +99,11 @@ Nhân viên kỹ thuật/vận hành chịu trách nhiệm đảm bảo hệ th�
   4. **Delete / Archive (Xóa / Lưu trữ):** Hủy bỏ hành động nếu tình hình thực tế thay đổi; có modal xác nhận trước khi xóa.
 - **Lưu trữ dữ liệu:** Đồng bộ hóa vào `localStorage` (key: `sb_operator_actions`).
 
+#### Màn hình 4: Zone Live Control (`html/operator-zone-control.html`) - R / U
+- **Luồng thao tác:**
+  1. **Read (Đọc):** Xem hệ thống trạng thái tòa nhà (ví dụ: *"Điều khiển chiếu sáng"*, *"Nhiệt độ & HVAC"*).
+  2. **Update (Sửa):** Điều chỉnh thông số hành động hoặc cập nhật trạng thái tiến độ (`Scheduled` ➔ `In-progress` ➔ `Completed`).
+
 ---
 
 ## PHẦN 3: SV3 – QUẢN LÝ CƠ SỞ & QUẢN TRỊ VIÊN (MANAGER & ADMIN)
