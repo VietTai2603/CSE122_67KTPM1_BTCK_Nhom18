@@ -10,16 +10,19 @@
 
 ## 🌐 1. ĐƯỜNG DẪN DỰ ÁN & LIÊN KẾT MINH CHỨNG (GATEKEEPERS)
 
-- 🚀 **Đường dẫn triển khai thực tế (Live Deployment URL - ĐK3):**  
+- 🚀 **Đường dẫn triển khai thực tế (Live Deployment URL):**  
   👉 [https://cse122-btl36-smartbuilding.vercel.app](https://cse122-btl36-smartbuilding.vercel.app) *(Hoặc mở qua GitHub Pages)*
-- 💻 **Kho mã nguồn GitHub chính thức (Repository - ĐK2):**  
+- 💻 **Kho mã nguồn GitHub chính thức (Repository):**  
   👉 [https://github.com/cse122-team18/cse122-smartbuilding-btl36](https://github.com/cse122-team18/cse122-smartbuilding-btl36)
-- 🎨 **Bản thiết kế Mockup Figma / Canva (Design System - ĐK1):**  
-  👉 [Link Figma Dự án (Quyền xem công khai)](design/figma-link.txt)
+- 🎨 **Bản thiết kế Mockup Figma / Canva (Design System):**  
+  👉 [Link Figma Dự án (Quyền xem công khai)]
+  [SV1](https://canva.link/mh8ker662zjwtx2)
+  [SV2](https://canva.link/qrj8w5mn4w62o2y)
+  [SV3](https://canva.link/64hj81bp9rl83nk)
 - 📋 **Bảng quản lý công việc Trello Board (Task Management):**  
-  👉 [Bảng Trello CSE122-BTL36-Team18-SmartBuilding](docs/trello-board-plan.md)
-- 🎥 **Thư mục tổng hợp Video minh chứng OBS (1:1 từng màn hình - ĐK4):**  
-  👉 [Thư mục Video OBS Google Drive](https://drive.google.com/drive/folders/cse122-team18-obs-evidence)
+  👉 [Bảng Trello CSE122-BTL36-Team18-SmartBuilding](https://trello.com/invite/b/6ad6bbc81915d2819b95b5f9/ATTI0e160799bbc83963b9ad18a0a835391dE71E4DBE/cse122-btl36-nhom-18-smartbuilding)
+- 🎥 **Thư mục tổng hợp Video minh chứng OBS (1:1 từng màn hình):**  
+  👉 [Thư mục Video OBS Google Drive](https://drive.google.com/drive/folders/1Jnj_pA_bsquwrfJWm9tJqOOQUZkHKE3S?usp=drive_link)
 
 ---
 
