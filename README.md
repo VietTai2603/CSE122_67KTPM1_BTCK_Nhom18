@@ -11,7 +11,7 @@
 ## 🌐 1. ĐƯỜNG DẪN DỰ ÁN & LIÊN KẾT MINH CHỨNG (GATEKEEPERS)
 
 - 🚀 **Đường dẫn triển khai thực tế (Live Deployment URL):**  
-  👉 [https://cse122-btl36-smartbuilding.vercel.app](https://cse122-btl36-smartbuilding.vercel.app)
+  👉 [https://cse122-btl36-smartbuilding.vercel.app](https://cse122smartbuildingteam18.vercel.app/)
 - 💻 **Kho mã nguồn GitHub chính thức (Repository):**  
   👉 [https://github.com/cse122-team18/cse122-smartbuilding-btl36](https://github.com/VietTai2603/CSE122_67KTPM1_BTCK_Nhom18/tree/main)
 - 🎨 **Bản thiết kế Mockup Figma / Canva (Design System):**  
