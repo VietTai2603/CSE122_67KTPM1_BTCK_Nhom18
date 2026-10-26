@@ -1,4 +1,4 @@
-# CHI TIẾT 24 TASK TRELLO – SMARTBUILDING BTL-36
+# CHI TIẾT 25 TASK TRELLO – SMARTBUILDING BTL-36
 
 Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có trên Trello; không tạo card thay thế. Giữ nguyên ngày bắt đầu/hạn, người được giao, nhãn, comment, link và lịch sử hoạt động đang có. Chỉ bổ sung hoặc sửa phần mô tả cần thiết. Trello sẽ ghi nhận lần chỉnh sửa mới trong activity, còn card cũ và lịch sử vẫn thuộc card đó. Nếu card đã có nhánh, PR hoặc video thật thì giữ nguyên; chỉ điền phần còn thiếu.
 
@@ -9,7 +9,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `docs/init-documentation`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Chuẩn hóa tài liệu nền tảng của đề tài SmartBuilding: vấn đề, mục tiêu, vai trò người dùng, luồng nghiệp vụ, kiểm kê màn hình, phân công và việc sử dụng AI.
@@ -29,7 +28,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/design-system-core`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Xây dựng bộ quy tắc giao diện dùng chung cho các dashboard: màu nền tối, xanh emerald, typography, card, nút, form, badge, modal và trạng thái tương tác.
@@ -49,7 +47,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/mock-data-engine`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Tạo dữ liệu mẫu cho zone, cảm biến, tài khoản, báo cáo và nghiệp vụ occupant/operator; cung cấp tiện ích đọc/ghi LocalStorage và hàm dùng chung.
@@ -69,7 +66,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/portal-homepage`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Làm trang Portal giới thiệu đề tài và điều hướng tới các khu vực theo vai trò cùng màn hình dùng chung.
@@ -89,7 +85,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/common-account-screens`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Hoàn thiện luồng đăng nhập mô phỏng, trang không đủ quyền, trang hồ sơ và chức năng đổi mật khẩu.
@@ -110,7 +105,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/common-error-recovery`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Hoàn thiện trang báo không tìm thấy đường dẫn và luồng khôi phục mật khẩu mô phỏng trên trình duyệt.
@@ -152,7 +146,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/occupant-comfort-feedback`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Cho người sử dụng gửi và quản lý phản ánh về nhiệt độ, điều hòa và ánh sáng.
@@ -319,7 +312,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/admin-zone-management`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quản trị danh mục các tầng/khu vực và thông số định mức.
@@ -340,7 +332,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/admin-sensor-management`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quản lý danh mục cảm biến IoT giả lập và trạng thái kết nối.
@@ -361,7 +352,6 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 **Nhánh Git:** `feature/admin-user-management`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quản trị tài khoản, vai trò và trạng thái truy cập của người dùng.
@@ -373,17 +363,34 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 - [ ] Khóa hoặc kích hoạt tài khoản; tài khoản khóa không đăng nhập được.
 - [ ] Lưu thay đổi và phản ánh chúng ở đăng nhập demo.
 
+## TASK-19 — Zone Live Control
+**Người phụ trách:** Lê Quang Tiến  
+**Tệp:** `html/operator-zone-control.html`, `javascript/operator-zone-control.js`
+**Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
+**Nhánh Git:** `feature/operator-zone-control`
+**Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
+
+**Mô tả:** Trạng thái tòa nhà hệ thống
+
+**Checklist:**
+- [ ] Tạo lệnh với khu vực, thời gian, hành động và mức tiết kiệm dự kiến.
+- [ ] Sửa, hủy hoặc lưu trữ lệnh theo trạng thái.
+- [ ] Hiển thị scheduled/active/completed/cancelled và bộ lọc.
+- [ ] Gợi ý hành động mock có thể được áp dụng hoặc bỏ qua.
+- [ ] Có xác nhận trước thao tác hủy và lưu thay đổi.
+
+**Hoàn thành khi:** CRUD và trạng thái lệnh nhất quán sau khi tải lại trang.
+
+
 **Hoàn thành khi:** Quản trị viên kiểm soát được danh mục người dùng và quyền truy cập.
 
-## TASK-19 — Kiểm tra Responsive và Accessibility
+## TASK-20 — Kiểm tra Responsive và Accessibility
 **Người phụ trách:** Phùng Viết Tài  
 **Phạm vi:** Toàn bộ HTML/CSS giao diện
 **Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `fix/responsive-a11y`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
-
 
 **Mô tả:** Rà soát giao diện ở kích thước desktop, tablet và điện thoại; sửa lỗi bố cục và khả năng truy cập.
 
@@ -395,14 +402,13 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 **Hoàn thành khi:** Các luồng chính sử dụng được trên màn nhỏ và bằng bàn phím.
 
-## TASK-20 — Kiểm tra dữ liệu và lỗi Console
+## TASK-21 — Kiểm tra dữ liệu và lỗi Console
 **Người phụ trách:** Lê Quang Tiến  
 **Phạm vi:** Các màn hình có JavaScript/LocalStorage
 **Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `fix/localstorage-console`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Rà soát luồng nạp, lưu và tải lại dữ liệu; kiểm tra các form và xử lý lỗi JavaScript.
@@ -415,15 +421,13 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 **Hoàn thành khi:** Luồng sử dụng chính không tạo lỗi Console và dữ liệu bền qua reload.
 
-## TASK-21 — Kiểm tra AI fallback và retry
+## TASK-22 — Kiểm tra AI fallback và retry
 **Người phụ trách:** Lê Đức Quang  
 **Phạm vi:** AI-1, AI-2, AI-3
 **Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `fix/ai-fallback`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
-
 
 **Mô tả:** Bổ sung trạng thái dự phòng khi thiếu dữ liệu hoặc mô phỏng AI không tạo được kết quả.
 
@@ -435,14 +439,13 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 **Hoàn thành khi:** Cả ba luồng AI có thể phục hồi sau lỗi/thiếu dữ liệu và giao diện không bị treo.
 
-## TASK-22 — Quay video OBS minh chứng
+## TASK-23 — Quay video OBS minh chứng
 **Người phụ trách:** Cả 3 thành viên  
 **Phạm vi:** Các màn hình do từng sinh viên phụ trách
 **Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `docs/obs-evidence`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Quay minh chứng quy trình sử dụng và phần triển khai theo yêu cầu môn học.
@@ -455,14 +458,13 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 **Hoàn thành khi:** Đủ video cho các màn hình cần minh chứng và mở xem được.
 
-## TASK-23 — Hoàn thiện README và báo cáo AI
+## TASK-24 — Hoàn thiện README và báo cáo AI
 **Người phụ trách:** Phùng Viết Tài (Lead), phối hợp cả nhóm  
 **Tệp:** `README.md`, `docs/ai-usage-report.md`, tài liệu liên quan
 **Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `docs/final-readme-ai-report`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Hoàn thiện hướng dẫn chạy, phân công, kiểm kê màn hình, nguồn dữ liệu và báo cáo sử dụng AI.
@@ -475,14 +477,13 @@ Dùng tài liệu này để cập nhật mô tả cho đúng 24 card đã có t
 
 **Hoàn thành khi:** Người khác có thể mở dự án, chạy demo và hiểu phạm vi sản phẩm từ tài liệu.
 
-## TASK-24 — Diễn tập bảo vệ và live-coding
+## TASK-25 — Diễn tập bảo vệ và live-coding
 **Người phụ trách:** Cả 3 thành viên  
 **Phạm vi:** Demo tổng thể và các kịch bản phát sinh
 **Hạn hoàn thành:** Đối chiếu hạn thật trên card Trello rồi cập nhật tại đây
 **Nhánh Git:** `docs/defense-livecoding`
 **Pull Request GitHub:** Tra PR thật trên GitHub rồi cập nhật URL tại đây
 **Commit Git:** Tra commit thật trong Git rồi cập nhật SHA tại đây
-**Video OBS:** Cập nhật link/tên file OBS thật sau khi quay
 
 
 **Mô tả:** Chuẩn bị phần trình bày, phân vai demo và luyện xử lý yêu cầu live-coding trong thời gian giới hạn.
