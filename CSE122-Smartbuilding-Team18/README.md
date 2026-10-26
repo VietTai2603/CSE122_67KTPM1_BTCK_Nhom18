@@ -13,7 +13,7 @@
 - 🚀 **Đường dẫn triển khai thực tế (Live Deployment URL - ĐK3):**  
   👉 [https://cse122-btl36-smartbuilding.vercel.app](https://cse122-btl36-smartbuilding.vercel.app) _(Hoặc mở qua GitHub Pages)_
 - 💻 **Kho mã nguồn GitHub chính thức (Repository - ĐK2):**  
-  👉 [https://github.com/cse122-team18/cse122-smartbuilding-btl36](https://github.com/cse122-team18/cse122-smartbuilding-btl36)
+  👉 [https://github.com/cse122-team18/cse122-smartbuilding-btl36](https://github.com/VietTai2603/CSE122_67KTPM1_BTCK_Nhom18)
 - 🎨 **Bản thiết kế Mockup Figma / Canva (Design System - ĐK1):**  
   👉 [Link Figma Dự án (Quyền xem công khai)](design/figma-link.txt)
 - 📋 **Bảng quản lý công việc Trello Board (Task Management):**  
