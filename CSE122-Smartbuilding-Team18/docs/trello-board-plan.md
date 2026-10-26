@@ -91,7 +91,7 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | **TASK-10** | **Energy Monitor:** Giám sát phụ tải tức thời theo từng tầng/zone, cảnh báo quá tải       | `html/operator-energy-monitor.html` |  **R** (Read)<br>Grid bản đồ Zone, Bộ lọc trạng thái, Gauge tải điện  | `SV2-01-operator-energy-monitor.mp4` |
 | **TASK-11** | **Alert Center:** Trung tâm xử lý cảnh báo & Tích hợp AI-1 (Energy Anomaly Detector)      | `html/operator-alert-center.html`   |   **C/R/U**<br>Quét Spike bằng AI, Tạo sự cố, Đổi trạng thái xử lý    | `SV2-02-operator-alert-center.mp4`   |
 | **TASK-12** | **Saving Actions:** Điều phối lệnh tiết kiệm điện & Tích hợp AI-2 (Saving Recommendation) | `html/operator-saving-actions.html` | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm | `SV2-03-operator-saving-actions.mp4` |
-| **TASK-19** | **Zone Live Control:** Trạng thái tòa nhà hệ thống                                        | `html/operator-zone-control.html`   | **C/R/U/D**<br>Thêm/Sửa/Hủy lệnh, Đồng bộ LocalStorage, Modal confirm |                                      |
+| **TASK-19** | **Zone Live Control:** Trạng thái tòa nhà hệ thống                                        | `html/operator-zone-control.html`   | **R/U**<br>Đọc/Sử dụng, Đồng bộ thiết bị  ||
 
 ---
 
@@ -102,9 +102,9 @@ Khi tạo mỗi card trên Trello, thành viên bắt buộc phải điền theo
 | **TASK-13** | **Energy KPIs:** Dashboard vĩ mô theo dõi chỉ số EUI, chi phí tiền điện & phát thải $CO_2$ | `html/manager-energy-kpis.html`     |     **R** (Read)<br>Thẻ KPI, Biểu đồ so sánh tháng, Chỉ số xanh     | `SV3-01-manager-energy-kpis.mp4`     |
 | **TASK-14** | **Zone Comparison & AI-3 Simulator:** So sánh định mức & Mô phỏng What-If giảm % phụ tải   | `html/manager-zone-comparison.html` |  **C/R/U**<br>Slider What-If AI, Tính tiền điện & $CO_2$ tiết kiệm  | `SV3-02-manager-zone-comparison.mp4` |
 | **TASK-15** | **Monthly Report:** Quản lý kỳ báo cáo năng lượng, phê duyệt bản nháp & In ấn PDF          | `html/manager-monthly-report.html`  | **C/R/U/D**<br>Tạo báo cáo tháng, Duyệt/Hủy, In ấn `window.print()` | `SV3-03-manager-monthly-report.mp4`  |
-| **TASK-16** | **Zone Management:** Quản lý danh mục các tầng và khu vực tòa nhà                          | `html/admin-zone-management.html`   |  **C/R/U/D**<br>Thêm/Sửa/Khóa Zone, validate diện tích & công suất  | `SV3-04-admin-zone-management.mp4`   |
-| **TASK-17** | **Sensor Management:** Quản lý danh mục cảm biến IoT giả lập                               | `html/admin-sensor-management.html` |    **C/R/U/D**<br>Thêm/Sửa cảm biến, toggle Online/Offline mock     | `SV3-05-admin-sensor-management.mp4` |
-| **TASK-18** | **User Management:** Quản lý danh sách tài khoản & phân quyền 4 vai trò                    | `html/admin-user-management.html`   |  **C/R/U/D**<br>Thêm/Sửa/Khóa user, phân quyền truy cập theo Zone   | `SV3-06-admin-user-management.mp4`   |
+| **TASK-16** | **Zone Management:** Quản lý danh mục các tầng và khu vực tòa nhà                          | `html/admin-zone-management.html`   |  **C/R/U/D**<br>Thêm/Sửa/Khóa Zone, validate diện tích & công suất  ||
+| **TASK-17** | **Sensor Management:** Quản lý danh mục cảm biến IoT giả lập                               | `html/admin-sensor-management.html` |    **C/R/U/D**<br>Thêm/Sửa cảm biến, toggle Online/Offline mock     ||
+| **TASK-18** | **User Management:** Quản lý danh sách tài khoản & phân quyền 4 vai trò                    | `html/admin-user-management.html`   |  **C/R/U/D**<br>Thêm/Sửa/Khóa user, phân quyền truy cập theo Zone   ||
 
 ---
 
