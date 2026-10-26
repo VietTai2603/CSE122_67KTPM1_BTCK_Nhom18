@@ -30,7 +30,11 @@
 }
 .cot-dien-nang {
   width: 100%;
-  background: linear-gradient(180deg, var(--emerald-400) 0%, var(--emerald-600) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--emerald-400) 0%,
+    var(--emerald-600) 100%
+  );
   border-radius: var(--radius-sm);
   transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -54,7 +58,7 @@
   white-space: nowrap;
   pointer-events: none;
   z-index: 10;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 .nhan-gio {
   font-size: 0.72rem;
@@ -62,7 +66,11 @@
   margin-top: 8px;
 }
 .the-goi-y-ai {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.1) 0%,
+    rgba(14, 165, 233, 0.05) 100%
+  );
   border: 1px solid rgba(16, 185, 129, 0.25);
 }
 .nhan-goi-y-ai {
@@ -78,11 +86,56 @@
 }
 
 /* Các lớp dùng cho JS (thay cho style viết trực tiếp trong chuỗi HTML) */
-.the-goi-y { background: rgba(0,0,0,0.25); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; }
-.hang-can-deu { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
-.chu-nho-mo { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px; }
-.chu-tiet-kiem { font-size: 0.75rem; color: var(--emerald-400); font-weight: 600; }
-.the-tom-tat { padding: 12px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md); border: 1px solid var(--border-color); }
-.thanh-tien-do-nho { height: 8px; background: rgba(255,255,255,0.1); border-radius: var(--radius-full); overflow: hidden; margin: 8px 0; }
-.muc-tien-do-nho { height: 100%; background: var(--emerald-400); }
-.dong-thong-tin { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); }
+.the-goi-y {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+.hang-can-deu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+.chu-nho-mo {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.chu-tiet-kiem {
+  font-size: 0.75rem;
+  color: var(--emerald-400);
+  font-weight: 600;
+}
+.the-tom-tat {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+.thanh-tien-do-nho {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: 8px 0;
+}
+.muc-tien-do-nho {
+  height: 100%;
+  background: var(--emerald-400);
+}
+.dong-thong-tin {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.app-footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: auto;
+}

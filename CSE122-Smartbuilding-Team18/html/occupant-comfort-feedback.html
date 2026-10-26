@@ -1,279 +1,470 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phản hồi tiện nghi & Tiết kiệm - SmartBuilding (SV1)</title>
-  <meta name="description" content="Comfort Feedback CRUD - Phản hồi về nhiệt độ, ánh sáng và điều hòa để điều phối tiết kiệm điện">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/occupant-comfort-feedback.css">
-<link rel="stylesheet" href="../css/inline-overrides.css">
-</head>
-<body>
-
-  <!-- SIDEBAR DÙNG CHUNG -->
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <div class="brand-icon">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-        </svg>
-      </div>
-      <div>
-        <div class="brand-title">SmartBuilding</div>
-        <div class="brand-sub">CSE122 • BTL-36</div>
-      </div>
-    </div>
-
-    <nav class="sidebar-menu">
-      <div class="menu-label">VAI TRÒ: NGƯỜI DÙNG TÒA NHÀ</div>
-      <a href="occupant-dashboard.html" class="nav-item">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-        </svg>
-        <span>Tổng quan cá nhân</span>
-      </a>
-      <a href="occupant-comfort-feedback.html" class="nav-item active">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-        </svg>
-        <span>Phản hồi tiện nghi</span>
-      </a>
-      <a href="occupant-energy-challenges.html" class="nav-item">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-        </svg>
-        <span>Thử thách năng lượng</span>
-      </a>
-      <a href="occupant-energy-history.html" class="nav-item"><span>📈</span><span>Lịch sử năng lượng</span></a>
-      <a href="occupant-rewards.html" class="nav-item"><span>🎁</span><span>Điểm thưởng & đổi quà</span></a>
-
-      <div class="menu-label page-style-occupant-comfort-feedback-001">HỆ THỐNG</div>
-      <a href="../index.html" class="nav-item">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-        </svg>
-        <span>Trang chủ Portal</span>
-      </a>
-    </nav>
-
-    <div class="sidebar-footer">
-      <div class="user-snippet">
-        <div class="page-style-occupant-comfort-feedback-002">
-          VA
-        </div>
-        <div class="user-info">
-          <div class="user-name" id="sidebarUserName">Nguyễn Văn An</div>
-          <div class="user-role-badge" id="sidebarUserRoom">Phòng 402 - Khu Đông</div>
-        </div>
-      </div>
-    </div>
-  </aside>
-
-  <!-- MAIN WRAPPER -->
-  <div class="main-wrapper">
-    <!-- TOPBAR -->
-    <header class="topbar">
-      <div class="topbar-left">
-        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle menu">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phản hồi tiện nghi & Tiết kiệm - SmartBuilding</title>
+    <meta
+      name="description"
+      content="Comfort Feedback CRUD - Phản hồi về nhiệt độ, ánh sáng và điều hòa để điều phối tiết kiệm điện"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/occupant-comfort-feedback.css" />
+    <link rel="stylesheet" href="../css/inline-overrides.css" />
+  </head>
+  <body>
+    <!-- SIDEBAR DÙNG CHUNG -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13 10V3L4 14h7v7l9-11h-7z"
+            />
           </svg>
-        </button>
+        </div>
         <div>
-          <h1 class="page-title">Phản hồi tiện nghi & Tiết kiệm năng lượng</h1>
-          <div class="page-subtitle">Quản lý các phản ánh môi trường phòng (Nhiệt độ, Ánh sáng, Thiết bị)</div>
+          <div class="brand-title">SmartBuilding</div>
+          <div class="brand-sub">CSE122 • BTL-36</div>
         </div>
       </div>
 
-      <div class="topbar-right">
-        <button class="btn btn-primary" onclick="openCreateFeedbackModal()">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+      <nav class="sidebar-menu">
+        <div class="menu-label">VAI TRÒ: NGƯỜI DÙNG TÒA NHÀ</div>
+        <a href="occupant-dashboard.html" class="nav-item">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
           </svg>
-          Gửi phản ánh mới
-        </button>
-      </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="content-area">
-      <!-- THANH LỌC TRẠNG THÁI (FILTER) -->
-      <div class="thanh-loc">
-        <div class="cac-tab-loc" id="filterTabs">
-          <button class="nut-tab-loc active" data-filter="all">Tất cả (<span id="countAll">0</span>)</button>
-          <button class="nut-tab-loc" data-filter="pending">Chờ tiếp nhận (<span id="countPending">0</span>)</button>
-          <button class="nut-tab-loc" data-filter="investigating">Đang xử lý (<span id="countInvestigating">0</span>)</button>
-          <button class="nut-tab-loc" data-filter="resolved">Đã giải quyết (<span id="countResolved">0</span>)</button>
-        </div>
-
-        <div class="page-style-occupant-comfort-feedback-003">
-          Gửi 1 phản ánh = Tặng <strong>+10 Điểm Xanh</strong>
-        </div>
-      </div>
-
-      <!-- BẢNG DANH SÁCH FEEDBACK (READ / UPDATE / DELETE) -->
-      <div class="card page-style-occupant-comfort-feedback-004">
-        <div class="table-responsive">
-          <table class="custom-table" id="feedbackTable">
-            <thead>
-              <tr>
-                <th>Vị trí / Phòng</th>
-                <th>Phân loại</th>
-                <th>Vấn đề phản ánh</th>
-                <th>Mức độ</th>
-                <th>Trạng thái</th>
-                <th>Thời gian</th>
-                <th class="page-style-occupant-comfort-feedback-005">Thao tác</th>
-              </tr>
-            </thead>
-            <tbody id="feedbackTableBody">
-              <!-- Render tự động từ JS -->
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Trạng thái rỗng khi chưa có dữ liệu (Empty State) -->
-        <div class="empty-state page-style-occupant-comfort-feedback-006" id="emptyState">
-          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          <span>Tổng quan cá nhân</span>
+        </a>
+        <a href="occupant-comfort-feedback.html" class="nav-item active">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+            />
           </svg>
-          <div class="empty-state-title">Chưa có phản hồi nào trong danh mục này</div>
-          <p class="page-style-occupant-comfort-feedback-007">
-            Hãy gửi phản ánh nếu bạn thấy phòng làm việc quá lạnh, quá nóng hoặc có thiết bị lãng phí điện.
+          <span>Phản hồi tiện nghi</span>
+        </a>
+        <a href="occupant-energy-challenges.html" class="nav-item">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+            />
+          </svg>
+          <span>Thử thách năng lượng</span>
+        </a>
+        <a href="occupant-energy-history.html" class="nav-item"
+          ><span>📈</span><span>Lịch sử năng lượng</span></a
+        >
+        <a href="occupant-rewards.html" class="nav-item"
+          ><span>🎁</span><span>Điểm thưởng & đổi quà</span></a
+        >
+
+        <div class="menu-label page-style-occupant-comfort-feedback-001">
+          HỆ THỐNG
+        </div>
+        <a href="../index.html" class="nav-item">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+          <span>Trang chủ Portal</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-snippet">
+          <div class="page-style-occupant-comfort-feedback-002">VA</div>
+          <div class="user-info">
+            <div class="user-name" id="sidebarUserName">Nguyễn Văn An</div>
+            <div class="user-role-badge" id="sidebarUserRoom">
+              Phòng 402 - Khu Đông
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button
+            class="menu-toggle-btn"
+            id="menuToggleBtn"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <div>
+            <h1 class="page-title">
+              Phản hồi tiện nghi & Tiết kiệm năng lượng
+            </h1>
+            <div class="page-subtitle">
+              Quản lý các phản ánh môi trường phòng (Nhiệt độ, Ánh sáng, Thiết
+              bị)
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="btn btn-primary" onclick="openCreateFeedbackModal()">
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+            Gửi phản ánh mới
+          </button>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="content-area">
+        <!-- THANH LỌC TRẠNG THÁI (FILTER) -->
+        <div class="thanh-loc">
+          <div class="cac-tab-loc" id="filterTabs">
+            <button class="nut-tab-loc active" data-filter="all">
+              Tất cả (<span id="countAll">0</span>)
+            </button>
+            <button class="nut-tab-loc" data-filter="pending">
+              Chờ tiếp nhận (<span id="countPending">0</span>)
+            </button>
+            <button class="nut-tab-loc" data-filter="investigating">
+              Đang xử lý (<span id="countInvestigating">0</span>)
+            </button>
+            <button class="nut-tab-loc" data-filter="resolved">
+              Đã giải quyết (<span id="countResolved">0</span>)
+            </button>
+          </div>
+
+          <div class="page-style-occupant-comfort-feedback-003">
+            Gửi 1 phản ánh = Tặng <strong>+10 Điểm Xanh</strong>
+          </div>
+        </div>
+
+        <!-- BẢNG DANH SÁCH FEEDBACK (READ / UPDATE / DELETE) -->
+        <div class="card page-style-occupant-comfort-feedback-004">
+          <div class="table-responsive">
+            <table class="custom-table" id="feedbackTable">
+              <thead>
+                <tr>
+                  <th>Vị trí / Phòng</th>
+                  <th>Phân loại</th>
+                  <th>Vấn đề phản ánh</th>
+                  <th>Mức độ</th>
+                  <th>Trạng thái</th>
+                  <th>Thời gian</th>
+                  <th class="page-style-occupant-comfort-feedback-005">
+                    Thao tác
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="feedbackTableBody">
+                <!-- Render tự động từ JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Trạng thái rỗng khi chưa có dữ liệu (Empty State) -->
+          <div
+            class="empty-state page-style-occupant-comfort-feedback-006"
+            id="emptyState"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            <div class="empty-state-title">
+              Chưa có phản hồi nào trong danh mục này
+            </div>
+            <p class="page-style-occupant-comfort-feedback-007">
+              Hãy gửi phản ánh nếu bạn thấy phòng làm việc quá lạnh, quá nóng
+              hoặc có thiết bị lãng phí điện.
+            </p>
+            <button
+              class="btn btn-primary btn-sm"
+              onclick="openCreateFeedbackModal()"
+            >
+              Gửi phản ánh ngay
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- MODAL TẠO PHẢN ÁNH MỚI (CREATE) -->
+    <div class="modal-overlay" id="createModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Gửi phản ánh tiện nghi & năng lượng</h3>
+          <button class="modal-close-btn" onclick="closeModal('createModal')">
+            &times;
+          </button>
+        </div>
+        <form id="createFeedbackForm" onsubmit="handleCreateFeedback(event)">
+          <div class="modal-body">
+            <div class="form-group" id="grpRoom">
+              <label class="form-label"
+                >Vị trí phòng / Khu vực <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="inputRoom"
+                value="Phòng 402 - Khu vực Đông"
+                required
+              />
+              <div class="form-error-msg">Vui lòng nhập vị trí phòng.</div>
+            </div>
+
+            <div class="grid-cols-2">
+              <div class="form-group" id="grpCategory">
+                <label class="form-label"
+                  >Phân loại <span class="required">*</span></label
+                >
+                <select
+                  class="form-control"
+                  id="selectCategory"
+                  onchange="updateIssueOptions()"
+                  required
+                >
+                  <option value="temperature">Nhiệt độ / Điều hòa</option>
+                  <option value="lighting">Hệ thống chiếu sáng</option>
+                  <option value="devices">Thiết bị & Thông gió</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="grpIssue">
+                <label class="form-label"
+                  >Hiện tượng cụ thể <span class="required">*</span></label
+                >
+                <select class="form-control" id="selectIssue">
+                  <!-- Cập nhật theo selectCategory -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mức độ ưu tiên</label>
+              <select class="form-control" id="selectPriority">
+                <option value="low">Thấp (Góp ý thông thường)</option>
+                <option value="medium" selected>
+                  Trung bình (Ảnh hưởng làm việc)
+                </option>
+                <option value="high">
+                  Cao (Lãng phí nghiêm trọng / Rất khó chịu)
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group" id="grpDescription">
+              <label class="form-label"
+                >Mô tả chi tiết <span class="required">*</span></label
+              >
+              <textarea
+                class="form-control"
+                id="inputDescription"
+                rows="3"
+                placeholder="Nhập chi tiết vị trí bàn, cảm nhận nhiệt độ hoặc thiết bị..."
+                required
+              ></textarea>
+              <div class="form-error-msg">
+                Mô tả phải có ít nhất 10 ký tự để kỹ thuật viên dễ xử lý.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeModal('createModal')"
+            >
+              Hủy bỏ
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Xác nhận gửi phản ánh
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODAL CHỈNH SỬA PHẢN ÁNH (UPDATE) -->
+    <div class="modal-overlay" id="editModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Chỉnh sửa nội dung phản ánh</h3>
+          <button class="modal-close-btn" onclick="closeModal('editModal')">
+            &times;
+          </button>
+        </div>
+        <form id="editFeedbackForm" onsubmit="handleUpdateFeedback(event)">
+          <input type="hidden" id="editId" />
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Vị trí phòng</label>
+              <input type="text" class="form-control" id="editRoom" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mức độ ưu tiên</label>
+              <select class="form-control" id="editPriority">
+                <option value="low">Thấp</option>
+                <option value="medium">Trung bình</option>
+                <option value="high">Cao</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="grpEditDesc">
+              <label class="form-label"
+                >Nội dung mô tả <span class="required">*</span></label
+              >
+              <textarea
+                class="form-control"
+                id="editDescription"
+                rows="3"
+                required
+              ></textarea>
+              <div class="form-error-msg">
+                Nội dung mô tả tối thiểu 10 ký tự.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeModal('editModal')"
+            >
+              Đóng
+            </button>
+            <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODAL XÁC NHẬN XÓA (DELETE) -->
+    <div class="modal-overlay" id="deleteConfirmModal">
+      <div class="modal-content page-style-occupant-comfort-feedback-008">
+        <div class="modal-header">
+          <h3 class="modal-title page-style-occupant-comfort-feedback-009">
+            Xác nhận hủy phản ánh
+          </h3>
+          <button
+            class="modal-close-btn"
+            onclick="closeModal('deleteConfirmModal')"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="page-style-occupant-comfort-feedback-010">
+            Bạn có chắc chắn muốn xóa phản ánh này không? Thao tác này sẽ xóa bỏ
+            bản ghi khỏi hệ thống và không thể khôi phục.
           </p>
-          <button class="btn btn-primary btn-sm" onclick="openCreateFeedbackModal()">Gửi phản ánh ngay</button>
+          <input type="hidden" id="deleteTargetId" />
         </div>
-      </div>
-    </main>
-  </div>
-
-  <!-- MODAL TẠO PHẢN ÁNH MỚI (CREATE) -->
-  <div class="modal-overlay" id="createModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Gửi phản ánh tiện nghi & năng lượng</h3>
-        <button class="modal-close-btn" onclick="closeModal('createModal')">&times;</button>
-      </div>
-      <form id="createFeedbackForm" onsubmit="handleCreateFeedback(event)">
-        <div class="modal-body">
-          <div class="form-group" id="grpRoom">
-            <label class="form-label">Vị trí phòng / Khu vực <span class="required">*</span></label>
-            <input type="text" class="form-control" id="inputRoom" value="Phòng 402 - Khu vực Đông" required>
-            <div class="form-error-msg">Vui lòng nhập vị trí phòng.</div>
-          </div>
-
-          <div class="grid-cols-2">
-            <div class="form-group" id="grpCategory">
-              <label class="form-label">Phân loại <span class="required">*</span></label>
-              <select class="form-control" id="selectCategory" onchange="updateIssueOptions()" required>
-                <option value="temperature">Nhiệt độ / Điều hòa</option>
-                <option value="lighting">Hệ thống chiếu sáng</option>
-                <option value="devices">Thiết bị & Thông gió</option>
-              </select>
-            </div>
-
-            <div class="form-group" id="grpIssue">
-              <label class="form-label">Hiện tượng cụ thể <span class="required">*</span></label>
-              <select class="form-control" id="selectIssue">
-                <!-- Cập nhật theo selectCategory -->
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Mức độ ưu tiên</label>
-            <select class="form-control" id="selectPriority">
-              <option value="low">Thấp (Góp ý thông thường)</option>
-              <option value="medium" selected>Trung bình (Ảnh hưởng làm việc)</option>
-              <option value="high">Cao (Lãng phí nghiêm trọng / Rất khó chịu)</option>
-            </select>
-          </div>
-
-          <div class="form-group" id="grpDescription">
-            <label class="form-label">Mô tả chi tiết <span class="required">*</span></label>
-            <textarea class="form-control" id="inputDescription" rows="3" placeholder="Nhập chi tiết vị trí bàn, cảm nhận nhiệt độ hoặc thiết bị..." required></textarea>
-            <div class="form-error-msg">Mô tả phải có ít nhất 10 ký tự để kỹ thuật viên dễ xử lý.</div>
-          </div>
-        </div>
-
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="closeModal('createModal')">Hủy bỏ</button>
-          <button type="submit" class="btn btn-primary">Xác nhận gửi phản ánh</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="closeModal('deleteConfirmModal')"
+          >
+            Giữ lại
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            onclick="confirmDeleteFeedback()"
+          >
+            Xóa ngay
+          </button>
         </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- MODAL CHỈNH SỬA PHẢN ÁNH (UPDATE) -->
-  <div class="modal-overlay" id="editModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Chỉnh sửa nội dung phản ánh</h3>
-        <button class="modal-close-btn" onclick="closeModal('editModal')">&times;</button>
-      </div>
-      <form id="editFeedbackForm" onsubmit="handleUpdateFeedback(event)">
-        <input type="hidden" id="editId">
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">Vị trí phòng</label>
-            <input type="text" class="form-control" id="editRoom" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Mức độ ưu tiên</label>
-            <select class="form-control" id="editPriority">
-              <option value="low">Thấp</option>
-              <option value="medium">Trung bình</option>
-              <option value="high">Cao</option>
-            </select>
-          </div>
-
-          <div class="form-group" id="grpEditDesc">
-            <label class="form-label">Nội dung mô tả <span class="required">*</span></label>
-            <textarea class="form-control" id="editDescription" rows="3" required></textarea>
-            <div class="form-error-msg">Nội dung mô tả tối thiểu 10 ký tự.</div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="closeModal('editModal')">Đóng</button>
-          <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- MODAL XÁC NHẬN XÓA (DELETE) -->
-  <div class="modal-overlay" id="deleteConfirmModal">
-    <div class="modal-content page-style-occupant-comfort-feedback-008">
-      <div class="modal-header">
-        <h3 class="modal-title page-style-occupant-comfort-feedback-009">Xác nhận hủy phản ánh</h3>
-        <button class="modal-close-btn" onclick="closeModal('deleteConfirmModal')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p class="page-style-occupant-comfort-feedback-010">
-          Bạn có chắc chắn muốn xóa phản ánh này không? Thao tác này sẽ xóa bỏ bản ghi khỏi hệ thống và không thể khôi phục.
-        </p>
-        <input type="hidden" id="deleteTargetId">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="closeModal('deleteConfirmModal')">Giữ lại</button>
-        <button type="button" class="btn btn-danger" onclick="confirmDeleteFeedback()">Xóa ngay</button>
       </div>
     </div>
-  </div>
 
-  <script src="../javascript/data.js"></script>
-  <script src="../javascript/main.js"></script>
-  <script src="../javascript/occupant-comfort-feedback.js"></script>
-<footer class="app-footer">
-  <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
-</footer>
-<script src="../javascript/role-switcher.js"></script>
-</body>
+    <script src="../javascript/data.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/occupant-comfort-feedback.js"></script>
+    <footer class="app-footer">
+      <p>© 2026 SmartBuilding CSE122 • Nhóm 18 • Đề tài BTL-36</p>
+    </footer>
+    <script src="../javascript/role-switcher.js"></script>
+  </body>
 </html>
-
-
-
