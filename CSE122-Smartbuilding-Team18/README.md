@@ -2,24 +2,27 @@
 
 > **Học phần:** PHÁT TRIỂN ỨNG DỤNG WEB CƠ BẢN – CSE122  
 > **Khoa:** Công nghệ thông tin – Trường Đại học Thủy Lợi (TLU)  
-> **Giảng viên hướng dẫn ** ThS. Kiều Tuấn Dũng
+> **Giảng viên hướng dẫn & chấm thi:** ThS. Kiều Tuấn Dũng – ThS. Tạ Chí Hiếu  
 > **Nhóm thực hiện:** Nhóm 18 (Lớp: CSE122)  
-> **Lĩnh vực đề tài:** Smart City / Smart Building & Energy
+> **Lĩnh vực đề tài:** Smart City / Smart Building & Energy  
 
 ---
 
 ## 🌐 1. ĐƯỜNG DẪN DỰ ÁN & LIÊN KẾT MINH CHỨNG (GATEKEEPERS)
 
-- 🚀 **Đường dẫn triển khai thực tế (Live Deployment URL - ĐK3):**  
-  👉 [https://cse122-btl36-smartbuilding.vercel.app](https://cse122-btl36-smartbuilding.vercel.app) _(Hoặc mở qua GitHub Pages)_
-- 💻 **Kho mã nguồn GitHub chính thức (Repository - ĐK2):**  
-  👉 [https://github.com/cse122-team18/cse122-smartbuilding-btl36](https://github.com/cse122-team18/cse122-smartbuilding-btl36)
-- 🎨 **Bản thiết kế Mockup Figma / Canva (Design System - ĐK1):**  
-  👉 [Link Figma Dự án (Quyền xem công khai)](design/figma-link.txt)
+- 🚀 **Đường dẫn triển khai thực tế (Live Deployment URL):**  
+  👉 [https://cse122-btl36-smartbuilding.vercel.app](https://cse122smartbuildingteam18.vercel.app/)
+- 💻 **Kho mã nguồn GitHub chính thức (Repository):**  
+  👉 [https://github.com/cse122-team18/cse122-smartbuilding-btl36](https://github.com/VietTai2603/CSE122_67KTPM1_BTCK_Nhom18/tree/main)
+- 🎨 **Bản thiết kế Mockup Figma / Canva (Design System):**  
+  👉 [Link Figma Dự án (Quyền xem công khai)]
+  [SV1](https://canva.link/mh8ker662zjwtx2)
+  [SV2](https://canva.link/qrj8w5mn4w62o2y)
+  [SV3](https://canva.link/64hj81bp9rl83nk)
 - 📋 **Bảng quản lý công việc Trello Board (Task Management):**  
-  👉 [Bảng Trello CSE122-BTL36-Team18-SmartBuilding](docs/trello-board-plan.md)
-- 🎥 **Thư mục tổng hợp Video minh chứng OBS (1:1 từng màn hình - ĐK4):**  
-  👉 [Thư mục Video OBS Google Drive](https://drive.google.com/drive/folders/cse122-team18-obs-evidence)
+  👉 [Bảng Trello CSE122-BTL36-Team18-SmartBuilding](https://trello.com/invite/b/6ad6bbc81915d2819b95b5f9/ATTI0e160799bbc83963b9ad18a0a835391dE71E4DBE/cse122-btl36-nhom-18-smartbuilding)
+- 🎥 **Thư mục tổng hợp Video minh chứng OBS (1:1 từng màn hình):**  
+  👉 [Thư mục Video OBS Google Drive](https://drive.google.com/drive/folders/1Jnj_pA_bsquwrfJWm9tJqOOQUZkHKE3S?usp=drive_link)
 
 ---
 
@@ -27,18 +30,17 @@
 
 Dự án tuân thủ nghiêm ngặt **Nguyên tắc số 3 (Vertical Slice & Cross-Responsibility)**: Mỗi thành viên tự tay code trọn vẹn các màn hình từ Mockup ➔ HTML/CSS ➔ JS/DOM ➔ LocalStorage ➔ Git/PR ➔ OBS, đồng thời gánh 1 trục kỹ thuật xuyên suốt.
 
-|  STT  | Họ và tên                             | MSSV | Vai trò chính                                     | Trách nhiệm chéo (Cross-cutting)                                                                                                                                                                        | Các màn hình phụ trách chính                                                                                                                                                                                                                          |
-| :---: | :------------------------------------ | :--: | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1** | **Phùng Viết Tài**<br>_(Trưởng nhóm)_ | SV1  | **Người sử dụng tòa nhà<br>(Occupant)**           | **Trục 1: Design System & A11y**<br>- Quản lý biến `:root`, CSS Tokens.<br>- Điều hướng chung & Khả năng tiếp cận.<br>- Đồng phụ trách `index.html`, `404.html`.                                        | 1. `html/occupant-dashboard.html`<br>2. `html/occupant-comfort-feedback.html`<br>3. `html/occupant-energy-challenges.html`<br>4. `html/occupant-energy-history.html`<br>5. `html/occupant-rewards.html`                                               |
-| **2** | **Lê Quang Tiến**                     | SV2  | **Nhân viên vận hành<br>(Operator)**              | **Trục 2: Data Engine & JS Architecture**<br>- Quản trị dữ liệu khởi tạo (`data.js`).<br>- Đồng bộ 2 chiều `localStorage`.<br>- Chuẩn hóa luồng tương tác AI UX.<br>- Đồng phụ trách `html/login.html`. | 6. `html/operator-energy-monitor.html`<br>7. `html/operator-alert-center.html`<br>8. `html/operator-saving-actions.html`<br>9. `html/operator-zone-control.html`                                                                                      |
-| **3** | **Lê Đức Quang**                      | SV3  | **Quản lý cơ sở & Quản trị<br>(Manager & Admin)** | **Trục 3: Tích hợp, Responsive & Release**<br>- Kiểm thử đa thiết bị (Desktop/Tablet/Mobile).<br>- Tích hợp What-If AI Simulator.<br>- Quản lý merge PR (`dev` ➔ `main`) & Deploy.                      | 10. `html/manager-energy-kpis.html`<br>11. `html/manager-zone-comparison.html`<br>12. `html/manager-monthly-report.html`<br>13. `html/admin-zone-management.html`<br>14. `html/admin-sensor-management.html`<br>15. `html/admin-user-management.html` |
+| STT | Họ và tên | MSSV | Vai trò chính | Trách nhiệm chéo (Cross-cutting) | Các màn hình phụ trách chính |
+| :-: | :--- | :---: | :--- | :--- | :--- |
+| **1** | **Phùng Viết Tài**<br>*(Trưởng nhóm)* | SV1 | **Người sử dụng tòa nhà<br>(Occupant)** | **Trục 1: Design System & A11y**<br>- Quản lý biến `:root`, CSS Tokens.<br>- Điều hướng chung & Khả năng tiếp cận.<br>- Đồng phụ trách `index.html`, `404.html`. | 1. `html/occupant-dashboard.html`<br>2. `html/occupant-comfort-feedback.html`<br>3. `html/occupant-energy-challenges.html`<br>4. `html/occupant-energy-history.html`<br>5. `html/occupant-rewards.html` |
+| **2** | **Lê Quang Tiến** | SV2 | **Nhân viên vận hành<br>(Operator)** | **Trục 2: Data Engine & JS Architecture**<br>- Quản trị dữ liệu khởi tạo (`data.js`).<br>- Đồng bộ 2 chiều `localStorage`.<br>- Chuẩn hóa luồng tương tác AI UX.<br>- Đồng phụ trách `html/login.html`. | 6. `html/operator-energy-monitor.html`<br>7. `html/operator-alert-center.html`<br>8. `html/operator-saving-actions.html`<br>9. `html/operator-zone-control.html` |
+| **3** | **Lê Đức Quang** | SV3 | **Quản lý cơ sở & Quản trị<br>(Manager & Admin)** | **Trục 3: Tích hợp, Responsive & Release**<br>- Kiểm thử đa thiết bị (Desktop/Tablet/Mobile).<br>- Tích hợp What-If AI Simulator.<br>- Quản lý merge PR (`dev` ➔ `main`) & Deploy. | 10. `html/manager-energy-kpis.html`<br>11. `html/manager-zone-comparison.html`<br>12. `html/manager-monthly-report.html`<br>13. `html/admin-zone-management.html`<br>14. `html/admin-sensor-management.html`<br>15. `html/admin-user-management.html` |
 
 ---
 
 ## 🏢 3. NGỮ CẢNH & PHÁT BIỂU VẤN ĐỀ THỰC TẾ (P1 – P4)
 
 Trong xu thế Smart City và Công trình xanh, việc quản lý và tối ưu năng lượng tại các tòa nhà văn phòng cao tầng gặp 4 điểm nghẽn chính:
-
 - **P1 (Dữ liệu khó đọc):** Chỉ số công tơ điện và cảm biến dạng kỹ thuật thô, người dùng và ban quản lý khó nắm bắt trực quan.
 - **P2 (Khó phát hiện bất thường):** Sự cố rò rỉ, điều hòa chạy qua đêm (Spike phụ tải) chỉ được biết khi nhận hóa đơn tiền điện cuối tháng.
 - **P3 (Hành động chưa thành quy trình):** Khẩu hiệu tiết kiệm điện chung chung, thiếu đầu việc (Task) điều phối phân công cụ thể.
@@ -62,24 +64,23 @@ Trong xu thế Smart City và Công trình xanh, việc quản lý và tối ưu
 
 Toàn bộ 18 màn hình được định danh và theo dõi tại tệp chi tiết [docs/screen-inventory.md](docs/screen-inventory.md) với đủ 12 cột truy vết:
 
-| Vai trò                    | Số màn hình | Màn hình tiêu biểu                                                |  Mức độ CRUD  | Tính năng AI                         |
-| :------------------------- | :---------: | :---------------------------------------------------------------- | :-----------: | :----------------------------------- |
-| **Dùng chung**             |      3      | Portal (`index.html`), Đăng nhập (`login.html`), Lỗi (`404.html`) |       R       | Điều hướng & Phân quyền              |
-| **Occupant (SV1)**         |      5      | Dashboard, Comfort Feedback, Energy Challenges, History, Rewards  | C / R / U / D | AI-2 Tips gợi ý cá nhân              |
-| **Operator (SV2)**         |      4      | Energy Monitor, Alert Center, Saving Actions, Zone Live Control   | C / R / U / D | **AI-1:** Quét Spike bất thường tải  |
-| **Facility Manager (SV3)** |      3      | Energy KPIs, Zone Comparison, Monthly Report                      | C / R / U / D | **AI-3:** What-If Simulator tải điện |
-| **Admin (SV3)**            |      3      | Zone Management, Sensor Management, User Management               | C / R / U / D | Quản trị tham số cấu hình            |
+| Vai trò | Số màn hình | Màn hình tiêu biểu | Mức độ CRUD | Tính năng AI |
+| :--- | :---: | :--- | :---: | :--- |
+| **Dùng chung** | 3 | Portal (`index.html`), Đăng nhập (`login.html`), Lỗi (`404.html`) | R | Điều hướng & Phân quyền |
+| **Occupant (SV1)** | 5 | Dashboard, Comfort Feedback, Energy Challenges, History, Rewards | C / R / U / D | AI-2 Tips gợi ý cá nhân |
+| **Operator (SV2)** | 4 | Energy Monitor, Alert Center, Saving Actions, Zone Live Control | C / R / U / D | **AI-1:** Quét Spike bất thường tải |
+| **Facility Manager (SV3)**| 3 | Energy KPIs, Zone Comparison, Monthly Report | C / R / U / D | **AI-3:** What-If Simulator tải điện |
+| **Admin (SV3)** | 3 | Zone Management, Sensor Management, User Management | C / R / U / D | Quản trị tham số cấu hình |
 
 ---
 
 ## 🔄 6. KIẾN TRÚC HỆ THỐNG & LUỒNG LIÊN THÔNG ĐA VAI TRÒ
 
 Ứng dụng tạo thành một vòng lặp nghiệp vụ khép kín giữa các vai trò:
-
-1. **Occupant (SV1)** gửi phản ánh: _"Phòng 402 quá lạnh (Lãng phí điện)"_ ➔ Lưu vào `localStorage`.
-2. **Operator (SV2)** mở _Alert Center_, kích hoạt **AI-1** quét phát hiện Spike quá tải HVAC tại Zone tương ứng.
-3. **Operator (SV2)** sang _Saving Actions_, chạy **AI-2** nhận gợi ý: _"Tăng điều hòa Tầng 4 lên 26°C"_ ➔ Bấm **Áp dụng** tạo lệnh điều phối.
-4. **Facility Manager (SV3)** mở _Zone Comparison_, dùng **AI-3 What-If** dự tính số tiền và $CO_2$ tiết kiệm được, sau đó lập và ký duyệt _Báo cáo tháng_.
+1. **Occupant (SV1)** gửi phản ánh: *"Phòng 402 quá lạnh (Lãng phí điện)"* ➔ Lưu vào `localStorage`.
+2. **Operator (SV2)** mở *Alert Center*, kích hoạt **AI-1** quét phát hiện Spike quá tải HVAC tại Zone tương ứng.
+3. **Operator (SV2)** sang *Saving Actions*, chạy **AI-2** nhận gợi ý: *"Tăng điều hòa Tầng 4 lên 26°C"* ➔ Bấm **Áp dụng** tạo lệnh điều phối.
+4. **Facility Manager (SV3)** mở *Zone Comparison*, dùng **AI-3 What-If** dự tính số tiền và $CO_2$ tiết kiệm được, sau đó lập và ký duyệt *Báo cáo tháng*.
 5. **Admin (SV3)** cấu hình phân bổ lại diện tích và cảm biến IoT của Zone để giám sát chặt chẽ.
 
 ---
@@ -90,14 +91,14 @@ Các tính năng AI tuân thủ nghiêm ngặt quy trình 6 bước tại **Nguy
 `Input ➔ Processing (Skeleton Loading) ➔ Output ➔ Explainability (Vì sao có gợi ý?) ➔ User Control (Chấp nhận/Sửa/Từ chối) ➔ Save/Apply vào LocalStorage`.
 
 1. **AI-1: Energy Anomaly Detector (Phát hiện Spike bất thường - `html/operator-alert-center.html`):**
-   - _Quy tắc:_ Quét các zone có công suất $P_{\text{thực tế}} > 1.35 \times P_{\text{baseline}}$.
-   - _Explainability:_ Nêu rõ tỷ lệ % vượt ngưỡng và nghi vấn thiết bị chạy sai lịch trình.
+   - *Quy tắc:* Quét các zone có công suất $P_{\text{thực tế}} > 1.35 \times P_{\text{baseline}}$.
+   - *Explainability:* Nêu rõ tỷ lệ % vượt ngưỡng và nghi vấn thiết bị chạy sai lịch trình.
 2. **AI-2: Saving Recommendation Engine (Gợi ý lệnh tiết kiệm điện - `html/operator-saving-actions.html`):**
-   - _Quy tắc:_ Dựa trên nhiệt độ ngoài trời (> 32°C ➔ tăng nhiệt độ điều hòa; giờ trưa 12h-13h30 ➔ tắt đèn).
-   - _User Control:_ Cho phép bấm **"Chỉnh sửa"** để điền thông số vào form trước khi duyệt.
+   - *Quy tắc:* Dựa trên nhiệt độ ngoài trời (> 32°C ➔ tăng nhiệt độ điều hòa; giờ trưa 12h-13h30 ➔ tắt đèn).
+   - *User Control:* Cho phép bấm **"Chỉnh sửa"** để điền thông số vào form trước khi duyệt.
 3. **AI-3: What-If Energy Simulator (Mô phỏng cắt giảm tải - `html/manager-zone-comparison.html`):**
-   - _Quy tắc:_ Cho phép kéo thanh trượt giảm 1% – 50% phụ tải ➔ Tính ngay số kWh, số tiền (2.200 đ/kWh) và $CO_2$ giảm được ($0.85 \text{ kg } CO_2/\text{kWh}$).
-   - _Lưu trữ:_ Cho phép lưu kịch bản thành định mức áp dụng cho kỳ tới.
+   - *Quy tắc:* Cho phép kéo thanh trượt giảm 1% – 50% phụ tải ➔ Tính ngay số kWh, số tiền (2.200 đ/kWh) và $CO_2$ giảm được ($0.85 \text{ kg } CO_2/\text{kWh}$).
+   - *Lưu trữ:* Cho phép lưu kịch bản thành định mức áp dụng cho kỳ tới.
 4. **Kịch bản AI Failure / Uncertainty Mode:** Có nút chuyển đổi `Mô phỏng AI lỗi: BẬT/TẮT` để kiểm tra khả năng xử lý khi thiếu dữ liệu hoặc hệ thống lỗi.
 
 ---
@@ -153,13 +154,11 @@ cse122-smartbuilding-team18/
 ## 🚀 10. HƯỚNG DẪN CÀI ĐẶT & CHẠY DỰ ÁN CỤC BỘ
 
 ### Cách 1: Sử dụng VS Code Live Server (Khuyên dùng)
-
 1. Cài extension **Live Server** trong VS Code.
 2. Nhấp chuột phải vào file `index.html` và chọn **"Open with Live Server"**.
 3. Ứng dụng sẽ tự động mở trên trình duyệt tại địa chỉ `http://127.0.0.1:5500`.
 
 ### Cách 2: Sử dụng máy chủ Node.js tĩnh
-
 ```bash
 node server.js
 # Mở trình duyệt truy cập: http://localhost:3000
@@ -185,32 +184,25 @@ node server.js
 
 ## 🎥 12. DANH MỤC VIDEO OBS MINH CHỨNG (TỶ LỆ 1:1) (ĐK4)
 
-_Mỗi video có thời lượng 3–5 phút, bắt buộc có webcam rõ mặt, mở mã nguồn trong VS Code, giải thích logic, live edit và commit:_
+*Mỗi video có thời lượng 3–5 phút, bắt buộc có webcam rõ mặt, mở mã nguồn trong VS Code, giải thích logic, live edit và commit:*
 
-| STT | Tên tệp Video OBS quy chuẩn             | Màn hình tương ứng      | Sinh viên thực hiện |   Trạng thái    |
-| :-: | :-------------------------------------- | :---------------------- | :-----------------: | :-------------: |
-|  1  | `SV1-01-occupant-dashboard.mp4`         | Occupant Dashboard      |   Phùng Viết Tài    | Đang hoàn thiện |
-|  2  | `SV1-02-occupant-comfort-feedback.mp4`  | Comfort Feedback        |   Phùng Viết Tài    | Đang hoàn thiện |
-|  3  | `SV1-03-occupant-energy-challenges.mp4` | Energy Challenges       |   Phùng Viết Tài    | Đang hoàn thiện |
-|  4  | `SV1-04-occupant-energy-history.mp4`    | Energy History          |   Phùng Viết Tài    | Đang hoàn thiện |
-|  5  | `SV1-05-occupant-rewards.mp4`           | Green Rewards           |   Phùng Viết Tài    | Đang hoàn thiện |
-|  6  | `SV2-01-operator-energy-monitor.mp4`    | Energy Monitor          |    Lê Quang Tiến    | Đang hoàn thiện |
-|  7  | `SV2-02-operator-alert-center.mp4`      | Alert Center & AI-1     |    Lê Quang Tiến    | Đang hoàn thiện |
-|  8  | `SV2-03-operator-saving-actions.mp4`    | Saving Actions & AI-2   |    Lê Quang Tiến    | Đang hoàn thiện |
-|  9  | `SV2-04-operator-zone-control.mp4`      | Zone Live Control       |    Lê Quang Tiến    | Đang hoàn thiện |
-| 10  | `SV3-01-manager-energy-kpis.mp4`        | Energy KPIs             |    Lê Đức Quang     | Đang hoàn thiện |
-| 11  | `SV3-02-manager-zone-comparison.mp4`    | Zone Comparison & AI-3  |    Lê Đức Quang     | Đang hoàn thiện |
-| 12  | `SV3-03-manager-monthly-report.mp4`     | Monthly Report & Export |    Lê Đức Quang     | Đang hoàn thiện |
-| 13  | `SV3-04-admin-zone-management.mp4`      | Zone Management         |    Lê Đức Quang     | Đang hoàn thiện |
-| 14  | `SV3-05-admin-sensor-management.mp4`    | Sensor Management       |    Lê Đức Quang     | Đang hoàn thiện |
-| 15  | `SV3-06-admin-user-management.mp4`      | User Management         |    Lê Đức Quang     | Đang hoàn thiện |
+| STT | Tên tệp Video OBS quy chuẩn | Màn hình tương ứng | Sinh viên thực hiện | Trạng thái |
+| :-: | :--- | :--- | :---: | :---: |
+| 1 | `SV1-01-occupant-dashboard.mp4` | Occupant Dashboard | Phùng Viết Tài | Hoàn thiện |
+| 2 | `SV1-03-occupant-energy-challenges.mp4` | Energy Challenges | Phùng Viết Tài | Hoàn thiện |
+| 3 | `SV1-05-occupant-rewards.mp4` | Green Rewards | Phùng Viết Tài | Hoàn thiện |
+| 4 | `SV2-01-operator-energy-monitor.mp4` | Energy Monitor | Lê Quang Tiến | Hoàn thiện |
+| 5 | `SV2-02-operator-alert-center.mp4` | Alert Center & AI-1 | Lê Quang Tiến | Hoàn thiện |
+| 6 | `SV2-03-operator-saving-actions.mp4` | Saving Actions & AI-2 | Lê Quang Tiến | Hoàn thiện |
+| 7 | `SV3-01-manager-energy-kpis.mp4` | Energy KPIs | Lê Đức Quang | Đang hoàn thiện |
+| 8 | `SV3-02-manager-zone-comparison.mp4` | Zone Comparison & AI-3 | Lê Đức Quang | Hoàn thiện |
+| 9 | `SV3-03-manager-monthly-report.mp4` | Monthly Report & Export | Lê Đức Quang | Hoàn thiện |
 
 ---
 
 ## 🤖 13. MINH BẠCH SỬ DỤNG AI & KIỂM CHỨNG MÃ NGUỒN (ĐK5)
 
 Chi tiết được trình bày tại [docs/ai-usage-report.md](docs/ai-usage-report.md):
-
 - **Phần AI hỗ trợ:** Khởi tạo ý tưởng layout, gợi ý CSS tokens, tư vấn công thức tính phát thải $CO_2$.
 - **Phần sinh viên kiểm chứng & làm chủ:** Khắc phục lỗi XSS của AI, viết lại logic đồng bộ 2 chiều `localStorage`, gộp bộ lọc tìm kiếm kết hợp, thiết kế luồng tương tác AI UX 6 bước và xây dựng các kịch bản lỗi ngoại lệ (Fallback Error State).
 
@@ -229,14 +221,12 @@ Chi tiết được trình bày tại [docs/ai-usage-report.md](docs/ai-usage-re
 ## 💡 15. KẾ HOẠCH BẢO VỆ & SẴN SÀNG CHỈNH SỬA TRỰC TIẾP (LIVE MODIFICATION)
 
 Cả 3 thành viên đã tự luyện tập và sẵn sàng thực hiện trực tiếp trong 5–10 phút tại phòng thi:
-
 - **Nhóm A (Tìm kiếm & Bộ lọc):** Thêm bộ lọc tầng, sắp xếp A-Z hoặc bộ đếm kết quả động.
 - **Nhóm B (Biểu mẫu & Hợp lệ):** Thêm trường số điện thoại/ghi chú, bộ đếm 200 ký tự cho textarea, kiểm tra trùng lặp mã.
 - **Nhóm C (CSS & Bố cục):** Đổi hiển thị từ bảng sang thẻ Card Grid, thêm thanh KPI tổng hợp.
 - **Nhóm D (Trạng thái dữ liệu):** Giả lập mảng rỗng `[]` hiển thị Empty State, độ trễ `setTimeout` 800ms cho skeleton.
-- **Nhóm E (Vòng đời nghiệp vụ):** Thêm trạng thái _Cần bổ sung (Needs Revision)_ hoặc nút ghim ưu tiên lưu `localStorage`.
+- **Nhóm E (Vòng đời nghiệp vụ):** Thêm trạng thái *Cần bổ sung (Needs Revision)* hoặc nút ghim ưu tiên lưu `localStorage`.
 - **Nhóm F (AI UX):** Thêm chỉ số tin cậy (Confidence Score 88%) hoặc nút tạo lại phương án khác (Regenerate).
 
 ---
-
 © 2026 SmartBuilding CSE122 Team 18. All rights reserved.

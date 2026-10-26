@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --bg-main: #0b1120;
@@ -35,10 +35,12 @@
 
   --transition-fast: 0.15s ease;
   --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -59,7 +61,10 @@ a {
   text-decoration: none;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
 }
 
@@ -153,7 +158,11 @@ button, input, select, textarea {
 }
 
 .nav-item.active {
-  background: linear-gradient(90deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0.15) 0%,
+    rgba(16, 185, 129, 0.05) 100%
+  );
   color: var(--emerald-400);
   font-weight: 600;
   border-left: 3px solid var(--emerald-500);
@@ -266,7 +275,11 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(14, 165, 233, 0.15));
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.15),
+    rgba(14, 165, 233, 0.15)
+  );
   border: 1px solid rgba(16, 185, 129, 0.3);
   padding: 6px 14px;
   border-radius: var(--radius-full);
@@ -296,9 +309,18 @@ button, input, select, textarea {
 }
 
 @keyframes pulse-dot {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(0.95); opacity: 0.8; }
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
 }
 
 .content-area {
@@ -330,7 +352,9 @@ button, input, select, textarea {
   border-radius: var(--radius-lg);
   padding: 24px;
   box-shadow: var(--shadow-card);
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .card:hover {
@@ -358,7 +382,7 @@ button, input, select, textarea {
 }
 
 .stat-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -490,7 +514,9 @@ button, input, select, textarea {
   color: var(--text-main);
   font-size: 0.9rem;
   outline: none;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .form-control:focus {
@@ -606,8 +632,14 @@ button, input, select, textarea {
 }
 
 @keyframes modal-enter {
-  from { opacity: 0; transform: scale(0.95) translateY(10px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .modal-header {
@@ -665,7 +697,9 @@ button, input, select, textarea {
   align-items: center;
   gap: 10px;
   animation: toast-in 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .toast-success {
@@ -681,8 +715,14 @@ button, input, select, textarea {
 }
 
 @keyframes toast-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .empty-state {
@@ -725,4 +765,11 @@ button, input, select, textarea {
   border: none;
   transition: all var(--transition-fast);
 }
-.filter-tab.active { background: var(--emerald-500); color: #fff; }
+.filter-tab.active {
+  background: var(--emerald-500);
+  color: #fff;
+}
+:focus-visible {
+  outline: 2px solid var(--emerald-400) !important;
+  outline-offset: 2px !important;
+}
