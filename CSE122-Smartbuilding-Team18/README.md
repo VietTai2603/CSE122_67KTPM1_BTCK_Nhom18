@@ -19,7 +19,7 @@
 - 📋 **Bảng quản lý công việc Trello Board (Task Management):**  
   👉 [Bảng Trello CSE122-BTL36-Team18-SmartBuilding](docs/trello-board-plan.md)
 - 🎥 **Thư mục tổng hợp Video minh chứng OBS (1:1 từng màn hình - ĐK4):**  
-  👉 [Thư mục Video OBS Google Drive](https://drive.google.com/drive/folders/cse122-team18-obs-evidence)
+  👉 [Thư mục Video OBS Google Drive](https://drive.google.com/drive/folders/1Jnj_pA_bsquwrfJWm9tJqOOQUZkHKE3S)
 
 ---
 
