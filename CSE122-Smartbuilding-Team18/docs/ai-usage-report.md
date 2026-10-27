@@ -56,6 +56,17 @@
   - Có đủ trạng thái: Người dùng bấm phân tích ➔ Hiển thị hiệu ứng chờ/khung xương (Loading/Skeleton 1 - 1.5 giây để tạo cảm giác suy luận thông minh) ➔ Hiển thị kết luận & bảng giải thích nguyên nhân ➔ Nút cho phép người dùng **"Chấp nhận áp dụng"**, **"Chỉnh sửa thông số"** hoặc **"Bỏ qua"**.
   - Có nút mô phỏng tình huống **"AI thất bại"** để kiểm chứng giao diện xử lý lỗi thân thiện.
 
+### 2.4. Trục trách nhiệm chéo 1: Design System, Điều hướng chung & Khả năng tiếp cận (A11y)
+
+- **Phần AI hỗ trợ:**
+  - Gợi ý khai báo cấu trúc CSS Tokens `:root` trong `css/style.css`: bảng màu Emerald/Slate, phông chữ Plus Jakarta Sans, bo góc và hiệu ứng đổ bóng.
+  - Gợi ý cấu trúc thanh điều hướng chung (Navbar/Sidebar) và bộ chuyển đổi vai trò nhanh `javascript/role-switcher.js` để demo không bị đứt mạch.
+  - Tư vấn các tiêu chí Web Accessibility (A11y) theo chuẩn W3C/WCAG: thuộc tính `alt` cho ảnh, thẻ `<label for="...">` cho ô nhập liệu, phím điều hướng Tab và phím `Escape` đóng modal.
+- **Lỗi AI & Phần sinh viên (SV1) tự kiểm chứng, khắc phục:**
+  - AI thường xuyên dùng `outline: none` trên `:focus` làm mất hoàn toàn dấu hiệu nhận biết vị trí con trỏ bàn phím (vi phạm Tiêu chí 3.3). SV1 đã tự thay thế bằng quy tắc `:focus-visible` với viền `2px solid var(--emerald-400)` nổi bật kèm `outline-offset: 2px`.
+  - Ban đầu AI không hỗ trợ phím tắt đóng Modal. SV1 đã bổ sung sự kiện `keydown` bắt phím `Escape` trong `javascript/main.js` để tự động gỡ class `active` của các modal đang mở.
+  - SV1 tự tay kiểm thử trên Chrome DevTools ở độ rộng 320px, 375px, 768px, 1024px và phóng to 200% để đảm bảo không bị lỗi tràn ngang (horizontal scroll).
+
 ---
 
 ## 3. Phân định ranh giới: Tính năng Mock vs Gọi API thật
@@ -107,23 +118,28 @@ Qua quá trình này, các thành viên có cơ hội thực hành và hiểu th
 Đây là những kiến thức nhóm đã tiếp xúc và thực hành trong phạm vi dự án, không có nghĩa là tất cả thành viên đã thành thạo JavaScript. Nhóm vẫn cần tiếp tục tự học và có trách nhiệm giải thích được phần mã mình sử dụng.
 
 ### 5.3. Khai báo theo thành viên
-
 #### SV1 – Phùng Viết Tài
+**Phạm vi phụ trách & Trục trách nhiệm chéo chính:**
 
-**Phạm vi JavaScript:**
+- **Màn hình Occupant (Vertical Slice):** `javascript/occupant-dashboard.js`, `javascript/occupant-comfort-feedback.js`, `javascript/occupant-energy-challenges.js`, `javascript/occupant-energy-history.js`, `javascript/occupant-rewards.js`, `javascript/forgot-password.js`.
+- **Trục trách nhiệm chéo số 1 (Cross-cutting Responsibility 1):**
+  - **Hệ thống thiết kế (Design System / CSS Variables):** Bảng màu Emerald/Slate, phông chữ Plus Jakarta Sans, CSS tokens `:root` trong `css/style.css`.
+  - **Điều hướng chung & Chuyển quyền:** Navbar/Sidebar đồng nhất và bộ chuyển đổi nhanh vai trò (`javascript/role-switcher.js`).
+  - **Khả năng tiếp cận (Accessibility - A11y):** Thuộc tính `alt` cho ảnh, `<label>` gắn với `for` cho form, hỗ trợ phím điều hướng Tab (viền `:focus-visible`), phím `Escape` đóng modal.
 
-- `javascript/occupant-dashboard.js`
-- `javascript/occupant-comfort-feedback.js`
-- `javascript/occupant-energy-challenges.js`
-- `javascript/occupant-energy-history.js`
-- `javascript/occupant-rewards.js`
-- `javascript/forgot-password.js`
+**AI hỗ trợ cho SV1:**
+- Gợi ý khai báo hệ thống biến `:root` trong `css/style.css` (bảng màu xanh ngọc Emerald, nền Slate, bo góc, bóng mờ).
+- Gợi ý cấu trúc thanh điều hướng chung (Navbar/Sidebar) và hàm chuyển nhanh vai trò trong `javascript/role-switcher.js`.
+- Tư vấn cách bắt sự kiện bàn phím phím `Escape` trong `javascript/main.js` để đóng modal và quy tắc CSS `:focus-visible` phục vụ chuẩn tiếp cận A11y.
+- Gợi ý cách kết xuất dữ liệu lên giao diện bằng DOM, xử lý sự kiện form, kiểm tra hợp lệ dữ liệu (validation) và lưu trữ `localStorage`.
 
-**AI hỗ trợ:** Gợi ý cách kết xuất dữ liệu lên giao diện bằng DOM, xử lý sự kiện trên các màn hình Occupant, kiểm tra dữ liệu biểu mẫu, cập nhật trạng thái thử thách/điểm thưởng và lưu dữ liệu nghiệp vụ bằng `localStorage`.
+**Prompt tiêu biểu (diễn giải):**
+- *“Gợi ý cấu trúc CSS Tokens `:root` chuẩn cho Design System (màu Emerald, nền Slate) và cách xử lý phím Tab `:focus-visible`, phím Escape đóng modal theo chuẩn tiếp cận A11y.”*
+- *“Hỗ trợ xây dựng JavaScript thuần cho luồng phản hồi tiện nghi: kiểm tra dữ liệu nhập, thêm/sửa/hủy phản hồi và lưu trạng thái vào `localStorage`.”*
 
-**Prompt tiêu biểu (diễn giải):** “Hỗ trợ xây dựng JavaScript thuần cho luồng phản hồi tiện nghi: kiểm tra dữ liệu nhập, thêm/sửa/hủy phản hồi, cập nhật danh sách và lưu trạng thái bằng `localStorage`.”
-
-**Phần sinh viên kiểm tra và hoàn thiện:** Đối chiếu các trường dữ liệu với biểu mẫu và dữ liệu mẫu; kiểm tra luồng tạo, sửa, hủy và tải lại trang; chỉnh cách hiển thị lỗi và thông báo để phù hợp với giao diện của dự án. Báo cáo cũ ghi nhận bản gợi ý ban đầu có thể nạp lại dữ liệu mẫu và dùng `alert()`; nhóm đã điều chỉnh để giữ dữ liệu người dùng và dùng thông báo trong giao diện.
+**Phần sinh viên kiểm tra và hoàn thiện:**
+- **Design System & A11y:** Tự tay viết lại viền `:focus-visible` nổi bật thay vì dùng `outline: none` của AI; tự viết sự kiện `Escape` đóng modal trong `javascript/main.js`; kiểm tra độ tương phản màu chữ và responsive trên Chrome DevTools.
+- **Bảo mật & Dữ liệu:** Tự viết hàm `escapeHtml()` để chống lỗi XSS khi in dữ liệu vào `innerHTML`; cấu trúc lại hàm lưu trữ `localStorage` 2 chiều để khi F5 không bị mất dữ liệu.
 
 #### SV2 – Lê Quang Tiến
 
